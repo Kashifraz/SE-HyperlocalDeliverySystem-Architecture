@@ -1,4 +1,4 @@
-# 📦 Hyperlocal Delivery & Food Ordering System
+# 📦 Hyperlocal Delivery System
 
 ## Group Members
 1) Syed Mohammad Kashif
@@ -6,7 +6,7 @@
 3) Danish Ali
 
 ## Project Description
-This project aims to build a comprehensive hyperlocal delivery and food ordering platform tailored for customers located within a 3-mile radius of local shops and food vendors. The platform allows users to browse nearby grocery stores, restaurants, and small-scale food points, view item details including prices and availability, add items to a cart, and place orders for home delivery. Customers receive live updates on their order status—from confirmation to preparation and delivery—and can track the delivery agent’s location in real-time.
+This project aims to build a comprehensive hyperlocal delivery platform tailored for customers located within a 3-mile radius of local shops and food vendors. The platform allows users to browse nearby grocery stores, restaurants, and small-scale food points, view item details including prices and availability, add items to a cart, and place orders for home delivery. Customers receive live updates on their order status—from confirmation to preparation and delivery—and can track the delivery agent’s location in real-time.
 
 To ensure quality and trust, customers are encouraged to leave feedback and ratings for each vendor, product, and delivery experience. This helps other users make informed decisions and motivates vendors and delivery personnel to maintain high service standards.
 
