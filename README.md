@@ -4,6 +4,7 @@
 1) Syed Mohammad Kashif
 2) Abdul Raheem Shahzad
 3) Danish Ali
+4) Juraev Dilshodbek
 
 ## Project Description
 This project aims to build a comprehensive hyperlocal delivery platform tailored for customers located within a 3-mile radius of local shops and food vendors. The platform allows users to browse nearby grocery stores, restaurants, and small-scale food points, view item details including prices and availability, add items to a cart, and place orders for home delivery. Customers receive live updates on their order status—from confirmation to preparation and delivery—and can track the delivery agent’s location in real-time.
@@ -41,5 +42,13 @@ Overall, this system supports the growing demand for convenient, reliable, and l
   
 ## Benefits
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
+
+## 📜 History Log
+
+| Date           | Task Description                                                                                 | Contributor                  |
+|----------------|--------------------------------------------------------------------------------------------------|------------------------------|
+| 2025, April 6  | Discussion and selection of project ideas for MSA course project.                                | Syed, Danish, Shahzad, Juraev|
+| 2025, April 6  | Finalized the idea of a hyperlocal delivery platform and created the GitHub repository.          | Syed, Danish, Shahzad, Juraev|
+| 2025, April 6  | Drafted 150-word and 250-word project descriptions for GitHub and course use.                    | Syed, Danish, Shahzad, Juraev|
 
 
