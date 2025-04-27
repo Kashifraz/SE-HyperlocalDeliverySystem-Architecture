@@ -69,10 +69,12 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 ## Project Diagrams
 
 ### 📄 System Overview
-[View System Overview Diagram](https://drive.google.com/file/d/1lzKsNz-Lpg68AAnnnZtTkOazJZsBd0o0/view?usp=sharing)
+<img src="https://drive.google.com/file/d/1lzKsNz-Lpg68AAnnnZtTkOazJZsBd0o0/view?usp=sharing" alt="System Overview" width="800"/>
 
 ### 📄 Context Diagram
-[View Context Diagram](https://drive.google.com/file/d/1s6yjKHa4YACqbHamveudkFxAaMoA2T2b/view)
+<img src="https://drive.google.com/file/d/1s6yjKHa4YACqbHamveudkFxAaMoA2T2b/view" alt="Context Diagram" width="800"/>
+
+
 
 
 
