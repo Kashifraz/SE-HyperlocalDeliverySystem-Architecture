@@ -43,6 +43,29 @@ Overall, this system supports the growing demand for convenient, reliable, and l
 ## Benefits
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
 
+## Stakeholder Overview
+
+The following are the primary stakeholders for this hyperlocal delivery platform. Each stakeholder influences the system design based on their specific needs and expectations:
+
+- **Customers**: End-users who browse, order, and receive products. Their satisfaction directly impacts platform adoption and success. A seamless and responsive user experience is critical.
+- **Vendors**: Local shops and food vendors who list products and manage inventory. Vendor participation ensures a wide variety of offerings; they require a stable and reliable system to manage daily operations.
+- **Delivery Agents**: Personnel responsible for picking up and delivering orders. Their efficiency affects order fulfillment speed and customer satisfaction; they need a simple and dependable app to manage deliveries.
+- **Product Owner**: Oversees the platform’s strategic direction and growth. They are concerned with building a scalable system that can support future expansions without major redesigns.
+- **Developers**: Technical team responsible for developing, maintaining, and improving the platform. They prioritize clean, maintainable code to ensure long-term system health and rapid feature updates.
+
+---
+
+## Key Stakeholder Concerns
+
+| **Stakeholder** | **Key Concerns**                          | **Quality Attribute**               |
+|-----------------|-------------------------------------------|-------------------------------|
+| **Customers**   | Easy-to-use app for browsing, ordering products, and receiving deliveries quickly. | Usability, Performance       |
+| **Vendors**     | System must be highly available and consistently operational to manage inventory and orders effectively. | Reliability                  |
+| **Delivery Agents** | Simple, reliable app to accept deliveries and update statuses easily. | Reliability, Usability        |
+| **Product Owner** | The system architecture should support easy scaling to accommodate business growth. | Scalability                   |
+| **Developers**  | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution. | Maintainability               |
+
+
 ## 📜 History Log
 
 | Date           | Task Description                                                                                 | Contributor                  |
