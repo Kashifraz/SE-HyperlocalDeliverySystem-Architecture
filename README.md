@@ -37,7 +37,7 @@ Overall, this system supports the growing demand for convenient, reliable, and l
 ## Non-Functional Requirements (Quality Arrtibutes)
 - **Performance:** Fast and responsive user interface.
 - **Reliability:** High system availability to ensure uptime and minimize outages.
-- **Security:** Secure user transactions and data privacy for customers and vendors.
+- **Maintainability:** Maintainable codebase, allowing for easy updates, improvements, and issue resolution.
 - **Usability:** Designed for easy navigation, even for users with limited digital literacy.
   
 ## Benefits
