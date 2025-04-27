@@ -65,14 +65,17 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Product Owner** | The system architecture should support easy scaling to accommodate business growth. | Scalability                   |
 | **Developers**  | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution. | Maintainability               |
 
-### System Overview
-<p align="center">
-<img src="![image](https://github.com/user-attachments/assets/8539226f-e3d5-45da-a2a4-2feb637e908f)
-">
-</p>
 
-### Context Diagram
-![Context Diagram](./Context_Diagram.pdf)
+## Project Diagrams
+
+### 📄 System Overview
+[View System Overview Diagram](https://drive.google.com/file/d/1lzKsNz-Lpg68AAnnnZtTkOazJZsBd0o0/view?usp=sharing)
+
+### 📄 Context Diagram
+[View Context Diagram](https://drive.google.com/file/d/1s6yjKHa4YACqbHamveudkFxAaMoA2T2b/view)
+
+
+
 ## 📜 History Log
 
 | Date           | Task Description                                                                                 | Contributor                  |
