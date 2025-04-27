@@ -66,13 +66,13 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Developers**  | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution. | Maintainability               |
 
 
-## Project Diagrams
+## 📄 System Overview
+<img src="./System.png" alt="System Overview" width="800"/>
 
-### 📄 System Overview
-<img src="https://drive.google.com/file/d/1lzKsNz-Lpg68AAnnnZtTkOazJZsBd0o0/view?usp=sharing" alt="System Overview" width="800"/>
+## 📄 Context Diagram
 
-### 📄 Context Diagram
-<img src="https://drive.google.com/file/d/1s6yjKHa4YACqbHamveudkFxAaMoA2T2b/view" alt="Context Diagram" width="800"/>
+<img src="./context.png" alt="Context Diagram" width="800"/>
+
 
 
 
