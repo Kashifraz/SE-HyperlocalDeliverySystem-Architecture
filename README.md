@@ -43,7 +43,7 @@ Overall, this system supports the growing demand for convenient, reliable, and l
 ## Benefits
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
 
-## Stakeholder Overview
+## Stakeholder Analysis
 
 The following are the primary stakeholders for this hyperlocal delivery platform. Each stakeholder influences the system design based on their specific needs and expectations:
 
@@ -65,7 +65,14 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Product Owner** | The system architecture should support easy scaling to accommodate business growth. | Scalability                   |
 | **Developers**  | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution. | Maintainability               |
 
+### System Overview
+<p align="center">
+<img src="![image](https://github.com/user-attachments/assets/8539226f-e3d5-45da-a2a4-2feb637e908f)
+">
+</p>
 
+### Context Diagram
+![Context Diagram](./Context_Diagram.pdf)
 ## 📜 History Log
 
 | Date           | Task Description                                                                                 | Contributor                  |
