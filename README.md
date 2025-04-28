@@ -43,6 +43,10 @@ Overall, this system supports the growing demand for convenient, reliable, and l
 ## Benefits
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
 
+## 📄 System Overview
+We included the system `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, which helps us interact with a distributed microservices backend. The system also has three main databases to store its data.
+<img src="./System.png" alt="System Overview" width="800"/>
+
 ## Stakeholder Analysis
 
 The following are the primary stakeholders for this hyperlocal delivery platform. Each stakeholder influences the system design based on their specific needs and expectations:
@@ -65,16 +69,9 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Product Owner** | The system architecture should support easy scaling to accommodate business growth. | Scalability                   |
 | **Developers**  | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution. | Maintainability               |
 
-
-## 📄 System Overview
-<img src="./System.png" alt="System Overview" width="800"/>
-
 ## 📄 Context Diagram
-
+The `Context Diagram` below shows how external entities, such as users and external systems, interact with our system. It shows that `vendors` provide their products and working hours information to our system, and the system provides customers with orders and business. The `customer` provides their delivery information and the products they added to the cart, and the system returns order confirmation and tracking of their orders. Similarly, the `delivery agent` receives the pending orders for delivery and completes the order delivery. Our system also interacts with external systems such as `Location API` (Google Maps) by providing the addresses and receiving the coordinates (longitude and latitude).
 <img src="./context.png" alt="Context Diagram" width="800"/>
-
-
-
 
 
 
