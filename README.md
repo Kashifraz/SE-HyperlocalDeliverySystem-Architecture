@@ -45,7 +45,7 @@ The platform supports the growing demand for convenient, reliable, and locally f
 
 ## 📄 System Overview
 We included the system `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, which helps us interact with a distributed microservices backend. The system also has three main databases to store its data.
-<img src="./System.png" alt="System Overview" width="1000"/>
+<img src="./system.png" alt="System Overview" width="1000"/>
 
 ## Stakeholder Analysis
 
