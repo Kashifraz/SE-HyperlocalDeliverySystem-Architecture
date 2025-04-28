@@ -34,7 +34,7 @@ Overall, this system supports the growing demand for convenient, reliable, and l
   - Accept delivery requests and navigate to destinations.
   - Update order status at each step of the delivery process.
   
-## Non-Functional Requirements (Quality Arrtibutes)
+## Non-Functional Requirements (Quality Attributes)
 - **Performance:** Fast and responsive user interface.
 - **Reliability:** High system availability to ensure uptime and minimize outages.
 - **Maintainability:** Maintainable codebase, allowing for easy updates, improvements, and issue resolution.
