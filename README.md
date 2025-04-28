@@ -45,7 +45,7 @@ The platform supports the growing demand for convenient, reliable, and locally f
 
 ## 📄 System Overview
 We included the system `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, which helps us interact with a distributed microservices backend. The system also has three main databases to store its data.
-<img src="./System.png" alt="System Overview" width="800"/>
+<img src="./System.png" alt="System Overview" width="1000"/>
 
 ## Stakeholder Analysis
 
@@ -69,12 +69,20 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Product Owner** | The system architecture should support easy scaling to accommodate business growth. | Scalability                   |
 | **Developers**  | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution. | Maintainability               |
 
-## 📄 Context Diagram
+## 📄 Context Viewpoint
+The `Context View` describes the `system’s boundaries` by showing its interactions with external actors such as users, vendors, delivery agents, and other systems. It highlights what is inside the system and what lies outside, helping stakeholders understand how the system fits into its environment and what major inputs and outputs exist.
+
 The `Context Diagram` below shows how external entities, such as users and external systems, interact with our system. It shows that `vendors` provide their products and working hours information to our system, and the system provides customers with orders and business. The `customer` provides their delivery information and the products they added to the cart, and the system returns order confirmation and tracking of their orders. Similarly, the `delivery agent` receives the pending orders for delivery and completes the order delivery. Our system also interacts with external systems such as `Location API` (Google Maps) by providing the addresses and receiving the coordinates (longitude and latitude).
-<img src="./context.png" alt="Context Diagram" width="800"/>
+<img src="./context.png" alt="Context Diagram" width="1000"/>
 
+## 📄 Use Case Viewpoint
+The Use Case Viewpoint captures the primary ways different users (customers, vendors, and delivery agents) interact with the delivery platform to achieve their goals. It outlines the major functionalities the system must support, such as browsing vendors, placing orders, tracking deliveries, managing inventory, and updating order statuses. This viewpoint helps in understanding user requirements clearly by focusing on user-system interactions and ensures that the system is designed around real-world activities and expectations of its stakeholders.
 
+## 📄 Process Viewpoint
+The Process Viewpoint focuses on the system’s dynamic behavior and describes how different parts of the system interact at runtime to achieve specific tasks. It models processes such as order placement, payment handling, delivery tracking, and inventory updates, often showing how components communicate, synchronize, and handle concurrent activities. In this delivery platform, the process view ensures smooth coordination between customers, vendors, and delivery agents by managing workflows like order processing, delivery assignment, and real-time status updates.
 
+## 📄 Development Viewpoint
+The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
 ## 📜 History Log
 
 | Date           | Task Description                                                                                 | Contributor                  |
