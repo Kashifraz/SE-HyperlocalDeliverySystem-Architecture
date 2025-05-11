@@ -34,7 +34,7 @@ Overall, this system supports the growing demand for convenient, reliable, and l
   - Accept delivery requests and navigate to destinations.
   - Update order status at each step of the delivery process.
   
-## Non-Functional Requirements (Quality Attributes)
+## Quality Attributes
 - **Performance:** Fast and responsive user interface.
 - **Reliability:** High system availability to ensure uptime and minimize outages.
 - **Maintainability:** Maintainable codebase, allowing for easy updates, improvements, and issue resolution.
@@ -57,17 +57,30 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - **Product Owner**: Oversees the platform’s strategic direction and growth. They are concerned with building a scalable system that can support future expansions without major redesigns.
 - **Developers**: Technical team responsible for developing, maintaining, and improving the platform. They prioritize clean, maintainable code to ensure long-term system health and rapid feature updates.
 
----
+## Functional Requirements
+| Role               | Use Case                 | Functional Requirement Description                                                                    |
+| ------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------- |
+| **Customer**       | Browse Products          | Customers can browse a list of products offered by local vendors within the platform.                 |
+| **Customer**       | Add Items to Cart        | Customers can add selected products to a shopping cart for future purchase.                           |
+| **Customer**       | Place Order              | Customers can place an order from the items in their cart by confirming delivery and payment details. |
+| **Customer**       | Track Order              | Customers can view real-time updates on their order status, including delivery tracking.              |
+| **Customer**       | Give Feedback            | After receiving an order, customers can leave feedback or rate the product, vendor, and delivery.     |
+| **Vendor**         | Setup Business Profile   | Vendors can register and configure their store with name, address, contact info, and logo.            |
+| **Vendor**         | Manage Inventory         | Vendors can add, update, or delete products including availability status and pricing.                |
+| **Vendor**         | Manage Orders            | Vendors can view and manage customer orders including accepting and updating order status.            |
+| **Vendor**         | Respond Feedback         | Vendors can view and reply to customer feedback on their products and services.                       |
+| **Delivery Agent** | Manage Delivery Requests | Delivery agents can view incoming delivery requests and choose to accept or reject them.              |
+| **Delivery Agent** | Complete Order Delivery  | Delivery agents can update the status of deliveries (e.g., picked up, on the way, delivered).         |
 
-## Key Stakeholder Concerns
+## Quality Attributes and Key Stakeholder Concerns
 
-| **Stakeholder** | **Key Concerns**                          | **Quality Attribute**               |
-|-----------------|-------------------------------------------|-------------------------------|
-| **Customers**   | Easy-to-use app for browsing, ordering products, and receiving deliveries quickly. | Usability, Performance       |
-| **Vendors**     | System must be highly available and consistently operational to manage inventory and orders effectively. | Reliability                  |
-| **Delivery Agents** | Simple, reliable app to accept deliveries and update statuses easily. | Reliability, Usability        |
-| **Product Owner** | The system architecture should support easy scaling to accommodate business growth. | Scalability                   |
-| **Developers**  | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution. | Maintainability               |
+| **Stakeholder**     | **Key Concerns**                                                                                         | **Relevant Quality Attributes** |
+| ------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **Customers**       | Easy-to-use app for browsing, ordering products, and receiving deliveries quickly.                       | Usability, Performance          |
+| **Vendors**         | System must be highly available and consistently operational to manage inventory and orders effectively. | Availability                    |
+| **Delivery Agents** | Simple, reliable app to accept deliveries and update statuses easily.                                    | Usability, Availability         |
+| **Product Owner**   | The system architecture should support easy scaling to accommodate business growth.                      | Scalability                     |
+| **Developers**      | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution.          | Maintainability                 |
 
 ## 📄 Context Viewpoint
 The `Context View` describes the `system’s boundaries` by showing its interactions with external actors such as users, vendors, delivery agents, and other systems. It highlights what is inside the system and what lies outside, helping stakeholders understand how the system fits into its environment and what major inputs and outputs exist.
