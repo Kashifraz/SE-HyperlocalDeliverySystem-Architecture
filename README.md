@@ -34,12 +34,6 @@ Overall, this system supports the growing demand for convenient, reliable, and l
   - Accept delivery requests and navigate to destinations.
   - Update order status at each step of the delivery process.
   
-## Quality Attributes
-- **Performance:** Fast and responsive user interface.
-- **Reliability:** High system availability to ensure uptime and minimize outages.
-- **Maintainability:** Maintainable codebase, allowing for easy updates, improvements, and issue resolution.
-- **Usability:** Designed for easy navigation, even for users with limited digital literacy.
-  
 ## Benefits
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
 
