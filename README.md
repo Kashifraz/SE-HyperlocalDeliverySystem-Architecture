@@ -39,7 +39,12 @@ The platform supports the growing demand for convenient, reliable, and locally f
 
 ## 📄 System Overview
 We included the system `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, which helps us interact with a distributed microservices backend. The system also has three main databases to store its data.
-<img src="./system.png" alt="System Overview" width="1000"/>
+
+<div align="center">
+ <img src="./system.png" alt="System Overview" width="1000"/>
+  <br>
+  <em> Figure 1: Architecture overview diagram showing the overview of system architecture</em>
+</div>
 
 ## Stakeholder Analysis
 
@@ -80,14 +85,31 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 The `Context View` describes the `system’s boundaries` by showing its interactions with external actors such as users, vendors, delivery agents, and other systems. It highlights what is inside the system and what lies outside, helping stakeholders understand how the system fits into its environment and what major inputs and outputs exist.
 
 The `Context Diagram` below shows how external entities, such as users and external systems, interact with our system. It shows that `vendors` provide their products and working hours information to our system, and the system provides customers with orders and business. The `customer` provides their delivery information and the products they added to the cart, and the system returns order confirmation and tracking of their orders. Similarly, the `delivery agent` receives the pending orders for delivery and completes the order delivery. Our system also interacts with external systems such as `Location API` (Google Maps) by providing the addresses and receiving the coordinates (longitude and latitude).
-<img src="./context.png" alt="Context Diagram" width="800"/>
+
+<div align="center">
+ <img src="./context.png" alt="Context Diagram" width="800"/>
+  <br>
+  <em> Figure 2: Context view of the system showing the interaction of external entities with our system</em>
+</div>
 
 ## 📄 Use Case Viewpoint
 The Use Case Viewpoint captures the primary ways different users (customers, vendors, and delivery agents) interact with the delivery platform to achieve their goals. It outlines the major functionalities the system must support, such as browsing vendors, placing orders, tracking deliveries, managing inventory, and updating order statuses. This viewpoint helps in understanding user requirements clearly by focusing on user-system interactions and ensures that the system is designed around real-world activities and expectations of its stakeholders.
-<img src="./Hyperlocal usecase-1.png" alt="Use Case Diagram" width="1000"/>
+
+<div align="center">
+ <img src="./Hyperlocal usecase-1.png" alt="Use Case Diagram" width="1000"/>
+  <br>
+  <em> Figure 3: Use case diagram demonstrating the use cases for vendor, customer and delivery agent</em>
+</div>
 
 ## 📄 Process Viewpoint
 The Process Viewpoint focuses on the system’s dynamic behavior and describes how different parts of the system interact at runtime to achieve specific tasks. It models processes such as order placement, payment handling, delivery tracking, and inventory updates, often showing how components communicate, synchronize, and handle concurrent activities. In this delivery platform, the process view ensures smooth coordination between customers, vendors, and delivery agents by managing workflows like order processing, delivery assignment, and real-time status updates.
+
+The System Sequence Diagram (SSD) below outlines the step-by-step interactions between the key actors—Customer, Vendor, Delivery Agent—and the Hyperlocal Delivery Platform during an order's lifecycle. The process begins when the Customer browses nearby vendors, selects items, and confirms the order, prompting the System to process payment and notify the Vendor while assigning a Delivery Agent. Next, the Vendor updates inventory, confirms order acceptance, and marks it as ready for pickup, which triggers the System to alert the Delivery Agent and update the Customer on the order status. The Delivery Agent then accepts the request, picks up the order, and provides real-time updates as it moves through "En Route" to "Delivered," with the System relaying tracking information to the Customer. Finally, after delivery, the Customer submits feedback on the Vendor, products, and delivery experience, which the System records for analytics and service improvement. The diagram effectively captures the end-to-end workflow, highlighting real-time coordination, status updates, and seamless communication among all parties involved in the hyperlocal delivery process.
+<div align="center">
+  <img src="./system-sequence-diagram.png" alt="Diagram" width="700">
+  <br>
+  <em> Figure 4: System Sequence Diagram: Order workflow between Customer, Vendor, and Delivery Agent</em>
+</div>
 
 ## 📄 Development Viewpoint
 The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
