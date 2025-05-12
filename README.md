@@ -101,7 +101,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 
 ## Functional Requirements
 
-### Customer Requirements
+### 1) Customer Requirements
 **CUS-1 Add Items to Cart**  
 - The customer shall be able to add items to cart  
 - The customer shall be able to remove items from cart  
@@ -126,7 +126,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The customer shall be able to submit feedback anonymously  
 - The customer shall be able to edit feedback within 24 hours  
 
-### Vendor Requirements
+### 2) Vendor Requirements
 **VEN-1 Setup Business Profile**  
 - The vendor shall be able to register store information  
 - The vendor shall be able to upload the business logo  
@@ -151,7 +151,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The vendor shall be able to report inappropriate feedback  
 - The vendor shall be able to view feedback analytics  
 
-### Delivery Agent Requirements
+### 3) Delivery Agent Requirements
 **DEL-1 Manage Delivery Requests**  
 - The agent shall be able to view assigned deliveries  
 - The agent shall be able to accept/reject delivery requests  
