@@ -267,7 +267,7 @@ We provided the mid-fidelity designs to address the end users' usability concern
 > **Result:** A layered, event‑centric microservices architecture that supports rapid feature evolution, fault isolation, and autonomous team ownership—ideal for a hyper‑local delivery marketplace.
 
 <!-- Figure 9 – Microservices Architecture -->
-![Microservices Architecture Diagram](microservices_architecture_view.png)
+![Microservices Architecture Diagram](./microservices_architecture_view.png)
 
 *Figure 9. Microservices‑based hyper‑local delivery platform.*
 ## Key Architectural Decisions to Address Quality Attributes
