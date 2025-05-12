@@ -57,19 +57,69 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - **Developers**: Technical team responsible for developing, maintaining, and improving the platform. They prioritize clean, maintainable code to ensure long-term system health and rapid feature updates.
 
 ## Functional Requirements
-| Role               | Use Case                 | Functional Requirement Description                                                                    |
-| ------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------- |
-| **Customer**       | Browse Products          | Customers can browse a list of products offered by local vendors within the platform.                 |
-| **Customer**       | Add Items to Cart        | Customers can add selected products to a shopping cart for future purchase.                           |
-| **Customer**       | Place Order              | Customers can place an order from the items in their cart by confirming delivery and payment details. |
-| **Customer**       | Track Order              | Customers can view real-time updates on their order status, including delivery tracking.              |
-| **Customer**       | Give Feedback            | After receiving an order, customers can leave feedback or rate the product, vendor, and delivery.     |
-| **Vendor**         | Setup Business Profile   | Vendors can register and configure their store with name, address, contact info, and logo.            |
-| **Vendor**         | Manage Inventory         | Vendors can add, update, or delete products including availability status and pricing.                |
-| **Vendor**         | Manage Orders            | Vendors can view and manage customer orders including accepting and updating order status.            |
-| **Vendor**         | Respond Feedback         | Vendors can view and reply to customer feedback on their products and services.                       |
-| **Delivery Agent** | Manage Delivery Requests | Delivery agents can view incoming delivery requests and choose to accept or reject them.              |
-| **Delivery Agent** | Complete Order Delivery  | Delivery agents can update the status of deliveries (e.g., picked up, on the way, delivered).         |
+
+### Customer Requirements
+**CUS-1 Add Items to Cart**  
+- The customer shall be able to add items to cart  
+- The customer shall be able to remove items from cart  
+- The customer shall be able to view cart contents  
+- The customer shall be able to see real-time price total  
+
+**CUS-2 Place Order**  
+- The customer shall be able to initiate checkout  
+- The customer shall be able to select delivery address  
+- The customer shall be able to choose payment method  
+- The customer shall be able to confirm order  
+
+**CUS-3 Track Order**  
+- The customer shall be able to view order status  
+- The customer shall be able to see delivery agent location  
+- The customer shall be able to contact delivery agent  
+- The customer shall be able to mark delivery as received  
+
+**CUS-4 Give Feedback**  
+- The customer shall be able to rate products (1-5 stars)  
+- The customer shall be able to write text reviews  
+- The customer shall be able to submit feedback anonymously  
+- The customer shall be able to edit feedback within 24 hours  
+
+### Vendor Requirements
+**VEN-1 Setup Business Profile**  
+- The vendor shall be able to register store information  
+- The vendor shall be able to upload the business logo  
+- The vendor shall be able to set service areas  
+- The vendor shall be able to configure business hours  
+
+**VEN-2 Manage Inventory**  
+- The vendor shall be able to add new products  
+- The vendor shall be able to update product details  
+- The vendor shall be able to mark items as out of stock  
+- The vendor shall be able to set product prices  
+
+**VEN-3 Manage Orders**  
+- The vendor shall be able to view new orders  
+- The vendor shall be able to accept/reject orders  
+- The vendor shall be able to update the order status  
+- The vendor shall be able to cancel orders  
+
+**VEN-4 Respond Feedback**  
+- The vendor shall be able to view customer ratings  
+- The vendor shall be able to reply to reviews  
+- The vendor shall be able to report inappropriate feedback  
+- The vendor shall be able to view feedback analytics  
+
+### Delivery Agent Requirements
+**DEL-1 Manage Delivery Requests**  
+- The agent shall be able to view assigned deliveries  
+- The agent shall be able to accept/reject delivery requests  
+- The agent shall be able to see delivery locations on the map  
+- The agent shall be able to view package details  
+
+**DEL-2 Complete Order Delivery**  
+- The agent shall be able to mark orders as picked up  
+- The agent shall be able to update the delivery status  
+- The agent shall be able to collect customer signatures  
+- The agent shall be able to mark orders as delivered  
 
 ## Quality Attributes and Key Stakeholder Concerns
 
