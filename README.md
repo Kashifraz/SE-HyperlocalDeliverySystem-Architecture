@@ -1,46 +1,4 @@
 # 📦 Hyperlocal Delivery System
-## Table of Contents
-
-1. **Hyperlocal Delivery System**  
-   1.1&nbsp;Group Members  
-   1.2&nbsp;Project Description  
-   1.3&nbsp;Features  
-&nbsp;&nbsp;&nbsp;&nbsp;1.3.1&nbsp;Customer Experience  
-&nbsp;&nbsp;&nbsp;&nbsp;1.3.2&nbsp;Vendor Dashboard  
-&nbsp;&nbsp;&nbsp;&nbsp;1.3.3&nbsp;Delivery Agent Mobile Interface  
-   1.4&nbsp;Benefits  
-
-2. **System Architecture Views**  
-   2.1&nbsp;System Overview  
-   2.2&nbsp;Stakeholder Analysis  
-
-3. **Functional Requirements**  
-   3.1&nbsp;Customer Requirements  
-   3.2&nbsp;Vendor Requirements  
-   3.3&nbsp;Delivery Agent Requirements  
-
-4. **Quality Attributes and Stakeholder Concerns**
-
-5. **Context Viewpoint**
-
-6. **Use Case Viewpoint**
-
-7. **Process Viewpoint**
-
-8. **Development Viewpoint**  
-   8.1&nbsp;Architectural Component Descriptions  
-   8.2&nbsp;Usability and Interoperability Designs  
-
-9. **Key Architectural Decisions Addressing Quality Attributes**  
-   9.1&nbsp;Usability  
-   9.2&nbsp;Performance  
-   9.3&nbsp;Availability  
-   9.4&nbsp;Scalability  
-   9.5&nbsp;Maintainability  
-
-10. **Architectural Decisions & Trade‑offs**
-
-11. **History Log**
 
 ## Group Members
 1) Syed Mohammad Kashif
