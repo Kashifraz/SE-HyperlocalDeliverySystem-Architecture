@@ -144,30 +144,32 @@ The Development View focuses on the system’s internal structure from a develop
 - **Component-based SPA Architecture**  
   *Why?* Provides app-like navigation without page reloads, creating smoother workflows for vendor dashboards. Components enable consistent UI patterns across the application.
 
-*Benefit:* Faster experience - no page reloads when clicking around. Buttons and menus behave consistently everywhere.
+  *Benefit:* Faster experience - no page reloads when clicking around. Buttons and menus behave consistently everywhere.
 
 - **Minimalist Modern Design**  
   *Why?* Reduces cognitive load through clean layouts, intuitive navigation, and adherence to current design systems. This directly improves task completion rates.
 
-*Benefit:* Not cluttered, with clear buttons and menus. Similar to apps people already know how to use.
+  *Benefit:* Not cluttered, with clear buttons and menus. Similar to apps people already know how to use.
 
 - **React Native for Mobile**  
   *Why?* Delivers native-like performance while maintaining a single codebase. Includes access to native gestures and animations that improve perceived responsiveness.
 
-*Benefit:* One code works on both iPhone and Android. Feels like a normal phone app with smooth scrolling.
+  *Benefit:* One code works on both iPhone and Android. Feels like a normal phone app with smooth scrolling.
 
 ### 2. Performance
 **Design Decisions:**
 - **Microservices with REST/JSON**  
   *Why?* Enables granular scaling of high-demand services independently. JSON provides lightweight data transfer compared to alternatives like XML.
 
+  *Benefit:* - Scale only the busy services (e.g., products and orders)  and avoid wasting resources on less-used components (e.g., feedback).
+  
 - **SQLite Local Storage**  
   *Why?* Caches frequently accessed data (e.g., product catalogs) to:  
   • Reduce API calls by 40-60%  
   • Enable offline functionality  
   • Decrease mobile data usage
 
-*Benefit:* Remembers your recent searches and orders so it doesn't need to download them again.
+  *Benefit:* Remembers your recent searches and orders so it doesn't need to download them again.
 
 - **Lazy Loading**  
   *Why?* Delays loading of non-critical resources (e.g., product images below fold) to:  
@@ -184,7 +186,7 @@ The Development View focuses on the system’s internal structure from a develop
   • Maintain 99.95% uptime  
   • Distribute read queries
 
-*Benefit:* If one database stops working, another can take over immediately.
+  *Benefit:* If one database stops working, another can take over immediately.
 
 - **Microservices Isolation**  
   *Why?* Contains failures to individual services - a payment service outage won't take down product catalog.
@@ -199,7 +201,7 @@ The Development View focuses on the system’s internal structure from a develop
 - **Stateless APIs**  
   *Why?* Enables instant scaling without session affinity requirements. Simplifies load balancing.
 
-  *Benefit:* No server-side session storage is required, making adding more servers (horizontal scaling) easy. Requests can be routed to any available instance.
+  *Benefit:* No server-side session storage is required, making adding more servers (horizontal scaling) easy. Requests can be routed to any available     instance.
 
 ### 5. Maintainability
 **Design Decisions:**
