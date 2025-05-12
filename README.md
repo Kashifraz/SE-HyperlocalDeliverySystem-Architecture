@@ -171,6 +171,16 @@ The Development View focuses on the system’s internal structure from a develop
 
   *Benefit:* Remembers your recent searches and orders so it doesn't need to download them again.
 
+- **Kubernetes Orchestration**  
+  *Why?* It maintains the high availability of the system by:  
+  • Automated deployment & auto scaling  
+  • Fault tolerance by preventing single-point failures 
+  • Load Balancing and self-healing
+  
+
+  *Benefit:* Remembers your recent searches and orders so it doesn't need to download them again.
+  
+
 - **Lazy Loading**  
   *Why?* Delays loading of non-critical resources (e.g., product images below fold) to:  
   • Improve initial page load time by ~30%  
@@ -223,14 +233,23 @@ The Development View focuses on the system’s internal structure from a develop
 
 ## Architecture Trade-offs
 
-| Quality Attribute | Decision          | Trade-off                          |
-|-------------------|-------------------|------------------------------------|
-| Scalability       | Microservices     | Higher operational complexity      |
-| Availability      | Multiple DBs      | Increased infrastructure cost      |
-| Maintainability   | MVC, ORM          | Slight performance overhead       |
-| Mobile Apps       | React Native      | Limited native performance         |
-| Performance       | SQLite            | Storage overhead on devices        |
-| API Design        | REST APIs (JSON)       | Less real-time than WebSockets     |
+## Architectural Decisions & Trade-offs
+
+| Quality Attribute | Key Decisions                    | Potential Trade-offs                                                                 |
+|-------------------|----------------------------------|-------------------------------------------------------------------------------------|
+| **Usability**     | Component-based SPA Architecture | Increased initial load time and SEO challenges                            |
+|                   | Minimalist Modern Design         | Risk of underutilizing screen space  |
+|                   | React Native for Mobile          | Platform-specific limitations         |
+| **Performance**   | Microservices with REST/JSON     | Network latency between services            |
+|                   | SQLite Local Storage             |  Increased mobile storage consumption                |
+|                   | Kubernetes Orchestration         | Steep learning curve and Cluster management overhead                                  |
+|                   | Lazy Loading                     | Implementation Complexity                 |
+| **Availability**  | Multi-DB Deployment              | Data consistency challenges and 2x storage costs                                      |
+|                   | Microservices Isolation          | Distributed tracing complexity and Inter-service communication failures               |
+| **Scalability**   | Horizontal Scaling               | Uneven scaling costs                         |
+|                   | Stateless APIs                   | External session storage dependency and JWT token management complexity               |
+| **Maintainability**| MVC with ORM                    | Limited control over queries and performance overhead (N+1 query risks)                                            |
+|                   | React Native Unified Codebase    | Platform-Specific Bugs (iOS/Android)    |
 
 ## 📜 History Log
 
