@@ -135,6 +135,101 @@ The Development View focuses on the system’s internal structure from a develop
 </div>
  <br>
 
+
+
+## Key Architectural Decisions to Address Quality Attributes
+
+### 1. Usability
+**Design Decisions:**
+- **Component-based SPA Architecture**  
+  *Why?* Provides app-like navigation without page reloads, creating smoother workflows for vendor dashboards. Components enable consistent UI patterns across the application.
+
+*Benefit:* Faster experience - no page reloads when clicking around. Buttons and menus behave consistently everywhere.
+
+- **Minimalist Modern Design**  
+  *Why?* Reduces cognitive load through clean layouts, intuitive navigation, and adherence to current design systems. This directly improves task completion rates.
+
+*Benefit:* Not cluttered, with clear buttons and menus. Similar to apps people already know how to use.
+
+- **React Native for Mobile**  
+  *Why?* Delivers native-like performance while maintaining a single codebase. Includes access to native gestures and animations that improve perceived responsiveness.
+
+*Benefit:* One code works on both iPhone and Android. Feels like a normal phone app with smooth scrolling.
+
+### 2. Performance
+**Design Decisions:**
+- **Microservices with REST/JSON**  
+  *Why?* Enables granular scaling of high-demand services independently. JSON provides lightweight data transfer compared to alternatives like XML.
+
+- **SQLite Local Storage**  
+  *Why?* Caches frequently accessed data (e.g., product catalogs) to:  
+  • Reduce API calls by 40-60%  
+  • Enable offline functionality  
+  • Decrease mobile data usage
+
+*Benefit:* Remembers your recent searches and orders so it doesn't need to download them again.
+
+- **Lazy Loading**  
+  *Why?* Delays loading of non-critical resources (e.g., product images below fold) to:  
+  • Improve initial page load time by ~30%  
+  • Reduce server bandwidth costs
+
+  *Benefit:* Only shows product pictures as you scroll down, so the screens load faster.
+
+### 3. Availability
+**Design Decisions:**
+- **Multi-DB Deployment**  
+  *Why?* Implements active-active replication to:  
+  • Survive regional outages  
+  • Maintain 99.95% uptime  
+  • Distribute read queries
+
+*Benefit:* If one database stops working, another can take over immediately.
+
+- **Microservices Isolation**  
+  *Why?* Contains failures to individual services - a payment service outage won't take down product catalog.
+  
+  *Benefit:* If payments stop working, you can still browse products.
+  
+### 4. Scalability
+**Design Decisions:**
+- **Horizontal Microservices Scaling**  
+  *Why?* Allows adding instances of only the services under load (e.g., scaling order processing separately from user profiles).
+
+- **Stateless APIs**  
+  *Why?* Enables instant scaling without session affinity requirements. Simplifies load balancing.
+
+  *Benefit:* No server-side session storage is required, making adding more servers (horizontal scaling) easy. Requests can be routed to any available instance.
+
+### 5. Maintainability
+**Design Decisions:**
+- **MVC with ORM**  
+  *Why?* Provides:  
+  • Clear separation between business logic and presentation  
+  • Automated SQL generation, reducing boilerplate code  
+  • Schema version control via migrations
+
+  *Benefit:* Keeps code organized like separate folders for different tasks.
+
+- **React Native Unified Codebase**  
+  *Why?* Reduces mobile maintenance overhead by:  
+  • Sharing 85%+ code between iOS/Android  
+  • Enabling single CI/CD pipeline
+  
+  *Benefit:* Fix a bug once and it's fixed on both iPhone and Android.
+
+
+## Architecture Trade-offs
+
+| Quality Attribute | Decision          | Trade-off                          |
+|-------------------|-------------------|------------------------------------|
+| Scalability       | Microservices     | Higher operational complexity      |
+| Availability      | Multiple DBs      | Increased infrastructure cost      |
+| Maintainability   | MVC, ORM          | Slight performance overhead       |
+| Mobile Apps       | React Native      | Limited native performance         |
+| Performance       | SQLite            | Storage overhead on devices        |
+| API Design        | REST APIs (JSON)       | Less real-time than WebSockets     |
+
 ## 📜 History Log
 
 | Date           | Task Description                                                                                 | Contributor                  |
@@ -142,5 +237,12 @@ The Development View focuses on the system’s internal structure from a develop
 | 2025, April 6  | Discussion and selection of project ideas for MSA course project.                                | Syed, Danish, Shahzad, Juraev|
 | 2025, April 6  | Finalized the idea of a hyperlocal delivery platform and created the GitHub repository.          | Syed, Danish, Shahzad, Juraev|
 | 2025, April 6  | Drafted 150-word and 250-word project descriptions for GitHub and course use.                    | Syed, Danish, Shahzad, Juraev|
+| 2025, April 15 | Created system overview diagram and written explanation of the system architecture.              | Syed, Shahzad                |
+| 2025, April 15 | Stakeholder analysis and identifying stakeholders' key concerns (quality attributes)             | Syed, Danish, Shahzad        |
+| 2025, April 15 | Writing of functional requirements and quality attributes.                                       | Syed, Danish, Juraev         |
+| 2025, May 05   | Created Use case diagram and context diagram to provide the use case view of the architecture.  | Syed, Danish, Shahzad, Juraev |
+| 2025, May 05   | Created the system sequence diagram to show the process view of the system.                     | Syed, Shahzad                 |
+| 2025, May 07   | Created the mid-fidelity design of the system to show the usability view of the system.         | Syed, Danish|
+| 2025, May 07 | Listed the key architecture decisions, how it addresses the quality attributes and potential trade-offs. | Syed, Danish, Shahzad, Juraev|
 
 
