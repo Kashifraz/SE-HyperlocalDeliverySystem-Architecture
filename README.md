@@ -218,53 +218,29 @@ We provided the mid-fidelity designs to address the end users' usability concern
 </div>
  <br>
 
-## Microservices Architecture – Hyper‑Local Delivery Platform
+## Hyper‑Local Delivery Microservices (Quick View)
 
-### 1. Tier Overview
+### Core Pieces
+- **Clients** – Customer & Rider apps, Vendor dashboard  
+- **API Gateway** – Single entry; handles auth, routing, and rate‑limits  
+- **Domain Services**  
+  - *Product* · *Cart* · *Feedback*  
+  - *Payment* · *Order* · *Tracking* · *Vendor Profile*
 
-| Tier | Components | Purpose & Key Responsibilities | Notes |
-|------|------------|--------------------------------|-------|
-| **Client / Presentation** | **Customer App**, **Delivery App**, **Vendor Dashboard** | Expose tailored UIs for shoppers, riders, and store owners. | All calls routed to the **API Gateway** (HTTPS + JSON). |
-| **Edge / Cross‑Cutting** | **API Gateway** | Authenticates, rate‑limits, logs, and routes requests. Hides internal topology. | OAuth 2 / JWT, request ↔ response transforms, circuit‑breaking. |
-| **Core Domain Services** | **Product Service**<br>**Cart Service**<br>**Feedback Service** | Customer‑facing capabilities. | Cart queries Product for price/stock; Feedback links to Product IDs. |
-| **Supporting / Workflow Services** | **Payment Service**<br>**Order Management Service**<br>**Tracking Service**<br>**Business Profile Service** | Handle checkout, order life‑cycle, courier tracking, vendor analytics. | Payment triggers Order Management; order events drive Tracking & Profile updates. |
+### How It Works (Happy Path)
+1. Client fetches catalogue (*Product*).  
+2. Items added to basket (*Cart*).  
+3. Checkout triggers payment (*Payment*) → creates order (*Order*).  
+4. Order event updates courier ETA (*Tracking*) and vendor stats (*Vendor Profile*).  
+5. After delivery, customer leaves a rating (*Feedback*).
 
----
+### Why This Design?
+- **Gateway = simple clients, secure edge**  
+- **Small, focused services = independent deploy & scale**  
+- **Events connect services = loose coupling & resilience**
 
-### 2. Happy‑Path Runtime Flow
+*Lean, event‑first architecture ready for rapid feature growth.* 
 
-1. **Browse & Select**  
-   Client → API Gateway → **Product Service** (retrieve catalogue).
-
-2. **Add to Cart**  
-   Client → **Cart Service** → (validates with **Product Service**).
-
-3. **Checkout & Pay**  
-   **Cart Service** → **Payment Service** (charge & tokenise).
-
-4. **Order Creation**  
-   On success, Payment → **Order Management Service** → *OrderPlaced* event.
-
-5. **Fulfilment & Tracking**  
-   *OrderPlaced* → **Tracking Service** (assign courier, stream ETA)  
-   *OrderPlaced* → **Business Profile Service** (update vendor stats, adjust inventory).
-
-6. **Post‑Delivery Feedback**  
-   Client → **Feedback Service** (ratings tied to product & order IDs).
-
----
-
-### 3. Architectural Highlights
-
-- **Bounded Contexts** – Product, Cart, Payment, and Logistics logic live in isolated services for independent scaling and deployment.  
-- **API Gateway Pattern** – Central entry point simplifies security, traffic shaping, and client integration.  
-- **Event‑Driven Choreography** – Asynchronous events (e.g., *OrderPlaced*) decouple long‑running workflows, boosting resilience and throughput.  
-- **Polyglot Friendly** – Each microservice can choose its optimal tech stack (e.g., Go for Tracking, Node.js for Cart) as long as it speaks REST or publishes events.  
-- **Extensibility** – New capabilities (Inventory, Geofencing, Recommendation) can be added as additional services without disrupting existing clients.
-
----
-
-> **Result:** A layered, event‑centric microservices architecture that supports rapid feature evolution, fault isolation, and autonomous team ownership—ideal for a hyper‑local delivery marketplace.
 
 <!-- Figure 9 – Microservices Architecture -->
 ![Microservices Architecture Diagram](./microservices_architecture_view.png "Microservices Architecture")
