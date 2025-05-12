@@ -108,11 +108,41 @@ The System Sequence Diagram (SSD) below outlines the step-by-step interactions b
 <div align="center">
   <img src="./system-sequence-diagram-2.png" alt="Diagram" width="700">
   <br>
-  <em> Figure 4: System Sequence Diagram: Order workflow between Customer, Vendor, and Delivery Agent</em>
+  <em> Figure 4: System Sequence Diagram to show interaction between Customer, Vendor, and Delivery Agent</em>
 </div>
 
 ## 📄 Development Viewpoint
 The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
+
+<div align="center">
+  <img src="./component.png" alt="Diagram" width="800">
+  <br>
+  <em> Figure 5: Component view of hyperlocal delivery system</em>
+</div>
+ <be>
+
+### Architectural Component Descriptions
+
+**ProductComponent**  
+The `ProductComponent` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `CartComponent` and `OrderComponent` rely on to display items and validate availability during checkout.
+
+**CartComponent**  
+The `CartComponent` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `ProductComponent` to fetch real-time product details and passes finalized carts to the `OrderComponent` to initiate the checkout process.
+
+**OrderComponent**  
+The `OrderComponent` oversees the entire order lifecycle, from creation to confirmation or cancellation. It coordinates with the `CartComponent` to process items, triggers the `PaymentComponent` for transactions, and notifies the `TrackingComponent` to monitor order status post-purchase.
+
+**PaymentComponent**  
+The `PaymentComponent` manages all payment processing, including credit card transactions, digital wallets, and refunds. It ensures secure payment authorization and communicates success or failure back to the `OrderComponent`, which then updates the order status accordingly.
+
+**TrackingComponent**  
+The `TrackingComponent` monitors order fulfillment, providing real-time shipping and delivery status updates. It receives order data from the `OrderComponent`, tracks and delivers products, and notifies customers of progress.
+
+**FeedbackComponent**  
+The `FeedbackComponent` collects and processes customer reviews and ratings linked to orders. It aggregates feedback for analytics, which the `BusinessProfileComponent` uses to generate vendor performance reports and improve service quality.
+
+**BusinessProfileComponent**  
+The `BusinessProfileComponent` manages vendor profiles, store settings, and business analytics. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
 ### Usability and Interoperability
@@ -120,19 +150,19 @@ The Development View focuses on the system’s internal structure from a develop
 <div align="center">
   <img src="./Customer-2.png" alt="Diagram" width="1000">
   <br>
-  <em> Figure 5: Mid-fidelity design for customer mobile application</em>
+  <em> Figure 6: Mid-fidelity design for customer mobile application</em>
 </div>
  <br>
 <div align="center">
   <img src="./Agent.png" alt="Diagram" width="1000">
   <br>
-  <em> Figure 6: Mid-fidelity design for delivery agent mobile application</em>
+  <em> Figure 7: Mid-fidelity design for delivery agent mobile application</em>
 </div>
  <br>
 <div align="center">
  <img src="./vendor.png" alt="Context Diagram" width="800"/>
   <br>
-  <em> Figure 7: Mid-fidelity design for Vendor Dashboard</em>
+  <em> Figure 8: Mid-fidelity design for Vendor Dashboard</em>
 </div>
  <br>
 
