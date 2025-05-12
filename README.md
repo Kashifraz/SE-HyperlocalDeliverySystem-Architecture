@@ -239,6 +239,7 @@ The `BusinessProfileComponent` manages vendor profiles, store settings, and busi
 
 
 ### Usability and Interoperability
+We provided the mid-fidelity designs to address the end users' usability concerns and demonstrate how our system is built to work on different platforms such as IOs, Android and Web, demonstrating the interoperability of our system. This will help us demonstrate our key architectural decisions for improved user experience.
 
 <div align="center">
   <img src="./Customer-2.png" alt="Diagram" width="1000">
