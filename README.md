@@ -219,13 +219,14 @@ We provided the mid-fidelity designs to address the end users' usability concern
  <br>
 
 ## Microservices Architecture 
-
+Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
 <div align="center">
- <img src="./microservices_architecture_view.png" alt="System Overview" width="1000"/>
+ <img src="./micoservices.png" alt="mircoservices Diagram" width="700"/>
   <br>
-  <em> Figure 9. Microservices‑based hyper‑local delivery platform.</em>
+  <em> Figure 9: Mircoservices architecture style of Hyperlocal delivery sytem</em>
 </div>
+ <br>
 
 ## Key Architectural Decisions to Address Quality Attributes
 
