@@ -218,34 +218,14 @@ We provided the mid-fidelity designs to address the end users' usability concern
 </div>
  <br>
 
-## Hyper‑Local Delivery Microservices (Quick View)
-
-### Core Pieces
-- **Clients** – Customer & Rider apps, Vendor dashboard  
-- **API Gateway** – Single entry; handles auth, routing, and rate‑limits  
-- **Domain Services**  
-  - *Product* · *Cart* · *Feedback*  
-  - *Payment* · *Order* · *Tracking* · *Vendor Profile*
-
-### How It Works (Happy Path)
-1. Client fetches catalogue (*Product*).  
-2. Items added to basket (*Cart*).  
-3. Checkout triggers payment (*Payment*) → creates order (*Order*).  
-4. Order event updates courier ETA (*Tracking*) and vendor stats (*Vendor Profile*).  
-5. After delivery, customer leaves a rating (*Feedback*).
-
-### Why This Design?
-- **Gateway = simple clients, secure edge**  
-- **Small, focused services = independent deploy & scale**  
-- **Events connect services = loose coupling & resilience**
-
-*Lean, event‑first architecture ready for rapid feature growth.* 
+## Microservices Architecture 
 
 
-<!-- Figure 9 – Microservices Architecture -->
-![Microservices Architecture Diagram](./microservices_architecture_view.png "Microservices Architecture")
-
-*Figure 9. Microservices‑based hyper‑local delivery platform.*
+<div align="center">
+ <img src="./microservices_architecture_view.png" alt="System Overview" width="1000"/>
+  <br>
+  <em> Figure 9. Microservices‑based hyper‑local delivery platform.</em>
+</div>
 
 ## Key Architectural Decisions to Address Quality Attributes
 
