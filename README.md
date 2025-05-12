@@ -78,7 +78,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Customers**       | Easy-to-use app for browsing, ordering products, and receiving deliveries quickly.                       | Usability, Performance          |
 | **Vendors**         | System must be highly available and consistently operational to manage inventory and orders effectively. | Availability                    |
 | **Delivery Agents** | Simple, reliable app to accept deliveries and update statuses easily.                                    | Usability, Availability         |
-| **Product Owner**   | The system architecture should support easy scaling to accommodate business growth.                      | Scalability                     |
+| **Product Owner**   | The system architecture should support easy scaling  and work across multiple devices.                   | Scalability, Interoperability                    |
 | **Developers**      | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution.          | Maintainability                 |
 
 ## 📄 Context Viewpoint
@@ -119,15 +119,21 @@ The Development View focuses on the system’s internal structure from a develop
 <div align="center">
   <img src="./Customer-2.png" alt="Diagram" width="1000">
   <br>
-  <em> Figure 5: Low fidelity design for customer mobile application</em>
+  <em> Figure 5: Mid-fidelity design for customer mobile application</em>
 </div>
-
+ <br>
 <div align="center">
   <img src="./Agent.png" alt="Diagram" width="1000">
   <br>
-  <em> Figure 5: Low fidelity design for delivery agent mobile application</em>
+  <em> Figure 6: Mid-fidelity design for delivery agent mobile application</em>
 </div>
-
+ <br>
+<div align="center">
+ <img src="./vendor.png" alt="Context Diagram" width="800"/>
+  <br>
+  <em> Figure 7: Mid-fidelity design for Vendor Dashboard</em>
+</div>
+ <br>
 
 ## 📜 History Log
 
