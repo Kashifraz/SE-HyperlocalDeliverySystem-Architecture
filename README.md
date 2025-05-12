@@ -115,7 +115,7 @@ The System Sequence Diagram (SSD) below outlines the step-by-step interactions b
 The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
 
 
-## Usability Viewpoint
+### Usability and Interoperability
 
 <div align="center">
   <img src="./Customer-2.png" alt="Diagram" width="1000">
