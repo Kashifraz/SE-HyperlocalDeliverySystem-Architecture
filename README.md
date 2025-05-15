@@ -224,7 +224,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 <div align="center">
  <img src="./micoservices.png" alt="mircoservices Diagram" width="700"/>
   <br>
-  <em> Figure 9: Mircoservices architecture style of Hyperlocal delivery sytem</em>
+  <em> Figure 9: Mircoservices architecture style of Hyperlocal delivery system</em>
 </div>
  <br>
 
