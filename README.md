@@ -1,5 +1,33 @@
 # 📦 Hyperlocal Delivery System
-
+## Table of Contents
+1. [Project Description](#-project-description)
+2. [Features](#features)
+3. [System Overview](#-system-overview)
+4. [Stakeholder Analysis](#stakeholder-analysis)
+5. [Functional Requirements](#functional-requirements)
+   - 5.1 [Customer Requirements](#1-customer-requirements)
+   - 5.2 [Vendor Requirements](#2-vendor-requirements)
+   - 5.3 [Delivery Agent Requirements](#3-delivery-agent-requirements)
+6. [Quality Attributes](#quality-attributes-and-key-stakeholder-concerns)
+7. [Architectural Views](#-architectural-views)
+   - 7.1 [Context Viewpoint](#-context-viewpoint)
+   - 7.2 [Use Case Viewpoint](#-use-case-viewpoint)
+   - 7.3 [Process Viewpoint](#-process-viewpoint)
+   - 7.4 [Development Viewpoint](#-development-viewpoint)
+8. [Microservices Architecture](#microservices-architecture)
+9. [Key Architectural Decisions](#key-architectural-decisions-to-address-quality-attributes)
+10. [Architectural Trade-offs](#architectural-decisions--trade-offs)
+11. [Revision History](#-history-log)
+12. [Figures](#figures)
+    - 12.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
+    - 12.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
+    - 12.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
+    - 12.4 [Figure 4: Sequence Diagram](#figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
+    - 12.5 [Figure 5: Component Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
+    - 12.6 [Figure 6: Customer UI](#figure-6-mid-fidelity-design-for-customer-mobile-application)
+    - 12.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
+    - 12.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
+    - 12.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
 ## Group Members
 1) Syed Mohammad Kashif
 2) Abdul Raheem Shahzad
