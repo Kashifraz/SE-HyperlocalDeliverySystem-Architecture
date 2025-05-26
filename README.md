@@ -370,7 +370,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 | **Maintainability**| MVC with ORM                    | Limited control over queries and performance overhead (N+1 query risks)                                            |
 |                   | React Native Unified Codebase    | Platform-Specific Bugs (iOS/Android)    |
 
-## 📜 History Log
+## History Log
 
 | Date           | Task Description                                                                                 | Contributor                  |
 |----------------|--------------------------------------------------------------------------------------------------|------------------------------|
