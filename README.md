@@ -174,6 +174,7 @@ The `Context Diagram` below shows how external entities, such as users and exter
   <br>
   <em> Figure 2: Context view of the system showing the interaction of external entities with our system</em>
 </div>
+<a id="figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system"></a>
 
 ### Use Case Viewpoint
 The Use Case Viewpoint captures the primary ways different users (customers, vendors, and delivery agents) interact with the delivery platform to achieve their goals. It outlines the major functionalities the system must support, such as browsing vendors, placing orders, tracking deliveries, managing inventory, and updating order statuses. This viewpoint helps in understanding user requirements clearly by focusing on user-system interactions and ensures that the system is designed around real-world activities and expectations of its stakeholders.
@@ -183,6 +184,7 @@ The Use Case Viewpoint captures the primary ways different users (customers, ven
   <br>
   <em> Figure 3: Use case diagram demonstrating the use cases for vendor, customer and delivery agent</em>
 </div>
+<a id="figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent"></a>
 
 ### Process Viewpoint
 The Process Viewpoint focuses on the system’s dynamic behavior and describes how different parts of the system interact at runtime to achieve specific tasks. It models processes such as order placement, payment handling, delivery tracking, and inventory updates, often showing how components communicate, synchronize, and handle concurrent activities. In this delivery platform, the process view ensures smooth coordination between customers, vendors, and delivery agents by managing workflows like order processing, delivery assignment, and real-time status updates.
@@ -193,6 +195,7 @@ The System Sequence Diagram (SSD) below outlines the step-by-step interactions b
   <br>
   <em> Figure 4: System Sequence Diagram to show interaction between Customer, Vendor, and Delivery Agent</em>
 </div>
+<a id="figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent"></a>
 
 ### Development Viewpoint
 The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
@@ -202,7 +205,7 @@ The Development View focuses on the system’s internal structure from a develop
   <br>
   <em> Figure 5: Component view of hyperlocal delivery system</em>
 </div>
- <be>
+<a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
 
 ### Architectural Component Descriptions
 
@@ -236,19 +239,21 @@ We provided the mid-fidelity designs to address the end users' usability concern
   <br>
   <em> Figure 6: Mid-fidelity design for customer mobile application</em>
 </div>
- <br>
+<a id="figure-6-mid-fidelity-design-for-customer-mobile-application"></a>
+
 <div align="center">
   <img src="./Agent.png" alt="Diagram" width="1000">
   <br>
   <em> Figure 7: Mid-fidelity design for delivery agent mobile application</em>
 </div>
- <br>
+<a id="figure-7-mid-fidelity-design-for-delivery-agent-mobile-application"></a>
+
 <div align="center">
  <img src="./vendor.png" alt="Context Diagram" width="800"/>
   <br>
   <em> Figure 8: Mid-fidelity design for Vendor Dashboard</em>
 </div>
- <br>
+<a id="figure-8-mid-fidelity-design-for-vendor-dashboard"></a>
 
 ## Microservices Architecture 
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
@@ -258,7 +263,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
   <br>
   <em> Figure 9: Mircoservices architecture style of Hyperlocal delivery system</em>
 </div>
- <br>
+<a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 
 ## Key Architectural Decisions to Address Quality Attributes
 
