@@ -293,8 +293,6 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
   > _React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
 
----
-
 ### 2. Performance
 
 #### 2.1 Microservices with REST/JSON
@@ -329,7 +327,6 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Implement **critical CSS** and prioritized loading, or use **CDN edge caching**.  
   > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
----
 
 ### 3. Availability
 
@@ -369,7 +366,6 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **sticky sessions** or **JWT tokens**.  
   > _Stateless APIs chosen for their simplicity; sticky sessions and JWTs add operational considerations._
 
----
 
 ### 5. Maintainability
 
@@ -389,25 +385,6 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **Flutter** for even more unified code or **native development** for full control.  
   > _React Native chosen for simplicity and shared code; Flutter and native were considered but add complexity._
 
-
-
-## Architectural Decisions & Trade-offs
-
-| Quality Attribute | Key Decisions                    | Potential Trade-offs                                                                 |
-|-------------------|----------------------------------|-------------------------------------------------------------------------------------|
-| **Usability**     | Component-based SPA Architecture | Increased initial load time and SEO challenges                            |
-|                   | Minimalist Modern Design         | Risk of underutilizing screen space  |
-|                   | React Native for Mobile          | Platform-specific limitations         |
-| **Performance**   | Microservices with REST/JSON     | Network latency between services            |
-|                   | SQLite Local Storage             |  Increased mobile storage consumption                |
-|                   | Kubernetes Orchestration         | Steep learning curve and Cluster management overhead                                  |
-|                   | Lazy Loading                     | Implementation Complexity                 |
-| **Availability**  | Multi-DB Deployment              | Data consistency challenges and 2x storage costs                                      |
-|                   | Microservices Isolation          | Distributed tracing complexity and Inter-service communication failures               |
-| **Scalability**   | Horizontal Scaling               | Uneven scaling costs                         |
-|                   | Stateless APIs                   | External session storage dependency and JWT token management complexity               |
-| **Maintainability**| MVC with ORM                    | Limited control over queries and performance overhead (N+1 query risks)                                            |
-|                   | React Native Unified Codebase    | Platform-Specific Bugs (iOS/Android)    |
 
 ## History Log
 
