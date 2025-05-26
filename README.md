@@ -267,10 +267,20 @@ Our system follows the mircoservices architecture style in comparison to monolit
 <a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 
 ### Model-View-Controller (MVC) Pattern
-
+<div align="center">
+ <img src="./mvc_pattern.png" alt="MVC pattern diagram" width="700"/>
+  <br>
+  <em> Figure 10: MVC pattern used in Hyperlocal delivery system</em>
+</div>
+<a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 
 ### RESTful API Pattern
-
+<div align="center">
+ <img src="./REST.png" alt="REST API diagram" width="700"/>
+  <br>
+  <em> Figure 11: RESTful API pattern used in Hyperlocal delivery system</em>
+</div>
+<a id="figure-11-rest-pattern-of-hyperlocal-delivery-system"></a>
 
 ## Key Architectural Decisions to Address Quality Attributes
 
