@@ -1,34 +1,38 @@
 ## Table of Contents
-1. [Project Description](#project-description)
-2. [Features](#features)
-3. [System Overview](#system-overview)
-4. [Stakeholder Analysis](#stakeholder-analysis)
-5. [Functional Requirements](#functional-requirements)
-   - 5.1 [Customer Requirements](#customer-requirements)
-   - 5.2 [Vendor Requirements](#vendor-requirements)
-   - 5.3 [Delivery Agent Requirements](#delivery-agent-requirements)
-6. [Quality Attributes](#quality-attributes-and-key-stakeholder-concerns)
-7. [Architectural Views](#architectural-views)
-   - 7.1 [Context Viewpoint](#context-viewpoint)
-   - 7.2 [Use Case Viewpoint](#use-case-viewpoint)
-   - 7.3 [Process Viewpoint](#process-viewpoint)
-   - 7.4 [Development Viewpoint](#development-viewpoint)
-8. [Usability](#usability)
-9. [Interoperability](#interoperability)
-10. [Microservices Architecture](#microservices-architecture)
-11. [Key Architectural Decisions](#key-architectural-decisions-to-address-quality-attributes)
-12. [Architectural Trade-offs](#architectural-decisions--trade-offs)
-13. [Revision History](#history-log)
+
+1. [Project Description](#1-project-description)
+2. [Features](#2-features)
+3. [System Overview](#3-system-overview)
+4. [Stakeholder Analysis](#4-stakeholder-analysis)
+5. [Functional Requirements](#5-functional-requirements)
+   - 5.1 [Customer Requirements](#5.1-customer-requirements)
+   - 5.2 [Vendor Requirements](#5.2-vendor-requirements)
+   - 5.3 [Delivery Agent Requirements](#5.3-delivery-agent-requirements)
+6. [Quality Attributes](#6-quality-attributes-and-key-stakeholder-concerns)
+7. [Architectural Views](#7-architectural-views)
+   - 7.1 [Context Viewpoint](#7.1-context-viewpoint)
+   - 7.2 [Use Case Viewpoint](#7.2-use-case-viewpoint)
+   - 7.3 [Process Viewpoint](#7.3-process-viewpoint)
+   - 7.4 [Development Viewpoint](#7.4-development-viewpoint)
+8. [Usability](#8-usability)
+9. [Interoperability](#9-interoperability)
+10. [Microservices Architecture](#10-microservices-architecture)
+11. [Key Architectural Decisions](#11-key-architectural-decisions-to-address-quality-attributes)
+12. [Architectural Trade-offs](#12-architectural-decisions--trade-offs)
+13. [Revision History](#13-history-log)
 14. Figures
-    - 14.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
-    - 14.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
-    - 14.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
-    - 14.4 [Figure 4: Sequence Diagram](#figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
-    - 14.5 [Figure 5: Component Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
-    - 14.6 [Figure 6: Customer UI](#figure-6-mid-fidelity-design-for-customer-mobile-application)
-    - 14.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
-    - 14.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
-    - 14.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
+    - 14.1 [Figure 1: System Overview](#14.1-figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
+    - 14.2 [Figure 2: Context Diagram](#14.2-figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
+    - 14.3 [Figure 3: Use Case Diagram](#14.3-figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
+    - 14.4 [Figure 4: Sequence Diagram](#14.4-figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
+    - 14.5 [Figure 5: Component Diagram](#14.5-figure-5-component-view-of-hyperlocal-delivery-system)
+    - 14.6 [Figure 6: Customer UI](#14.6-figure-6-mid-fidelity-design-for-customer-mobile-application)
+    - 14.7 [Figure 7: Agent UI](#14.7-figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
+    - 14.8 [Figure 8: Vendor Dashboard](#14.8-figure-8-mid-fidelity-design-for-vendor-dashboard)
+    - 14.9 [Figure 9: Microservices](#14.9-figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
+    - 14.10 [Figure 10: MVC Pattern](#14.10-figure-10-mvc-pattern-of-hyperlocal-delivery-system)
+    - 14.11 [Figure 11: REST API Pattern](#14.11-figure-11-rest-pattern-of-hyperlocal-delivery-system)
+
 
 
 
@@ -39,7 +43,7 @@
 4) Juraev Dilshodbek
    
 
-## Project Description
+## 1 Project Description
 This project aims to build a `hyperlocal delivery` platform tailored for customers located within a `3-mile radius` of local shops and food vendors. The platform allows users to `browse` nearby grocery stores, restaurants, and small-scale food points, `view item details` including prices and availability, `add items` to a cart, and `place orders` for home delivery. Customers receive `live updates` on their order status—from confirmation to preparation and delivery—and can `track` the order and delivery agent’s.
 
 To ensure quality and trust, customers are encouraged to leave `feedback and ratings` for each vendor, product, and delivery experience. This helps other users make informed decisions and motivates vendors and delivery personnel to maintain high service standards.
@@ -50,7 +54,7 @@ The platform emphasizes ease of use, responsiveness, and seamless interactions a
 
 Overall, this system supports the growing demand for convenient, reliable, and locally focused delivery services, fostering stronger connections between neighborhood vendors and their surrounding communities.
 
-## Features
+## 2 Features
 - **Customer Experience:**
   - Browse local vendors and food points.
   - Add items to the cart and place orders.
@@ -70,7 +74,7 @@ Overall, this system supports the growing demand for convenient, reliable, and l
 ## Benefits
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
 
-## 📄 System Overview
+## 3 System Overview
 We included the system `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, which helps us interact with a distributed microservices backend. The system also has three main databases to store its data.
 
 <div align="center">
@@ -80,7 +84,7 @@ We included the system `Overview diagram` showing the system's end users. It sho
 </div>
 <a id="figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture"></a>
 
-## Stakeholder Analysis
+## 4 Stakeholder Analysis
 
 The following are the primary stakeholders for this hyperlocal delivery platform. Each stakeholder influences the system design based on their specific needs and expectations:
 
@@ -90,9 +94,9 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - **Product Owner**: Oversees the platform’s strategic direction and growth. They are concerned with building a scalable system that can support future expansions without major redesigns.
 - **Developers**: Technical team responsible for developing, maintaining, and improving the platform. They prioritize clean, maintainable code to ensure long-term system health and rapid feature updates.
 
-## Functional Requirements
+## 5 Functional Requirements
 
-### Customer Requirements
+### 5.1 Customer Requirements
 **CUS-1 Add Items to Cart**  
 - The customer shall be able to add items to cart  
 - The customer shall be able to remove items from cart  
@@ -117,7 +121,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The customer shall be able to submit feedback anonymously  
 - The customer shall be able to edit feedback within 24 hours  
 
-### Vendor Requirements
+### 5.2 Vendor Requirements
 **VEN-1 Setup Business Profile**  
 - The vendor shall be able to register store information  
 - The vendor shall be able to upload the business logo  
@@ -142,7 +146,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The vendor shall be able to report inappropriate feedback  
 - The vendor shall be able to view feedback analytics  
 
-### Delivery Agent Requirements
+### 5.3 Delivery Agent Requirements
 **DEL-1 Manage Delivery Requests**  
 - The agent shall be able to view assigned deliveries  
 - The agent shall be able to accept/reject delivery requests  
@@ -155,7 +159,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The agent shall be able to collect customer signatures  
 - The agent shall be able to mark orders as delivered  
 
-## Quality Attributes and Key Stakeholder Concerns
+## 6. Quality Attributes and Key Stakeholder Concerns
 
 | **Stakeholder**     | **Key Concerns**                                                                                         | **Relevant Quality Attributes** |
 | ------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------- |
@@ -165,8 +169,8 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Product Owner**   | The system architecture should support easy scaling  and work across multiple devices.                   | Scalability, Interoperability                    |
 | **Developers**      | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution.          | Maintainability                 |
 
-## Architectural Views
-### Context Viewpoint
+## 7. Architectural Views
+### 7.1 Context Viewpoint
 The `Context View` describes the `system’s boundaries` by showing its interactions with external actors such as users, vendors, delivery agents, and other systems. It highlights what is inside the system and what lies outside, helping stakeholders understand how the system fits into its environment and what major inputs and outputs exist.
 
 The `Context Diagram` below shows how external entities, such as users and external systems, interact with our system. It shows that `vendors` provide their products and working hours information to our system, and the system provides customers with orders and business. The `customer` provides their delivery information and the products they added to the cart, and the system returns order confirmation and tracking of their orders. Similarly, the `delivery agent` receives the pending orders for delivery and completes the order delivery. Our system also interacts with external systems such as `Location API` (Google Maps) by providing the addresses and receiving the coordinates (longitude and latitude).
@@ -178,7 +182,7 @@ The `Context Diagram` below shows how external entities, such as users and exter
 </div>
 <a id="figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system"></a>
 
-### Use Case Viewpoint
+### 7.2 Use Case Viewpoint
 The Use Case Viewpoint captures the primary ways different users (customers, vendors, and delivery agents) interact with the delivery platform to achieve their goals. It outlines the major functionalities the system must support, such as browsing vendors, placing orders, tracking deliveries, managing inventory, and updating order statuses. This viewpoint helps in understanding user requirements clearly by focusing on user-system interactions and ensures that the system is designed around real-world activities and expectations of its stakeholders.
 
 <div align="center">
@@ -188,7 +192,7 @@ The Use Case Viewpoint captures the primary ways different users (customers, ven
 </div>
 <a id="figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent"></a>
 
-### Process Viewpoint
+### 7.3 Process Viewpoint
 The Process Viewpoint focuses on the system’s dynamic behavior and describes how different parts of the system interact at runtime to achieve specific tasks. It models processes such as order placement, payment handling, delivery tracking, and inventory updates, often showing how components communicate, synchronize, and handle concurrent activities. In this delivery platform, the process view ensures smooth coordination between customers, vendors, and delivery agents by managing workflows like order processing, delivery assignment, and real-time status updates.
 
 The System Sequence Diagram (SSD) below outlines the step-by-step interactions between the key actors—Customer, Vendor, Delivery Agent—and the Hyperlocal Delivery Platform during an order's lifecycle. The process begins when the Customer browses nearby vendors, selects items, and confirms the order, prompting the System to process payment and notify the Vendor while assigning a Delivery Agent. Next, the Vendor updates inventory, confirms order acceptance, and marks it as ready for pickup, which triggers the System to alert the Delivery Agent and update the Customer on the order status. The Delivery Agent then accepts the request, picks up the order, and provides real-time updates as it moves through "En Route" to "Delivered," with the System relaying tracking information to the Customer. Finally, after delivery, the Customer submits feedback on the Vendor, products, and delivery experience, which the System records for analytics and service improvement. The diagram effectively captures the end-to-end workflow, highlighting real-time coordination, status updates, and seamless communication among all parties involved in the hyperlocal delivery process.
@@ -199,7 +203,7 @@ The System Sequence Diagram (SSD) below outlines the step-by-step interactions b
 </div>
 <a id="figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent"></a>
 
-### Development Viewpoint
+### 7.4 Development Viewpoint
 The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
 
 <div align="center">
@@ -233,7 +237,7 @@ The `FeedbackComponent` collects and processes customer reviews and ratings link
 The `BusinessProfileComponent` manages vendor profiles, store settings, and business analytics. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
-## Usability
+## 8 Usability
 We provided the mid-fidelity designs to address the end users' usability concerns and demonstrate how our system is built to work on different platforms such as IOs, Android and Web, demonstrating the interoperability of our system. This will help us demonstrate our key architectural decisions for improved user experience.
 
 <div align="center">
@@ -257,10 +261,10 @@ We provided the mid-fidelity designs to address the end users' usability concern
 </div>
 <a id="figure-8-mid-fidelity-design-for-vendor-dashboard"></a>
 
-## Interoperability
+## 9 Interoperability
 
 ## Architectural Patterns Used in the Project
-### Microservices Architecture 
+### 10 Microservices Architecture 
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
 <div align="center">
@@ -289,7 +293,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 </div>
 <a id="figure-11-rest-pattern-of-hyperlocal-delivery-system"></a>
 
-## Key Architectural Decisions to Address Quality Attributes
+## 11 Key Architectural Decisions to Address Quality Attributes
 
 ### 1. Usability
 
