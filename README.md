@@ -267,6 +267,8 @@ Our system follows the mircoservices architecture style in comparison to monolit
 <a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 
 ### Model-View-Controller (MVC) Pattern
+We have used Model-View-Controller (MVC) architecture patterns, which separate a system into three distinct components: the Model, which manages data logic; the View, which handles presentation and user interface; and the Controller, which processes input, invokes Model operations, and updates the View. This separation promotes modularity, ease of maintenance, and testability. By isolating business rules from the user interface, developers can work on different components simultaneously without introducing side effects. In server-side frameworks like Laravel, MVC enables clean, organized codebases where models represent database entities, views are templated frontends, and controllers serve as the business logic part.
+
 <div align="center">
  <img src="./mvc_pattern.png" alt="MVC pattern diagram" width="700"/>
   <br>
@@ -275,6 +277,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 
 ### RESTful API Pattern
+We also used the REST API architectural pattern, which is based on stateless communication and resource-based interactions over HTTP. It structures requests around CRUD operations (Create, Read, Update, Delete) on resources, using standard HTTP methods (GET, POST, PUT, DELETE) and returning lightweight JSON payloads. RESTful APIs enable decoupling between frontend clients and backend services, allowing independent evolution of both layers. To enhance scalability, security, and maintainability, an API Gateway can be introduced. The API Gateway acts as a single entry point for all client requests, managing authentication, request routing, rate limiting, and aggregating responses from multiple microservices. This pattern simplifies client-side logic, ensures consistent cross-cutting concerns, and enables backend services to remain focused on business logic. In a microservices architecture, the combination of REST APIs and an API Gateway streamlines communication, enhances system resilience, and supports horizontal scaling.
 <div align="center">
  <img src="./RESTgate.png" alt="REST API diagram" width="800"/>
   <br>
