@@ -261,10 +261,8 @@ We provided the mid-fidelity designs to address the end users' usability concern
 </div>
 <a id="figure-8-mid-fidelity-design-for-vendor-dashboard"></a>
 
-## 9 Interoperability
-
-## Architectural Patterns Used in the Project
-### 10 Microservices Architecture 
+## 9 Architectural Patterns Used in the Project
+### 9.1 Microservices Architecture 
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
 <div align="center">
@@ -274,7 +272,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 </div>
 <a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 
-### Model-View-Controller (MVC) Pattern
+### 9.2 Model-View-Controller (MVC) Pattern
 We have used Model-View-Controller (MVC) architecture patterns, which separate a system into three distinct components: the Model, which manages data logic; the View, which handles presentation and user interface; and the Controller, which processes input, invokes Model operations, and updates the View. This separation promotes modularity, ease of maintenance, and testability. By isolating business rules from the user interface, developers can work on different components simultaneously without introducing side effects. In server-side frameworks like Laravel, MVC enables clean, organized codebases where models represent database entities, views are templated frontends, and controllers serve as the business logic part.
 
 <div align="center">
@@ -284,7 +282,7 @@ We have used Model-View-Controller (MVC) architecture patterns, which separate a
 </div>
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 
-### RESTful API Pattern
+### 9.3 RESTful API Pattern
 We also used the REST API architectural pattern, which is based on stateless communication and resource-based interactions over HTTP. It structures requests around CRUD operations (Create, Read, Update, Delete) on resources, using standard HTTP methods (GET, POST, PUT, DELETE) and returning lightweight JSON payloads. RESTful APIs enable decoupling between frontend clients and backend services, allowing independent evolution of both layers. To enhance scalability, security, and maintainability, an API Gateway can be introduced. The API Gateway acts as a single entry point for all client requests, managing authentication, request routing, rate limiting, and aggregating responses from multiple microservices. This pattern simplifies client-side logic, ensures consistent cross-cutting concerns, and enables backend services to remain focused on business logic. In a microservices architecture, the combination of REST APIs and an API Gateway streamlines communication, enhances system resilience, and supports horizontal scaling.
 <div align="center">
  <img src="./RESTgate.png" alt="REST API diagram" width="800"/>
@@ -293,9 +291,9 @@ We also used the REST API architectural pattern, which is based on stateless com
 </div>
 <a id="figure-11-rest-pattern-of-hyperlocal-delivery-system"></a>
 
-## 11 Key Architectural Decisions to Address Quality Attributes
+## 10 Key Architectural Decisions to Address Quality Attributes
 
-### 1. Usability
+### 10.1 Usability
 
 #### Component-based SPA Architecture
 - **Issue**: Traditional multi-page applications cause reloads that interrupt workflows.
@@ -321,7 +319,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
   > _React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
 
-### 2. Performance
+### 10.2 Performance
 
 #### Microservices with REST/JSON
 - **Issue**: Monolithic architectures limit scalability and can become performance bottlenecks.
@@ -356,7 +354,7 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
 
-### 3. Availability
+### 10.3 Availability
 
 #### Multi-DB Deployment
 - **Issue**: Single database failure can cause downtime.
@@ -375,7 +373,7 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
 
 
-### 4. Scalability
+### 10.4 Scalability
 
 #### Horizontal Microservices Scaling
 - **Issue**: Sudden increases in load can overwhelm services.
@@ -394,7 +392,7 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
 
 
-### 5. Maintainability
+### 10.5 Maintainability
 
 #### MVC with ORM
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
