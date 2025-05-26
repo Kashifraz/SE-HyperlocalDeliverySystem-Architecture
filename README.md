@@ -255,7 +255,8 @@ We provided the mid-fidelity designs to address the end users' usability concern
 </div>
 <a id="figure-8-mid-fidelity-design-for-vendor-dashboard"></a>
 
-## Microservices Architecture 
+## Architectural Patterns Used in the Project
+### Microservices Architecture 
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
 <div align="center">
@@ -265,11 +266,17 @@ Our system follows the mircoservices architecture style in comparison to monolit
 </div>
 <a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 
+### Model-View-Controller (MVC) Pattern
+
+
+### RESTful API Pattern
+
+
 ## Key Architectural Decisions to Address Quality Attributes
 
 ### 1. Usability
 
-#### 1.1 Component-based SPA Architecture
+#### Component-based SPA Architecture
 - **Issue**: Traditional multi-page applications cause reloads that interrupt workflows.
 - **Rationale**: Single Page Applications (SPA) provide seamless navigation and faster interactions, crucial for vendor dashboards. Component-based design ensures consistency and reusability across the app.
 - **Benefits**: Smooth user experience with no full-page reloads; consistent design language throughout the app.
@@ -277,7 +284,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use server-side rendering (SSR) frameworks like **Next.js** to balance performance and interactivity.  
   > _We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity._
 
-#### 1.2 Minimalist Modern Design
+#### Minimalist Modern Design
 - **Issue**: Overly complex UI designs increase cognitive load, reducing task efficiency.
 - **Rationale**: Minimalist design simplifies navigation and enhances usability by reducing visual clutter.
 - **Benefits**: Users can complete tasks faster due to intuitive layouts and familiar interaction patterns.
@@ -285,7 +292,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Employ **user-centered design (UCD)** or participatory design to balance simplicity and features.  
   > _Minimalist design was preferred for its clarity; UCD was considered but adds complexity in rapid delivery._
 
-#### 1.3 React Native for Mobile
+#### React Native for Mobile
 - **Issue**: Building separate native apps for iOS and Android increases development and maintenance costs.
 - **Rationale**: React Native provides near-native performance with a shared codebase, reducing costs and improving delivery speed.
 - **Benefits**: Consistent behavior across platforms, reduced development effort, access to native gestures and animations.
@@ -295,7 +302,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 
 ### 2. Performance
 
-#### 2.1 Microservices with REST/JSON
+#### Microservices with REST/JSON
 - **Issue**: Monolithic architectures limit scalability and can become performance bottlenecks.
 - **Rationale**: Microservices allow scaling of individual components, and REST/JSON offers lightweight communication.
 - **Benefits**: Independent scaling, improved fault isolation, reduced data transfer size.
@@ -303,7 +310,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **GraphQL** to optimize API communication or **gRPC** for higher performance.  
   > _REST/JSON was selected for simplicity and wide compatibility; GraphQL or gRPC were considered but are heavier solutions._
 
-#### 2.2 SQLite Local Storage
+#### SQLite Local Storage
 - **Issue**: Frequent API calls for product data increase load times and data usage.
 - **Rationale**: Local storage caches frequently accessed data, reducing API calls and enabling offline access.
 - **Benefits**: Improved load times, reduced mobile data usage, offline functionality.
@@ -311,7 +318,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **IndexedDB (for web)** or **Realm DB (for mobile)** for more advanced local data management.  
   > _SQLite was chosen for simplicity; IndexedDB or Realm offer more features but add complexity._
 
-#### 2.3 Kubernetes Orchestration
+#### Kubernetes Orchestration
 - **Issue**: High-availability requirements for backend services under dynamic loads.
 - **Rationale**: Kubernetes provides automated deployment, scaling, and self-healing capabilities.
 - **Benefits**: High availability, automatic scaling, fault tolerance, and load balancing.
@@ -319,7 +326,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **serverless architectures** (e.g., AWS Lambda) or **Docker Swarm**.  
   > _Kubernetes was chosen for robust orchestration; simpler alternatives were considered but lacked required capabilities._
 
-#### 2.4 Lazy Loading
+#### Lazy Loading
 - **Issue**: Loading all resources upfront increases initial page load time.
 - **Rationale**: Lazy loading defers non-critical resources, improving perceived performance.
 - **Benefits**: Faster initial page loads, reduced server bandwidth.
@@ -330,7 +337,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 
 ### 3. Availability
 
-#### 3.1 Multi-DB Deployment
+#### Multi-DB Deployment
 - **Issue**: Single database failure can cause downtime.
 - **Rationale**: Active-active replication distributes load and ensures failover capabilities.
 - **Benefits**: High availability, resilience to regional failures, and distributed reads.
@@ -338,7 +345,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use managed distributed databases like **Amazon Aurora Global** or **Google Cloud Spanner**.  
   > _Multi-DB replication was chosen for control and resilience; managed solutions were considered but add vendor lock-in._
 
-#### 3.2 Microservices Isolation
+#### Microservices Isolation
 - **Issue**: Failures in one part of the system can cascade and affect the entire system.
 - **Rationale**: Isolating services ensures faults remain contained.
 - **Benefits**: One service failure (e.g., payments) does not affect others (e.g., product catalog).
@@ -349,7 +356,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 
 ### 4. Scalability
 
-#### 4.1 Horizontal Microservices Scaling
+#### Horizontal Microservices Scaling
 - **Issue**: Sudden increases in load can overwhelm services.
 - **Rationale**: Horizontal scaling adds instances of services under load.
 - **Benefits**: Scalability with predictable performance.
@@ -357,18 +364,18 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **serverless functions** for automatic scaling without managing infrastructure.  
   > _Horizontal scaling offers predictable control; serverless functions were considered but have cold start penalties._
 
-#### 4.2 Stateless APIs
+#### Stateless APIs
 - **Issue**: Stateful APIs complicate scaling due to session management.
 - **Rationale**: Stateless APIs simplify scaling and load balancing by removing session dependency.
 - **Benefits**: Easy horizontal scaling, reduced complexity.
 - **Limitations**: Requires external session management (e.g., Redis) if needed.
-- **Alternative Solutions**: Use **sticky sessions** or **JWT tokens**.  
-  > _Stateless APIs chosen for their simplicity; sticky sessions and JWTs add operational considerations._
+- **Alternative Solutions**: Use **sticky sessions**.  
+  > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
 
 
 ### 5. Maintainability
 
-#### 5.1 MVC with ORM
+#### MVC with ORM
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
 - **Rationale**: MVC separates concerns, and ORM reduces boilerplate while managing database interactions.
 - **Benefits**: Clean code structure, reduced development overhead, version-controlled schema changes.
@@ -376,7 +383,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **micro-ORMs like Dapper** or raw SQL for performance-critical parts.  
   > _MVC with ORM was chosen for its maintainability; micro-ORMs/raw SQL are alternatives but increase manual work._
 
-#### 5.2 React Native Unified Codebase
+#### React Native Unified Codebase
 - **Issue**: Maintaining separate iOS and Android codebases leads to duplication of work.
 - **Rationale**: React Native allows sharing most of the code, reducing maintenance and delivery effort.
 - **Benefits**: Single codebase, faster bug fixes, unified CI/CD pipeline.
