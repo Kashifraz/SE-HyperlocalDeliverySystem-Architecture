@@ -13,20 +13,22 @@
    - 7.2 [Use Case Viewpoint](#use-case-viewpoint)
    - 7.3 [Process Viewpoint](#process-viewpoint)
    - 7.4 [Development Viewpoint](#development-viewpoint)
-8. [Microservices Architecture](#microservices-architecture)
-9. [Key Architectural Decisions](#key-architectural-decisions-to-address-quality-attributes)
-10. [Architectural Trade-offs](#architectural-decisions--trade-offs)
-11. [Revision History](#history-log)
-12. Figures
-    - 12.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
-    - 12.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
-    - 12.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
-    - 12.4 [Figure 4: Sequence Diagram](#figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
-    - 12.5 [Figure 5: Component Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
-    - 12.6 [Figure 6: Customer UI](#figure-6-mid-fidelity-design-for-customer-mobile-application)
-    - 12.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
-    - 12.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
-    - 12.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
+8. [Usability](#usability)
+9. [Interoperability](#interoperability)
+10. [Microservices Architecture](#microservices-architecture)
+11. [Key Architectural Decisions](#key-architectural-decisions-to-address-quality-attributes)
+12. [Architectural Trade-offs](#architectural-decisions--trade-offs)
+13. [Revision History](#history-log)
+14. Figures
+    - 14.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
+    - 14.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
+    - 14.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
+    - 14.4 [Figure 4: Sequence Diagram](#figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
+    - 14.5 [Figure 5: Component Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
+    - 14.6 [Figure 6: Customer UI](#figure-6-mid-fidelity-design-for-customer-mobile-application)
+    - 14.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
+    - 14.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
+    - 14.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
 
 
 
@@ -231,7 +233,7 @@ The `FeedbackComponent` collects and processes customer reviews and ratings link
 The `BusinessProfileComponent` manages vendor profiles, store settings, and business analytics. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
-### Usability and Interoperability
+## Usability
 We provided the mid-fidelity designs to address the end users' usability concerns and demonstrate how our system is built to work on different platforms such as IOs, Android and Web, demonstrating the interoperability of our system. This will help us demonstrate our key architectural decisions for improved user experience.
 
 <div align="center">
@@ -254,6 +256,8 @@ We provided the mid-fidelity designs to address the end users' usability concern
   <em> Figure 8: Mid-fidelity design for Vendor Dashboard</em>
 </div>
 <a id="figure-8-mid-fidelity-design-for-vendor-dashboard"></a>
+
+## Interoperability
 
 ## Architectural Patterns Used in the Project
 ### Microservices Architecture 
