@@ -113,7 +113,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The customer shall be able to submit feedback anonymously  
 - The customer shall be able to edit feedback within 24 hours  
 
-### 2) Vendor Requirements
+### Vendor Requirements
 **VEN-1 Setup Business Profile**  
 - The vendor shall be able to register store information  
 - The vendor shall be able to upload the business logo  
@@ -138,7 +138,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The vendor shall be able to report inappropriate feedback  
 - The vendor shall be able to view feedback analytics  
 
-### 3) Delivery Agent Requirements
+### Delivery Agent Requirements
 **DEL-1 Manage Delivery Requests**  
 - The agent shall be able to view assigned deliveries  
 - The agent shall be able to accept/reject delivery requests  
