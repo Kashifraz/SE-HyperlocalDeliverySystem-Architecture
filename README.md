@@ -76,6 +76,7 @@ We included the system `Overview diagram` showing the system's end users. It sho
   <br>
   <em> Figure 1: Architecture overview diagram showing the overview of system architecture</em>
 </div>
+<a id="figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture"></a>
 
 ## Stakeholder Analysis
 
