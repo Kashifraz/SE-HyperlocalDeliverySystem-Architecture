@@ -266,97 +266,130 @@ Our system follows the mircoservices architecture style in comparison to monolit
 <a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 
 ## Key Architectural Decisions to Address Quality Attributes
+# Architecture and Design Decisions for Vendor Dashboard Platform
 
-### 1. Usability
-**Design Decisions:**
-- **Component-based SPA Architecture**  
-  *Why?* Provides app-like navigation without page reloads, creating smoother workflows for vendor dashboards. Components enable consistent UI patterns across the application.
+## 1. Usability
 
-  *Benefit:* Faster experience - no page reloads when clicking around. Buttons and menus behave consistently everywhere.
+### 1.1 Component-based SPA Architecture
+- **Issue**: Traditional multi-page applications cause reloads that interrupt workflows.
+- **Rationale**: Single Page Applications (SPA) provide seamless navigation and faster interactions, crucial for vendor dashboards. Component-based design ensures consistency and reusability across the app.
+- **Benefits**: Smooth user experience with no full-page reloads; consistent design language throughout the app.
+- **Limitations**: Requires more complex client-side state management (e.g., Redux) and might affect initial load time.
+- **Alternative Solutions**: Use server-side rendering (SSR) frameworks like **Next.js** to balance performance and interactivity.  
+  > _We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity._
 
-- **Minimalist Modern Design**  
-  *Why?* Reduces cognitive load through clean layouts, intuitive navigation, and adherence to current design systems. This directly improves task completion rates.
+### 1.2 Minimalist Modern Design
+- **Issue**: Overly complex UI designs increase cognitive load, reducing task efficiency.
+- **Rationale**: Minimalist design simplifies navigation and enhances usability by reducing visual clutter.
+- **Benefits**: Users can complete tasks faster due to intuitive layouts and familiar interaction patterns.
+- **Limitations**: Risk of oversimplifying features or omitting necessary visual cues.
+- **Alternative Solutions**: Employ **user-centered design (UCD)** or participatory design to balance simplicity and features.  
+  > _Minimalist design was preferred for its clarity; UCD was considered but adds complexity in rapid delivery._
 
-  *Benefit:* Not cluttered, with clear buttons and menus. Similar to apps people already know how to use.
+### 1.3 React Native for Mobile
+- **Issue**: Building separate native apps for iOS and Android increases development and maintenance costs.
+- **Rationale**: React Native provides near-native performance with a shared codebase, reducing costs and improving delivery speed.
+- **Benefits**: Consistent behavior across platforms, reduced development effort, access to native gestures and animations.
+- **Limitations**: May encounter limitations in accessing low-level native APIs; requires bridging in some cases.
+- **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
+  > _React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
 
-- **React Native for Mobile**  
-  *Why?* Delivers native-like performance while maintaining a single codebase. Includes access to native gestures and animations that improve perceived responsiveness.
+---
 
-  *Benefit:* One code works on both iPhone and Android. Feels like a normal phone app with smooth scrolling.
+## 2. Performance
 
-### 2. Performance
-**Design Decisions:**
-- **Microservices with REST/JSON**  
-  *Why?* Enables granular scaling of high-demand services independently. JSON provides lightweight data transfer compared to alternatives like XML.
+### 2.1 Microservices with REST/JSON
+- **Issue**: Monolithic architectures limit scalability and can become performance bottlenecks.
+- **Rationale**: Microservices allow scaling of individual components, and REST/JSON offers lightweight communication.
+- **Benefits**: Independent scaling, improved fault isolation, reduced data transfer size.
+- **Limitations**: Increased complexity in managing service boundaries and deployments.
+- **Alternative Solutions**: Use **GraphQL** to optimize API communication or **gRPC** for higher performance.  
+  > _REST/JSON was selected for simplicity and wide compatibility; GraphQL or gRPC were considered but are heavier solutions._
 
-  *Benefit:* - Scale only the busy services (e.g., products and orders)  and avoid wasting resources on less-used components (e.g., feedback).
-  
-- **SQLite Local Storage**  
-  *Why?* Caches frequently accessed data (e.g., product catalogs) to:  
-  • Reduce API calls by 40-60%  
-  • Enable offline functionality  
-  • Decrease mobile data usage
+### 2.2 SQLite Local Storage
+- **Issue**: Frequent API calls for product data increase load times and data usage.
+- **Rationale**: Local storage caches frequently accessed data, reducing API calls and enabling offline access.
+- **Benefits**: Improved load times, reduced mobile data usage, offline functionality.
+- **Limitations**: Risk of stale data if synchronization is not managed properly.
+- **Alternative Solutions**: Use **IndexedDB (for web)** or **Realm DB (for mobile)** for more advanced local data management.  
+  > _SQLite was chosen for simplicity; IndexedDB or Realm offer more features but add complexity._
 
-  *Benefit:* Remembers your recent searches and orders so it doesn't need to download them again.
+### 2.3 Kubernetes Orchestration
+- **Issue**: High-availability requirements for backend services under dynamic loads.
+- **Rationale**: Kubernetes provides automated deployment, scaling, and self-healing capabilities.
+- **Benefits**: High availability, automatic scaling, fault tolerance, and load balancing.
+- **Limitations**: Steep learning curve, additional overhead for managing Kubernetes clusters.
+- **Alternative Solutions**: Use **serverless architectures** (e.g., AWS Lambda) or **Docker Swarm**.  
+  > _Kubernetes was chosen for robust orchestration; simpler alternatives were considered but lacked required capabilities._
 
-- **Kubernetes Orchestration**  
-  *Why?* It maintains the high availability of the system by:  
-  • Automated deployment & auto scaling  
-  • Fault tolerance by preventing single-point failures 
-  • Load Balancing and self-healing
-  
+### 2.4 Lazy Loading
+- **Issue**: Loading all resources upfront increases initial page load time.
+- **Rationale**: Lazy loading defers non-critical resources, improving perceived performance.
+- **Benefits**: Faster initial page loads, reduced server bandwidth.
+- **Limitations**: Possible delays in loading deferred resources when needed.
+- **Alternative Solutions**: Implement **critical CSS** and prioritized loading, or use **CDN edge caching**.  
+  > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
-  *Benefit:* Remembers your recent searches and orders so it doesn't need to download them again.
-  
+---
 
-- **Lazy Loading**  
-  *Why?* Delays loading of non-critical resources (e.g., product images below fold) to:  
-  • Improve initial page load time by ~30%  
-  • Reduce server bandwidth costs
+## 3. Availability
 
-  *Benefit:* Only shows product pictures as you scroll down, so the screens load faster.
+### 3.1 Multi-DB Deployment
+- **Issue**: Single database failure can cause downtime.
+- **Rationale**: Active-active replication distributes load and ensures failover capabilities.
+- **Benefits**: High availability, resilience to regional failures, and distributed reads.
+- **Limitations**: Increased complexity in replication and consistency management.
+- **Alternative Solutions**: Use managed distributed databases like **Amazon Aurora Global** or **Google Cloud Spanner**.  
+  > _Multi-DB replication was chosen for control and resilience; managed solutions were considered but add vendor lock-in._
 
-### 3. Availability
-**Design Decisions:**
-- **Multi-DB Deployment**  
-  *Why?* Implements active-active replication to:  
-  • Survive regional outages  
-  • Maintain 99.95% uptime  
-  • Distribute read queries
+### 3.2 Microservices Isolation
+- **Issue**: Failures in one part of the system can cascade and affect the entire system.
+- **Rationale**: Isolating services ensures faults remain contained.
+- **Benefits**: One service failure (e.g., payments) does not affect others (e.g., product catalog).
+- **Limitations**: Requires robust inter-service communication and monitoring.
+- **Alternative Solutions**: Use **modular monolith** or **Domain-Driven Design (DDD)**.  
+  > _Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
 
-  *Benefit:* If one database stops working, another can take over immediately.
+---
 
-- **Microservices Isolation**  
-  *Why?* Contains failures to individual services - a payment service outage won't take down product catalog.
-  
-  *Benefit:* If payments stop working, you can still browse products.
-  
-### 4. Scalability
-**Design Decisions:**
-- **Horizontal Microservices Scaling**  
-  *Why?* Allows adding instances of only the services under load (e.g., scaling order processing separately from user profiles).
+## 4. Scalability
 
-- **Stateless APIs**  
-  *Why?* Enables instant scaling without session affinity requirements. Simplifies load balancing.
+### 4.1 Horizontal Microservices Scaling
+- **Issue**: Sudden increases in load can overwhelm services.
+- **Rationale**: Horizontal scaling adds instances of services under load.
+- **Benefits**: Scalability with predictable performance.
+- **Limitations**: Requires effective load balancing and monitoring.
+- **Alternative Solutions**: Use **serverless functions** for automatic scaling without managing infrastructure.  
+  > _Horizontal scaling offers predictable control; serverless functions were considered but have cold start penalties._
 
-  *Benefit:* No server-side session storage is required, making adding more servers (horizontal scaling) easy. Requests can be routed to any available     instance.
+### 4.2 Stateless APIs
+- **Issue**: Stateful APIs complicate scaling due to session management.
+- **Rationale**: Stateless APIs simplify scaling and load balancing by removing session dependency.
+- **Benefits**: Easy horizontal scaling, reduced complexity.
+- **Limitations**: Requires external session management (e.g., Redis) if needed.
+- **Alternative Solutions**: Use **sticky sessions** or **JWT tokens**.  
+  > _Stateless APIs chosen for their simplicity; sticky sessions and JWTs add operational considerations._
 
-### 5. Maintainability
-**Design Decisions:**
-- **MVC with ORM**  
-  *Why?* Provides:  
-  • Clear separation between business logic and presentation  
-  • Automated SQL generation, reducing boilerplate code  
-  • Schema version control via migrations
+---
 
-  *Benefit:* Keeps code organized like separate folders for different tasks.
+## 5. Maintainability
 
-- **React Native Unified Codebase**  
-  *Why?* Reduces mobile maintenance overhead by:  
-  • Sharing 85%+ code between iOS/Android  
-  • Enabling single CI/CD pipeline
-  
-  *Benefit:* Fix a bug once and it's fixed on both iPhone and Android.
+### 5.1 MVC with ORM
+- **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
+- **Rationale**: MVC separates concerns, and ORM reduces boilerplate while managing database interactions.
+- **Benefits**: Clean code structure, reduced development overhead, version-controlled schema changes.
+- **Limitations**: ORM can introduce performance overhead for complex queries.
+- **Alternative Solutions**: Use **micro-ORMs like Dapper** or raw SQL for performance-critical parts.  
+  > _MVC with ORM was chosen for its maintainability; micro-ORMs/raw SQL are alternatives but increase manual work._
+
+### 5.2 React Native Unified Codebase
+- **Issue**: Maintaining separate iOS and Android codebases leads to duplication of work.
+- **Rationale**: React Native allows sharing most of the code, reducing maintenance and delivery effort.
+- **Benefits**: Single codebase, faster bug fixes, unified CI/CD pipeline.
+- **Limitations**: Limited access to certain native modules, may need custom bridging.
+- **Alternative Solutions**: Use **Flutter** for even more unified code or **native development** for full control.  
+  > _React Native chosen for simplicity and shared code; Flutter and native were considered but add complexity._
+
 
 
 ## Architectural Decisions & Trade-offs
