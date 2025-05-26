@@ -129,7 +129,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The customer shall be able to submit feedback anonymously  
 - The customer shall be able to edit feedback within 24 hours  
 
-### 5.2 Vendor Requirements
+### <a id="5-2-vendor-requirements"></a> 5.2 Vendor Requirements
 **VEN-1 Setup Business Profile**  
 - The vendor shall be able to register store information  
 - The vendor shall be able to upload the business logo  
@@ -154,7 +154,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - The vendor shall be able to report inappropriate feedback  
 - The vendor shall be able to view feedback analytics  
 
-### 5.3 Delivery Agent Requirements
+### <a id="5-3-delivery-agent-requirements"></a> 5.3 Delivery Agent Requirements
 **DEL-1 Manage Delivery Requests**  
 - The agent shall be able to view assigned deliveries  
 - The agent shall be able to accept/reject delivery requests  
@@ -178,7 +178,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 | **Developers**      | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution.          | Maintainability                 |
 
 ## 7. Architectural Views
-### 7.1 Context Viewpoint
+### <a id="7-1-context-viewpoint"></a> 7.1 Context Viewpoint
 The `Context View` describes the `system’s boundaries` by showing its interactions with external actors such as users, vendors, delivery agents, and other systems. It highlights what is inside the system and what lies outside, helping stakeholders understand how the system fits into its environment and what major inputs and outputs exist.
 
 The `Context Diagram` below shows how external entities, such as users and external systems, interact with our system. It shows that `vendors` provide their products and working hours information to our system, and the system provides customers with orders and business. The `customer` provides their delivery information and the products they added to the cart, and the system returns order confirmation and tracking of their orders. Similarly, the `delivery agent` receives the pending orders for delivery and completes the order delivery. Our system also interacts with external systems such as `Location API` (Google Maps) by providing the addresses and receiving the coordinates (longitude and latitude).
@@ -190,7 +190,7 @@ The `Context Diagram` below shows how external entities, such as users and exter
   <em> Figure 2: Context view of the system showing the interaction of external entities with our system</em>
 </div>
 
-### 7.2 Use Case Viewpoint
+### <a id="7-2-use-case-viewpoint"></a> 7.2 Use Case Viewpoint
 The Use Case Viewpoint captures the primary ways different users (customers, vendors, and delivery agents) interact with the delivery platform to achieve their goals. It outlines the major functionalities the system must support, such as browsing vendors, placing orders, tracking deliveries, managing inventory, and updating order statuses. This viewpoint helps in understanding user requirements clearly by focusing on user-system interactions and ensures that the system is designed around real-world activities and expectations of its stakeholders.
 
 
@@ -202,7 +202,7 @@ The Use Case Viewpoint captures the primary ways different users (customers, ven
 </div>
 
 
-### 7.3 Process Viewpoint
+### <a id="7-3-process-viewpoint"></a> 7.3 Process Viewpoint
 The Process Viewpoint focuses on the system’s dynamic behavior and describes how different parts of the system interact at runtime to achieve specific tasks. It models processes such as order placement, payment handling, delivery tracking, and inventory updates, often showing how components communicate, synchronize, and handle concurrent activities. In this delivery platform, the process view ensures smooth coordination between customers, vendors, and delivery agents by managing workflows like order processing, delivery assignment, and real-time status updates.
 
 The System Sequence Diagram (SSD) below outlines the step-by-step interactions between the key actors—Customer, Vendor, Delivery Agent—and the Hyperlocal Delivery Platform during an order's lifecycle. The process begins when the Customer browses nearby vendors, selects items, and confirms the order, prompting the System to process payment and notify the Vendor while assigning a Delivery Agent. Next, the Vendor updates inventory, confirms order acceptance, and marks it as ready for pickup, which triggers the System to alert the Delivery Agent and update the Customer on the order status. The Delivery Agent then accepts the request, picks up the order, and provides real-time updates as it moves through "En Route" to "Delivered," with the System relaying tracking information to the Customer. Finally, after delivery, the Customer submits feedback on the Vendor, products, and delivery experience, which the System records for analytics and service improvement. The diagram effectively captures the end-to-end workflow, highlighting real-time coordination, status updates, and seamless communication among all parties involved in the hyperlocal delivery process.
@@ -215,7 +215,7 @@ The System Sequence Diagram (SSD) below outlines the step-by-step interactions b
 </div>
 
 
-### 7.4 Development Viewpoint
+### <a id="7-4-development-viewpoint"></a> 7.4 Development Viewpoint
 The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
 
 <a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
@@ -276,7 +276,7 @@ We provided the mid-fidelity designs to address the end users' usability concern
 
 
 ## 9 Architectural Patterns Used in the Project
-### 9.1 Microservices Architecture 
+### <a id="9-1-microservices-architecture"></a> 9.1 Microservices Architecture
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
 <a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
@@ -287,7 +287,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 </div>
 
 
-### 9.2 Model-View-Controller (MVC) Pattern
+### <a id="9-2-model-view-controller-mvc-pattern"></a> 9.2 Model-View-Controller (MVC) Pattern
 We have used Model-View-Controller (MVC) architecture patterns, which separate a system into three distinct components: the Model, which manages data logic; the View, which handles presentation and user interface; and the Controller, which processes input, invokes Model operations, and updates the View. This separation promotes modularity, ease of maintenance, and testability. By isolating business rules from the user interface, developers can work on different components simultaneously without introducing side effects. In server-side frameworks like Laravel, MVC enables clean, organized codebases where models represent database entities, views are templated frontends, and controllers serve as the business logic part.
 
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
@@ -298,7 +298,7 @@ We have used Model-View-Controller (MVC) architecture patterns, which separate a
 </div>
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 
-### 9.3 RESTful API Pattern
+### <a id="9-3-restful-api-pattern"></a> 9.3 RESTful API Pattern
 We also used the REST API architectural pattern, which is based on stateless communication and resource-based interactions over HTTP. It structures requests around CRUD operations (Create, Read, Update, Delete) on resources, using standard HTTP methods (GET, POST, PUT, DELETE) and returning lightweight JSON payloads. RESTful APIs enable decoupling between frontend clients and backend services, allowing independent evolution of both layers. To enhance scalability, security, and maintainability, an API Gateway can be introduced. The API Gateway acts as a single entry point for all client requests, managing authentication, request routing, rate limiting, and aggregating responses from multiple microservices. This pattern simplifies client-side logic, ensures consistent cross-cutting concerns, and enables backend services to remain focused on business logic. In a microservices architecture, the combination of REST APIs and an API Gateway streamlines communication, enhances system resilience, and supports horizontal scaling.
 
 <a id="figure-11-rest-pattern-of-hyperlocal-delivery-system"></a>
@@ -310,7 +310,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 
 ## 10 Key Architectural Decisions to Address Quality Attributes
 
-### 10.1 Usability
+### <a id="10-1-usability"></a> 10.1 Usability
 
 #### Component-based SPA Architecture
 - **Issue**: Traditional multi-page applications cause reloads that interrupt workflows.
@@ -336,7 +336,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
   > _React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
 
-### 10.2 Performance
+### <a id="10-2-performance"></a> 10.2 Performance
 
 #### Microservices with REST/JSON
 - **Issue**: Monolithic architectures limit scalability and can become performance bottlenecks.
@@ -371,7 +371,7 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
 
-### 10.3 Availability
+### <a id="10-3-availability"></a> 10.3 Availability
 
 #### Multi-DB Deployment
 - **Issue**: Single database failure can cause downtime.
@@ -390,7 +390,7 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
 
 
-### 10.4 Scalability
+### <a id="10-4-scalability"></a> 10.4 Scalability
 
 #### Horizontal Microservices Scaling
 - **Issue**: Sudden increases in load can overwhelm services.
@@ -409,7 +409,7 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
 
 
-### 10.5 Maintainability
+### <a id="10-5-maintainability"></a> 10.5 Maintainability
 
 #### MVC with ORM
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
