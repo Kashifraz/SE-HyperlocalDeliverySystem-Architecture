@@ -276,7 +276,7 @@ Our system follows the mircoservices architecture style in comparison to monolit
 
 ### RESTful API Pattern
 <div align="center">
- <img src="./REST.png" alt="REST API diagram" width="700"/>
+ <img src="./RESTgate.png" alt="REST API diagram" width="800"/>
   <br>
   <em> Figure 11: RESTful API pattern used in Hyperlocal delivery system</em>
 </div>
