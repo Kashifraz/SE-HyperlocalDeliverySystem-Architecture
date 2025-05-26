@@ -103,7 +103,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 
 ## 5 Functional Requirements
 
-### 5.1 Customer Requirements
+### <a id="5.1-customer-requirements"></a> 5.1 Customer Requirements
 
 **CUS-1 Add Items to Cart**  
 - The customer shall be able to add items to cart  
