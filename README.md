@@ -82,12 +82,13 @@ The platform supports the growing demand for convenient, reliable, and locally f
 ## 3 System Overview
 We included the system `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, which helps us interact with a distributed microservices backend. The system also has three main databases to store its data.
 
+<a id="figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture"></a>
 <div align="center">
  <img src="./system.png" alt="System Overview" width="1000"/>
   <br>
   <em> Figure 1: Architecture overview diagram showing the overview of system architecture</em>
 </div>
-<a id="figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture"></a>
+
 
 ## 4 Stakeholder Analysis
 
@@ -180,43 +181,48 @@ The `Context View` describes the `system’s boundaries` by showing its interact
 
 The `Context Diagram` below shows how external entities, such as users and external systems, interact with our system. It shows that `vendors` provide their products and working hours information to our system, and the system provides customers with orders and business. The `customer` provides their delivery information and the products they added to the cart, and the system returns order confirmation and tracking of their orders. Similarly, the `delivery agent` receives the pending orders for delivery and completes the order delivery. Our system also interacts with external systems such as `Location API` (Google Maps) by providing the addresses and receiving the coordinates (longitude and latitude).
 
+<a id="figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system"></a>
 <div align="center">
  <img src="./context.png" alt="Context Diagram" width="800"/>
   <br>
   <em> Figure 2: Context view of the system showing the interaction of external entities with our system</em>
 </div>
-<a id="figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system"></a>
 
 ### 7.2 Use Case Viewpoint
 The Use Case Viewpoint captures the primary ways different users (customers, vendors, and delivery agents) interact with the delivery platform to achieve their goals. It outlines the major functionalities the system must support, such as browsing vendors, placing orders, tracking deliveries, managing inventory, and updating order statuses. This viewpoint helps in understanding user requirements clearly by focusing on user-system interactions and ensures that the system is designed around real-world activities and expectations of its stakeholders.
 
+
+<a id="figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent"></a>
 <div align="center">
  <img src="./Hyperlocal usecase-1.png" alt="Use Case Diagram" width="1000"/>
   <br>
   <em> Figure 3: Use case diagram demonstrating the use cases for vendor, customer and delivery agent</em>
 </div>
-<a id="figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent"></a>
+
 
 ### 7.3 Process Viewpoint
 The Process Viewpoint focuses on the system’s dynamic behavior and describes how different parts of the system interact at runtime to achieve specific tasks. It models processes such as order placement, payment handling, delivery tracking, and inventory updates, often showing how components communicate, synchronize, and handle concurrent activities. In this delivery platform, the process view ensures smooth coordination between customers, vendors, and delivery agents by managing workflows like order processing, delivery assignment, and real-time status updates.
 
 The System Sequence Diagram (SSD) below outlines the step-by-step interactions between the key actors—Customer, Vendor, Delivery Agent—and the Hyperlocal Delivery Platform during an order's lifecycle. The process begins when the Customer browses nearby vendors, selects items, and confirms the order, prompting the System to process payment and notify the Vendor while assigning a Delivery Agent. Next, the Vendor updates inventory, confirms order acceptance, and marks it as ready for pickup, which triggers the System to alert the Delivery Agent and update the Customer on the order status. The Delivery Agent then accepts the request, picks up the order, and provides real-time updates as it moves through "En Route" to "Delivered," with the System relaying tracking information to the Customer. Finally, after delivery, the Customer submits feedback on the Vendor, products, and delivery experience, which the System records for analytics and service improvement. The diagram effectively captures the end-to-end workflow, highlighting real-time coordination, status updates, and seamless communication among all parties involved in the hyperlocal delivery process.
+
+<a id="figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent"></a>
 <div align="center">
   <img src="./system-sequence-diagram-2.png" alt="Diagram" width="700">
   <br>
   <em> Figure 4: System Sequence Diagram to show interaction between Customer, Vendor, and Delivery Agent</em>
 </div>
-<a id="figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent"></a>
+
 
 ### 7.4 Development Viewpoint
 The Development View focuses on the system’s internal structure from a developer’s perspective. It describes how the software is organized in the codebase — such as modules, packages, layers, and components — and how they are built and managed. This view helps developers understand how to develop, maintain, and extend the system efficiently. It also covers aspects like version control, build processes, coding standards, and team organization.
 
+<a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
 <div align="center">
   <img src="./component.png" alt="Diagram" width="800">
   <br>
   <em> Figure 5: Component view of hyperlocal delivery system</em>
 </div>
-<a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
+
 
 ### Architectural Component Descriptions
 
@@ -245,41 +251,44 @@ The `BusinessProfileComponent` manages vendor profiles, store settings, and busi
 ## 8 Usability
 We provided the mid-fidelity designs to address the end users' usability concerns and demonstrate how our system is built to work on different platforms such as IOs, Android and Web, demonstrating the interoperability of our system. This will help us demonstrate our key architectural decisions for improved user experience.
 
+<a id="figure-6-mid-fidelity-design-for-customer-mobile-application"></a>
 <div align="center">
   <img src="./Customer-2.png" alt="Diagram" width="1000">
   <br>
   <em> Figure 6: Mid-fidelity design for customer mobile application</em>
 </div>
-<a id="figure-6-mid-fidelity-design-for-customer-mobile-application"></a>
 
+<a id="figure-7-mid-fidelity-design-for-delivery-agent-mobile-application"></a>
 <div align="center">
   <img src="./Agent.png" alt="Diagram" width="1000">
   <br>
   <em> Figure 7: Mid-fidelity design for delivery agent mobile application</em>
 </div>
-<a id="figure-7-mid-fidelity-design-for-delivery-agent-mobile-application"></a>
 
+<a id="figure-8-mid-fidelity-design-for-vendor-dashboard"></a>
 <div align="center">
  <img src="./vendor.png" alt="Context Diagram" width="800"/>
   <br>
   <em> Figure 8: Mid-fidelity design for Vendor Dashboard</em>
 </div>
-<a id="figure-8-mid-fidelity-design-for-vendor-dashboard"></a>
+
 
 ## 9 Architectural Patterns Used in the Project
 ### 9.1 Microservices Architecture 
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
+<a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 <div align="center">
  <img src="./micoservices.png" alt="mircoservices Diagram" width="700"/>
   <br>
   <em> Figure 9: Mircoservices architecture style of Hyperlocal delivery system</em>
 </div>
-<a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
+
 
 ### 9.2 Model-View-Controller (MVC) Pattern
 We have used Model-View-Controller (MVC) architecture patterns, which separate a system into three distinct components: the Model, which manages data logic; the View, which handles presentation and user interface; and the Controller, which processes input, invokes Model operations, and updates the View. This separation promotes modularity, ease of maintenance, and testability. By isolating business rules from the user interface, developers can work on different components simultaneously without introducing side effects. In server-side frameworks like Laravel, MVC enables clean, organized codebases where models represent database entities, views are templated frontends, and controllers serve as the business logic part.
 
+<a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 <div align="center">
  <img src="./mvc_pattern.png" alt="MVC pattern diagram" width="700"/>
   <br>
@@ -289,12 +298,13 @@ We have used Model-View-Controller (MVC) architecture patterns, which separate a
 
 ### 9.3 RESTful API Pattern
 We also used the REST API architectural pattern, which is based on stateless communication and resource-based interactions over HTTP. It structures requests around CRUD operations (Create, Read, Update, Delete) on resources, using standard HTTP methods (GET, POST, PUT, DELETE) and returning lightweight JSON payloads. RESTful APIs enable decoupling between frontend clients and backend services, allowing independent evolution of both layers. To enhance scalability, security, and maintainability, an API Gateway can be introduced. The API Gateway acts as a single entry point for all client requests, managing authentication, request routing, rate limiting, and aggregating responses from multiple microservices. This pattern simplifies client-side logic, ensures consistent cross-cutting concerns, and enables backend services to remain focused on business logic. In a microservices architecture, the combination of REST APIs and an API Gateway streamlines communication, enhances system resilience, and supports horizontal scaling.
+
+<a id="figure-11-rest-pattern-of-hyperlocal-delivery-system"></a>
 <div align="center">
  <img src="./RESTgate.png" alt="REST API diagram" width="800"/>
   <br>
   <em> Figure 11: RESTful API pattern used in Hyperlocal delivery system</em>
 </div>
-<a id="figure-11-rest-pattern-of-hyperlocal-delivery-system"></a>
 
 ## 10 Key Architectural Decisions to Address Quality Attributes
 
