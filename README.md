@@ -346,7 +346,6 @@ Our system follows the mircoservices architecture style in comparison to monolit
 - **Alternative Solutions**: Use **modular monolith** or **Domain-Driven Design (DDD)**.  
   > _Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
 
----
 
 ### 4. Scalability
 
