@@ -17,7 +17,7 @@
 9. [Key Architectural Decisions](#key-architectural-decisions-to-address-quality-attributes)
 10. [Architectural Trade-offs](#architectural-decisions--trade-offs)
 11. [Revision History](#history-log)
-12. [Figures](#figures)
+12. [Figures]
     - 12.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
     - 12.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
     - 12.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
