@@ -5,7 +5,7 @@
 3. [System Overview](#3-system-overview)
 4. [Stakeholder Analysis](#4-stakeholder-analysis)
 5. [Functional Requirements](#5-functional-requirements)
-   - 5.1 [Customer Requirements](#5.1-customer-requirements)
+   - 5.1 [Customer Requirements](#5-1-customer-requirements)
    - 5.2 [Vendor Requirements](#5-2-vendor-requirements)
    - 5.3 [Delivery Agent Requirements](#5-3-delivery-agent-requirements)
 6. [Quality Attributes](#6-quality-attributes-and-key-stakeholder-concerns)
@@ -103,7 +103,7 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 
 ## 5 Functional Requirements
 
-### 5.1 Customer Requirements
+### 5-1 Customer Requirements
 
 **CUS-1 Add Items to Cart**  
 - The customer shall be able to add items to cart  
