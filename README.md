@@ -427,6 +427,14 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **Flutter** for even more unified code or **native development** for full control.  
   > _React Native chosen for simplicity and shared code; Flutter and native were considered but add complexity._
 
+## Relationship between identified architecture design decisions
+We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram.
+<a id="figure-8-relationship"></a>
+<div align="center">
+ <img src="./relation.png" alt="Context Diagram" width="800"/>
+  <br>
+  <em> Figure 12: Relationship between key architectural decisions.</em>
+</div>
 
 ## History Log
 
