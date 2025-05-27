@@ -354,7 +354,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Local storage caches frequently accessed data, reducing API calls and enabling offline access.
 - **Benefits**: Improved load times, reduced mobile data usage, offline functionality.
 - **Limitations**: Risk of stale data if synchronization is not managed properly.
-- **Alternative Solutions**: Use **IndexedDB (for web)** or **Realm DB (for mobile)** for more advanced local data management.  
+- **Alternative Solutions**: Use **AsynStorage** or **Realm DB (for mobile)** for more advanced local data management.  
   > _SQLite was chosen for simplicity; IndexedDB or Realm offer more features but add complexity._
 
 #### Kubernetes Orchestration
@@ -370,7 +370,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Lazy loading defers non-critical resources, improving perceived performance.
 - **Benefits**: Faster initial page loads, reduced server bandwidth.
 - **Limitations**: Possible delays in loading deferred resources when needed.
-- **Alternative Solutions**: Implement **critical CSS** and prioritized loading, or use **CDN edge caching**.  
+- **Alternative Solutions**: Implement **critical resources** and prioritized loading, or use **CDN edge caching**.  
   > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
 
@@ -389,7 +389,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Isolating services ensures faults remain contained.
 - **Benefits**: One service failure (e.g., payments) does not affect others (e.g., product catalog).
 - **Limitations**: Requires robust inter-service communication and monitoring.
-- **Alternative Solutions**: Use **modular monolith** or **Domain-Driven Design (DDD)**.  
+- **Alternative Solutions**: Use **modular monolith**.  
   > _Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
 
 
@@ -408,7 +408,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Stateless APIs simplify scaling and load balancing by removing session dependency.
 - **Benefits**: Easy horizontal scaling, reduced complexity.
 - **Limitations**: Requires external session management (e.g., Redis) if needed.
-- **Alternative Solutions**: Use **sticky sessions**.  
+- **Alternative Solutions**: Use **web sockets**.  
   > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
 
 
@@ -454,5 +454,9 @@ We have provided the alternate competing solutions and the relationships between
 | 2025, May 05   | Created the system sequence diagram to show the process view of the system.                     | Syed, Shahzad                 |
 | 2025, May 07   | Created the mid-fidelity design of the system to show the usability view of the system.         | Syed, Danish|
 | 2025, May 07 | Listed the key architecture decisions, how it addresses the quality attributes and potential trade-offs. | Syed, Danish, Shahzad, Juraev|
+| 2025, May 15   | Created the mid-fidelity design of the system to show the usability view of the system.         | Syed, Danish|
+| 2025, May 21   | Created the diagrams for architectural patterns used in the project.         | Syed, Shahzad, Danish|
+| 2025, May 23   | provided architectural decisons in proper format and provided alternative solutions.         | Syed, Shahzad|
+| 2025, May 25 | Identified relationships among decisions and drawn decision space diagram. | Syed, Danish, Shahzad|
 
 
