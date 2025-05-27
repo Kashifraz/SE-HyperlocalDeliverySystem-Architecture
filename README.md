@@ -37,6 +37,9 @@
     - 13.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
     - 13.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
     - 13.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
+    - 13.10 [Figure 10: MVC Pattern](#figure-10-mvc-pattern-of-hyperlocal-delivery-system)
+    - 13.11 [Figure 11: RESTful API](#figure-11-rest-pattern-of-hyperlocal-delivery-system)
+    - 13.12 [Figure 12: Key Architectural Decisions](#figure-8-relationship)
 
 
 
