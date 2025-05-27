@@ -25,7 +25,7 @@
    - 10.3 [Availability](#10-3-availability)
    - 10.4 [Scalability](#10-4-scalability)
    - 10.5 [Maintainability](#10-5-maintainability)
-11. [Architectural Trade-offs](#11-architectural-decisions--trade-offs)
+11. [Architectural decisions relationships](#11-architectural-decisions--trade-offs)
 12. [Revision History](#12-history-log)
 13. [Figures](#13-figures)
     - 13.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
@@ -427,7 +427,8 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **Flutter** for even more unified code or **native development** for full control.  
   > _React Native chosen for simplicity and shared code; Flutter and native were considered but add complexity._
 
-## Relationship between identified architecture design decisions
+## 11 Relationship between identified architecture design decisions
+<a id="#11-architectural-decisions--trade-offs"></a>
 We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram.
 <a id="figure-8-relationship"></a>
 <div align="center">
