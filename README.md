@@ -455,8 +455,13 @@ We have provided the alternate competing solutions and the relationships between
 </div>
 
 ## References
-1 - <a href="https://dl.acm.org/doi/abs/10.1145/3106237.3121282">Reflections on the REST architectural style and" principled design of the modern web architecture</a>
-1 - <a href="https://www.sciencedirect.com/science/article/pii/S0950584920301993">Understanding and addressing quality attributes of microservices architecture: A Systematic literature review</a>
+1 - <a href="https://dl.acm.org/doi/abs/10.1145/3106237.3121282">Reflections on the REST architectural style and principled design of the modern web architecture</a>
+
+2 - <a href="https://www.sciencedirect.com/science/article/pii/S0950584920301993">Understanding and addressing quality attributes of microservices architecture: A Systematic literature review</a>
+
+3 - <a href="https://ieeexplore.ieee.org/abstract/document/950428">Flexible Self-Management Using the Model-View-Controller Pattern</a>
+
+4 - <a href="https://ieeexplore.ieee.org/abstract/document/4497770">Web-application development using the Model/View/Controller design pattern</a>
 
 
 ## History Log
