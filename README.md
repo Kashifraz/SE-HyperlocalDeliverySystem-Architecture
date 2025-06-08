@@ -57,7 +57,7 @@ This project aims to build a `hyperlocal delivery` platform tailored for custome
 
 To ensure quality and trust, customers are encouraged to leave `feedback and ratings` for each vendor, product, and delivery experience. This helps other users make informed decisions and motivates vendors and delivery personnel to maintain high service standards.
 
-Vendors have access to a dedicated `dashboard` where they can manage their `inventory`, update product availability, set business hours, and view incoming orders. Delivery personnel use a mobile interface to accept `delivery requests`, navigate to destinations, and update the order status at each step.
+Vendors have access to a dedicated `dashboard` where they can manage their `inventory`, update product availability, set business hours, and view incoming orders. Delivery agents use a mobile interface to accept `delivery requests`, navigate to destinations, and update the order status at each step.
 
 The platform emphasizes ease of use, responsiveness, and seamless interactions among all user types. Key non-functional goals include maintaining a fast user interface, ensuring high system availability, and reliability. The user experience is designed to be intuitive and efficient, even for individuals with limited digital literacy.
 
@@ -84,7 +84,7 @@ Overall, this system supports the growing demand for convenient, reliable, and l
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
 
 ## 3 System Overview
-We included the system `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, which helps us interact with a distributed microservices backend. The system also has three main databases to store its data.
+We included the system's `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, allowing us to have a single point of entry to the system. It helps us interact with a distributed microservices backend. The system uses RESTful APIs for communication, enabling stateless and efficient data communication between the front and backend. The system also has three central databases to store its data. 
 
 <a id="figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture"></a>
 <div align="center">
@@ -109,21 +109,21 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 ### <a id="5.1-customer-requirements"></a> 5.1 Customer Requirements
 
 **CUS-1 Add Items to Cart**  
-- The customer shall be able to add items to cart  
-- The customer shall be able to remove items from cart  
+- The customer shall be able to add items to the cart  
+- The customer shall be able to remove items from the cart  
 - The customer shall be able to view cart contents  
-- The customer shall be able to see real-time price total  
+- The customer shall be able to see the real-time price total  
 
 **CUS-2 Place Order**  
 - The customer shall be able to initiate checkout  
-- The customer shall be able to select delivery address  
-- The customer shall be able to choose payment method  
-- The customer shall be able to confirm order  
+- The customer shall be able to select a delivery address  
+- The customer shall be able to choose a payment method  
+- The customer shall be able to confirm the order  
 
 **CUS-3 Track Order**  
-- The customer shall be able to view order status  
-- The customer shall be able to see delivery agent location  
-- The customer shall be able to contact delivery agent  
+- The customer shall be able to view the order status  
+- The customer shall be able to see the delivery agent's location  
+- The customer shall be able to contact the delivery agent  
 - The customer shall be able to mark delivery as received  
 
 **CUS-4 Give Feedback**  
