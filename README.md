@@ -104,6 +104,20 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 - **Product Owner**: Oversees the platform’s strategic direction and growth. They are concerned with building a scalable system that can support future expansions without major redesigns.
 - **Developers**: Technical team responsible for developing, maintaining, and improving the platform. They prioritize clean, maintainable code to ensure long-term system health and rapid feature updates.
 
+## Negative Stakeholders  
+
+While our hyperlocal delivery platform provides value to customers, vendors, and delivery agents, certain stakeholders may oppose or be negatively impacted by the system. Identifying these groups helps mitigate risks and ensures smoother adoption.  
+
+### **1. Competing Delivery Platforms**  
+These established players may see our hyperlocal model as a threat, especially since we focus on small vendors within a 3-mile radius. They could respond by lowering fees, offering exclusive vendor contracts, or lobbying for regulations that disadvantage smaller platforms. This could limit our vendor partnerships and customer base.  
+
+### **2. Traditional Brick-and-Mortar Retailers (Not on the Platform)**  
+Local stores that choose not to join our platform may lose business to competitors who offer delivery. They might discourage customers from using our service, form alliances to exclude us, or resist digital adoption, reducing the variety of vendors available on our system.    
+
+### **3. Neighborhood Residents (Non-Customers)**  
+Increased delivery traffic (e.g., bikes, scooters) may cause noise, parking issues, or safety concerns in residential areas. Residents could complain to local officials, leading to delivery restrictions or negative publicity that harms our platform’s reputation.    
+
+
 ## 5 Functional Requirements
 
 ### <a id="5.1-customer-requirements"></a> 5.1 Customer Requirements
