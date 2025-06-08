@@ -100,9 +100,13 @@ The following are the primary stakeholders for this hyperlocal delivery platform
 
 ### Stakeholders
 - **Customers**: End-users who browse, order, and receive products. Their satisfaction directly impacts platform adoption and success. A seamless and responsive user experience is critical.
+  
 - **Vendors**: Local shops and food vendors who list products and manage inventory. Vendor participation ensures a wide variety of offerings; they require a stable and reliable system to manage daily operations.
+  
 - **Delivery Agents**: Personnel responsible for picking up and delivering orders. Their efficiency affects order fulfillment speed and customer satisfaction; they need a simple and dependable app to manage deliveries.
+  
 - **Product Owner**: Oversees the platform’s strategic direction and growth. They are concerned with building a scalable system that can support future expansions without major redesigns.
+
 - **Developers**: Technical team responsible for developing, maintaining, and improving the platform. They prioritize clean, maintainable code to ensure long-term system health and rapid feature updates.
 
 ### Negative Stakeholders  
@@ -449,6 +453,11 @@ We have provided the alternate competing solutions and the relationships between
   <br>
   <em> Figure 12: Relationship between key architectural decisions.</em>
 </div>
+
+## References
+1 - <a href="https://dl.acm.org/doi/abs/10.1145/3106237.3121282">Reflections on the REST architectural style and" principled design of the modern web architecture</a>
+1 - <a href="https://www.sciencedirect.com/science/article/pii/S0950584920301993">Understanding and addressing quality attributes of microservices architecture: A Systematic literature review</a>
+
 
 ## History Log
 
