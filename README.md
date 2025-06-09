@@ -20,7 +20,7 @@
    - 9.2 [Model-View-Controller (MVC) Pattern](#9-2-model-view-controller-mvc-pattern)
    - 9.3 [RESTful API Pattern](#9-3-restful-api-pattern)
 10. [Key Architectural Decisions](#10-key-architectural-decisions-to-address-quality-attributes)
-   - 10.1 [Component-based SPA Architecture](#10-1-SPA)
+   -10.1  [10.1 Component-based SPA Architecture](#10-1-component-based-spa-architecture)
    - 10.2 [Minimalist Modern Design](#10-2-Minimalist)
    - 10.3 [React Native for Mobile](#10-3-Native)
    - 10.4 [Microservices with REST/JSON](#10-4-Microservices)
@@ -417,7 +417,8 @@ We also used the REST API architectural pattern, which is based on stateless com
 
 ## 10. Key Architectural Decisions to Address Quality Attributes
 
-### <a id="10-1-SPA"></a> 10.1 Component-based SPA Architecture
+### <a id="10-1-component-based-spa-architecture"></a> 10.1 Component-based SPA Architecture
+
 - **Issue**: Traditional multi-page applications cause reloads that interrupt workflows.
 - **Rationale**: Single Page Applications (SPA) provide seamless navigation and faster interactions, crucial for vendor dashboards. Component-based design ensures consistency and reusability across the app.
 - **Benefits**: Smooth user experience with no full-page reloads; consistent design language throughout the app.
