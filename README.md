@@ -197,7 +197,7 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
 | **Customers**       | Easy-to-use app for browsing, ordering products, and receiving deliveries quickly.                       | Usability, Performance          |
 | **Vendors**         | System must be highly available and consistently operational to manage inventory and orders effectively. | Availability                    |
 | **Delivery Agents** | Simple, reliable app to accept deliveries and update statuses easily.                                    | Usability, Availability         |
-| **Product Owner**   | The system architecture should support easy scaling  and work across multiple devices.                   | Scalability, Interoperability                    |
+| **Product Owner**   | The system architecture should support easy scaling  and work across multiple devices.                   | Scalability                     |
 | **Developers**      | Codebase should be maintainable, allowing for easy updates, improvements, and issue resolution.          | Maintainability                 |
 ### 6.1. **Usability**
    **Stakeholder**: Customers, Delivery Agents  
