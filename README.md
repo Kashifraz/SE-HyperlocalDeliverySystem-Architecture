@@ -20,7 +20,7 @@
    - 9.2 [Model-View-Controller (MVC) Pattern](#9-2-model-view-controller-mvc-pattern)
    - 9.3 [RESTful API Pattern](#9-3-restful-api-pattern)
 10. [Key Architectural Decisions](#10-key-architectural-decisions-to-address-quality-attributes)
-   -10.1  [10.1 Component-based SPA Architecture](#10-1-component-based-spa-architecture)
+   -10.1  [Component-based SPA Architecture](#10-1-component-based-spa-architecture)
    - 10.2 [Minimalist Modern Design](#10-2-Minimalist)
    - 10.3 [React Native for Mobile](#10-3-Native)
    - 10.4 [Microservices with REST/JSON](#10-4-Microservices)
