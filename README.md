@@ -558,6 +558,21 @@ We have provided the alternate competing solutions and the relationships between
 
 5 - <a href="https://www.researchgate.net/publication/383413476_Comparative_Analysis_of_Microservices_and_Monolithic_Architectures_in_Cloud_Deployment">Comparative Analysis of Microservices and Monolithic Architectures in Cloud Deployment</a>
 
+6 - <a href="https://www.researchgate.net/publication/317637883_Microservices_Architecture_for_Cloud_Computing">Microservices Architecture for Cloud Computing</a>
+
+7 - <a href="https://learn.microsoft.com/en-us/entra/identity-platform/tutorial-single-page-app-react-prepare-app?tabs=workforce-tenant">Tutorial: Prepare a Single Page App with React for Azure AD Authentication</a>
+
+8 - <a href="https://www.researchgate.net/publication/334150777_Modern_Single_Page_Application_Architecture_A_Case_Study">Modern Single Page Application Architecture: A Case Study</a>
+
+9 - <a href="https://www.researchgate.net/publication/387762754_Microservices_Architecture_Using_Docker_and_Kubernetes">Microservices Architecture Using Docker and Kubernetes</a>
+
+10 - <a href="https://openliberty.io/docs/latest/rest-microservices.html">RESTful Microservices with Open Liberty</a>
+
+11 - <a href="https://www.researchgate.net/publication/338497042_Prospects_for_Using_React_Native_for_Developing_Cross-platform_Mobile_Applications">Prospects for Using React Native for Developing Cross-platform Mobile Applications</a>
+
+12 - <a href="https://www.researchgate.net/publication/383849770_Scalable_Fault_Tolerance_for_Microservices-Based_Systems">Scalable Fault Tolerance for Microservices-Based Systems</a>
+
+
 
 
 ## History Log
