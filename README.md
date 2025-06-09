@@ -268,7 +268,9 @@ The `BusinessProfileComponent` manages vendor profiles, store settings, and busi
 
 
 ## 8 Usability
-We provided the mid-fidelity designs to address the end users' usability concerns and demonstrate how our system is built to work on different platforms such as iOS, Android, and Web. This will help us demonstrate our key architectural decisions for improved user experience. These diagrams show that our design has modern UI/UX principles. We have made our design minimalistic to make it easy to use and understand. We also have separate UI for different users of our systems, such as separate mobile applications for customers and delivery agents, and a web dashboard for vendors. This minimalistic design and separation of user interfaces help improve the `understandability` of our system, which is a sub-attribute of usability.
+We provided mid-fidelity designs to address the usability concerns of end users and to showcase how our system is designed to meet the expectations of users across various devices, including iOS, Android, and the web. This approach allows us to highlight our key architectural decisions aimed at enhancing the user experience. The diagrams illustrate that our design adheres to modern UI/UX principles. 
+
+We have adopted a minimalistic design to ensure that our system is easy to use and understand. Additionally, we have created separate user interfaces tailored for different users, including distinct mobile applications for customers and delivery agents, as well as a web dashboard for vendors. This minimalistic approach and the separation of user interfaces contribute to improving the overall understandability of our system, which is an essential aspect of usability.
 
 <a id="figure-6-mid-fidelity-design-for-customer-mobile-application"></a>
 <div align="center">
