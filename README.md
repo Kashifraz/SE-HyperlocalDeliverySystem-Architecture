@@ -390,63 +390,61 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
 
-### <a id="10-3-availability"></a> 10.3 Availability
-
-#### Multi-DB Deployment
-- **Issue**: Single database failure can cause downtime.
+### <a id="10-8-Deployment"></a> 10.8 Multi-DB Deployment
+- **Issue**: A Single database failure can cause downtime.
 - **Rationale**: Active-active replication distributes load and ensures failover capabilities.
 - **Benefits**: High availability, resilience to regional failures, and distributed reads.
 - **Limitations**: Increased complexity in replication and consistency management.
+- **Quality attributes**: Availability.
 - **Alternative Solutions**: Use managed distributed databases like **Amazon Aurora Global** or **Google Cloud Spanner**.  
   > _Multi-DB replication was chosen for control and resilience; managed solutions were considered but add vendor lock-in._
 
-#### Microservices Isolation
+### <a id="10-9-Isolation"></a> 10.9 Microservices Isolation
 - **Issue**: Failures in one part of the system can cascade and affect the entire system.
 - **Rationale**: Isolating services ensures faults remain contained.
 - **Benefits**: One service failure (e.g., payments) does not affect others (e.g., product catalog).
 - **Limitations**: Requires robust inter-service communication and monitoring.
+- **Quality attributes**: Availability.
 - **Alternative Solutions**: Use **modular monolith**.  
   > _Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
 
-
-### <a id="10-4-scalability"></a> 10.4 Scalability
-
-#### Horizontal Microservices Scaling
+### <a id="10-10-Isolation"></a> 10.10 Horizontal Microservices Scaling
 - **Issue**: Sudden increases in load can overwhelm services.
 - **Rationale**: Horizontal scaling adds instances of services under load.
 - **Benefits**: Scalability with predictable performance.
 - **Limitations**: Requires effective load balancing and monitoring.
+- **Quality attributes**: Scalability.
 - **Alternative Solutions**: Use **serverless functions** for automatic scaling without managing infrastructure.  
   > _Horizontal scaling offers predictable control; serverless functions were considered but have cold start penalties._
 
-#### Stateless APIs
+### <a id="10-11-Isolation"></a> 10.11 Stateless APIs
 - **Issue**: Stateful APIs complicate scaling due to session management.
 - **Rationale**: Stateless APIs simplify scaling and load balancing by removing session dependency.
 - **Benefits**: Easy horizontal scaling, reduced complexity.
 - **Limitations**: Requires external session management (e.g., Redis) if needed.
+- **Quality attributes**: Scalability.
 - **Alternative Solutions**: Use **web sockets**.  
   > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
 
-
-### <a id="10-5-maintainability"></a> 10.5 Maintainability
-
-#### MVC with ORM
+### <a id="10-12-Isolation"></a> 10.12 MVC with ORM
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
 - **Rationale**: MVC separates concerns, and ORM reduces boilerplate while managing database interactions.
 - **Benefits**: Clean code structure, reduced development overhead, version-controlled schema changes.
 - **Limitations**: ORM can introduce performance overhead for complex queries.
+- **Quality attributes**: Maintainability.
 - **Alternative Solutions**: Use **micro-ORMs like Dapper** or raw SQL for performance-critical parts.  
   > _MVC with ORM was chosen for its maintainability; micro-ORMs/raw SQL are alternatives but increase manual work._
 
-#### React Native Unified Codebase
+#### <a id="10-13-Isolation"></a> 10.13 React Native Unified Codebase
 - **Issue**: Maintaining separate iOS and Android codebases leads to duplication of work.
 - **Rationale**: React Native allows sharing most of the code, reducing maintenance and delivery effort.
 - **Benefits**: Single codebase, faster bug fixes, unified CI/CD pipeline.
 - **Limitations**: Limited access to certain native modules, may need custom bridging.
+- **Quality attributes**: Maintainability.
 - **Alternative Solutions**: Use **Flutter** for even more unified code or **native development** for full control.  
   > _React Native chosen for simplicity and shared code; Flutter and native were considered but add complexity._
 
-## 11 Relationship between identified architecture design decisions
+## 11. Relationship between identified architecture design decisions
 <a id="#11-architectural-decisions--trade-offs"></a>
 We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram.
 <a id="figure-8-relationship"></a>
