@@ -237,7 +237,7 @@ The Development View focuses on the system’s internal structure from a develop
 
 <a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
 <div align="center">
-  <img src="./component.png" alt="Diagram" width="800">
+  <img src="./Component.png" alt="Diagram" width="800">
   <br>
   <em> Figure 5: Component view of hyperlocal delivery system</em>
 </div>
@@ -246,13 +246,13 @@ The Development View focuses on the system’s internal structure from a develop
 ### Architectural Component Descriptions
 
 **ProductComponent**  
-The `ProductComponent` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `CartComponent` and `OrderComponent` rely on to display items and validate availability during checkout.
+The `ProductComponent` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `CartComponent` rely on to display items and validate availability during checkout.
 
 **CartComponent**  
-The `CartComponent` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `ProductComponent` to fetch real-time product details and passes finalized carts to the `OrderComponent` to initiate the checkout process.
+The `CartComponent` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `ProductComponent` to fetch real-time product details and passes finalized carts to the `PaymentComponent` for checkout.
 
 **OrderComponent**  
-The `OrderComponent` oversees the entire order lifecycle, from creation to confirmation or cancellation. It coordinates with the `CartComponent` to process items, triggers the `PaymentComponent` for transactions, and notifies the `TrackingComponent` to monitor order status post-purchase.
+The `OrderComponent` is responsible for managing the orders right from their creation to their fulfillment, including changing order status and order cancellation scenarios. It coordinates with the `PaymentComponent` for payment confirmation after the `PaymentComponent` completes transactions, and also interacts with the `TrackingComponent` to monitor order status post-purchase and provide real-time tracking.
 
 **PaymentComponent**  
 The `PaymentComponent` manages all payment processing, including credit card transactions, digital wallets, and refunds. It ensures secure payment authorization and communicates success or failure back to the `OrderComponent`, which then updates the order status accordingly.
@@ -261,14 +261,14 @@ The `PaymentComponent` manages all payment processing, including credit card tra
 The `TrackingComponent` monitors order fulfillment, providing real-time shipping and delivery status updates. It receives order data from the `OrderComponent`, tracks and delivers products, and notifies customers of progress.
 
 **FeedbackComponent**  
-The `FeedbackComponent` collects and processes customer reviews and ratings linked to orders. It aggregates feedback for analytics, which the `BusinessProfileComponent` uses to generate vendor performance reports and improve service quality.
+The `FeedbackComponent` collects and processes customer reviews and ratings linked to orders. This feedback information is required for the `ProductComponent` to create the product listing. It also aggregates feedback for analytics, which the `BusinessProfileComponent` uses to generate vendor performance reports and improve service quality.
 
 **BusinessProfileComponent**  
-The `BusinessProfileComponent` manages vendor profiles, store settings, and business analytics. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
+The `BusinessProfileComponent` manages vendor profiles, store settings, and business analytics. The vendor profiles also include the product listing, which includes product information, customer reviews, and feedback. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
 ## 8 Usability
-We provided the mid-fidelity designs to address the end users' usability concerns and demonstrate how our system is built to work on different platforms such as IOs, Android and Web, demonstrating the interoperability of our system. This will help us demonstrate our key architectural decisions for improved user experience.
+We provided the mid-fidelity designs to address the end users' usability concerns and demonstrate how our system is built to work on different platforms such as iOS, Android, and Web. This will help us demonstrate our key architectural decisions for improved user experience. These diagrams show that our design has modern UI/UX principles. We have made our design minimalistic to make it easy to use and understand. We also have separate UI for different users of our systems, such as separate mobile applications for customers and delivery agents, and a web dashboard for vendors. This minimalistic design and separation of user interfaces help improve the `understandability` of our system, which is a sub-attribute of usability.
 
 <a id="figure-6-mid-fidelity-design-for-customer-mobile-application"></a>
 <div align="center">
