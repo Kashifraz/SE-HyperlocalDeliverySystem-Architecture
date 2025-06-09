@@ -35,8 +35,9 @@
    - 10.13  [React Native Unified Codebase](#10-13-react-native-unified-codebase)
 
 11. [Architectural decisions relationships](#11-architectural-decisions--trade-offs)
-12. [Revision History](#12-history-log)
-13. [Figures](#13-figures)
+12. [References](#12-References)
+13. [Revision History](#12-history-log)
+14. [Figures](#13-figures)
     - 13.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
     - 13.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
     - 13.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
@@ -547,7 +548,7 @@ We have provided the alternate competing solutions and the relationships between
   <em> Figure 12: Relationship between key architectural decisions.</em>
 </div>
 
-## References
+## 12. References
 1 - <a href="https://dl.acm.org/doi/abs/10.1145/3106237.3121282">Reflections on the REST architectural style and principled design of the modern web architecture</a>
 
 2 - <a href="https://www.sciencedirect.com/science/article/pii/S0950584920301993">Understanding and addressing quality attributes of microservices architecture: A Systematic literature review</a>
