@@ -42,9 +42,6 @@
     - 13.12 [Figure 12: Key Architectural Decisions](#figure-8-relationship)
 
 
-
-
-
 ## Group Members
 1) Syed Mohammad Kashif
 2) Abdul Raheem Shahzad
@@ -52,7 +49,7 @@
 4) Juraev Dilshodbek
    
 
-## 1 Project Description
+## 1. Project Description
 This project aims to build a `hyperlocal delivery` platform tailored for customers located within a `3-mile radius` of local shops and food vendors. The platform allows users to `browse` nearby grocery stores, restaurants, and small-scale food points, `view item details` including prices and availability, `add items` to a cart, and `place orders` for home delivery. Customers receive `live updates` on their order status—from confirmation to preparation and delivery—and can `track` the order and delivery agent’s.
 
 To ensure quality and trust, customers are encouraged to leave `feedback and ratings` for each vendor, product, and delivery experience. This helps other users make informed decisions and motivates vendors and delivery personnel to maintain high service standards.
@@ -63,7 +60,7 @@ The platform emphasizes ease of use, responsiveness, and seamless interactions a
 
 Overall, this system supports the growing demand for convenient, reliable, and locally focused delivery services, fostering stronger connections between neighborhood vendors and their surrounding communities.
 
-## 2 Features
+## 2. Features
 - **Customer Experience:**
   - Browse local vendors and food points.
   - Add items to the cart and place orders.
@@ -83,7 +80,7 @@ Overall, this system supports the growing demand for convenient, reliable, and l
 ## Benefits
 The platform supports the growing demand for convenient, reliable, and locally focused delivery services. It helps strengthen connections between neighborhood vendors and their surrounding communities by providing an efficient, trustworthy solution for local deliveries.
 
-## 3 System Overview
+## 3. System Overview
 We included the system's `Overview diagram` showing the system's end users. It shows that our system has different interfaces for end users, such as the `Customer Mobile App` for customers and the `vendor dashboard` for vendors. Then, it shows we have a common `API Gateway` for the whole system, allowing us to have a single point of entry to the system. It helps us interact with a distributed microservices backend. The system uses RESTful APIs for communication, enabling stateless and efficient data communication between the front and backend. The system also has three central databases to store its data. 
 
 <a id="figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture"></a>
@@ -94,7 +91,7 @@ We included the system's `Overview diagram` showing the system's end users. It s
 </div>
 
 
-## 4 Stakeholder Analysis
+## 4. Stakeholder Analysis
 
 The following are the primary stakeholders for this hyperlocal delivery platform. Each stakeholder influences the system design based on their specific needs and expectations:
 
@@ -118,7 +115,7 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
 - **Neighborhood Residents (Non-Customers):** Increased delivery traffic (e.g., bikes, scooters) may cause noise, parking issues, or safety concerns in residential areas. Residents could complain to local officials, leading to delivery restrictions or negative publicity that harms our platform’s reputation.    
 
 
-## 5 Functional Requirements
+## 5. Functional Requirements
 
 ### <a id="5.1-customer-requirements"></a> 5.1 Customer Requirements
 
@@ -267,7 +264,7 @@ The `FeedbackComponent` collects and processes customer reviews and ratings link
 The `BusinessProfileComponent` manages vendor profiles, store settings, and business analytics. The vendor profiles also include the product listing, which includes product information, customer reviews, and feedback. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
-## 8 Usability
+## 8. Usability viewpoint
 We provided mid-fidelity designs to address the usability concerns of end users and to showcase how our system is designed to meet the expectations of users across various devices, including iOS, Android, and the web. This approach allows us to highlight our key architectural decisions aimed at enhancing the user experience. The diagrams illustrate that our design adheres to modern UI/UX principles. 
 
 We have adopted a minimalistic design to ensure that our system is easy to use and understand. Additionally, we have created separate user interfaces tailored for different users, including distinct mobile applications for customers and delivery agents, as well as a web dashboard for vendors. This minimalistic approach and the separation of user interfaces contribute to improving the overall understandability of our system, which is an essential aspect of usability.
@@ -294,7 +291,7 @@ We have adopted a minimalistic design to ensure that our system is easy to use a
 </div>
 
 
-## 9 Architectural Patterns Used in the Project
+## 9. Architectural Patterns Used in the Project
 ### <a id="9-1-microservices-architecture"></a> 9.1 Microservices Architecture
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
@@ -317,7 +314,7 @@ We have used Model-View-Controller (MVC) architecture patterns, which separate a
 </div>
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 
-### <a id="9-3-restful-api-pattern"></a> 9.3 RESTful API Pattern
+### <a id="9-3-restful-api-pattern"></a> 9.3 REST architecture pattern
 We also used the REST API architectural pattern, which is based on stateless communication and resource-based interactions over HTTP. It structures requests around CRUD operations (Create, Read, Update, Delete) on resources, using standard HTTP methods (GET, POST, PUT, DELETE) and returning lightweight JSON payloads. RESTful APIs enable decoupling between frontend clients and backend services, allowing independent evolution of both layers. To enhance scalability, security, and maintainability, an API Gateway can be introduced. The API Gateway acts as a single entry point for all client requests, managing authentication, request routing, rate limiting, and aggregating responses from multiple microservices. This pattern simplifies client-side logic, ensures consistent cross-cutting concerns, and enables backend services to remain focused on business logic. In a microservices architecture, the combination of REST APIs and an API Gateway streamlines communication, enhances system resilience, and supports horizontal scaling.
 
 <a id="figure-11-rest-pattern-of-hyperlocal-delivery-system"></a>
@@ -327,65 +324,68 @@ We also used the REST API architectural pattern, which is based on stateless com
   <em> Figure 11: RESTful API pattern used in Hyperlocal delivery system</em>
 </div>
 
-## 10 Key Architectural Decisions to Address Quality Attributes
+## 10. Key Architectural Decisions to Address Quality Attributes
 
-### <a id="10-1-usability"></a> 10.1 Usability
-
-#### Component-based SPA Architecture
+### <a id="10-1-SPA"></a> 10.1 Component-based SPA Architecture
 - **Issue**: Traditional multi-page applications cause reloads that interrupt workflows.
 - **Rationale**: Single Page Applications (SPA) provide seamless navigation and faster interactions, crucial for vendor dashboards. Component-based design ensures consistency and reusability across the app.
 - **Benefits**: Smooth user experience with no full-page reloads; consistent design language throughout the app.
 - **Limitations**: Requires more complex client-side state management (e.g., Redux) and might affect initial load time.
+- **Quality attributes**: Usability.
 - **Alternative Solutions**: Use server-side rendering (SSR) frameworks like **Next.js** to balance performance and interactivity.  
   > _We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity._
 
-#### Minimalist Modern Design
+### <a id="10-2-Minimalist"></a> 10.2 Minimalist Modern Design
 - **Issue**: Overly complex UI designs increase cognitive load, reducing task efficiency.
 - **Rationale**: Minimalist design simplifies navigation and enhances usability by reducing visual clutter.
 - **Benefits**: Users can complete tasks faster due to intuitive layouts and familiar interaction patterns.
 - **Limitations**: Risk of oversimplifying features or omitting necessary visual cues.
+- **Quality attributes**: Usability.
 - **Alternative Solutions**: Employ **user-centered design (UCD)** or participatory design to balance simplicity and features.  
   > _Minimalist design was preferred for its clarity; UCD was considered but adds complexity in rapid delivery._
 
-#### React Native for Mobile
+### <a id="10-3-Native"></a> 10.3 React Native for Mobile
 - **Issue**: Building separate native apps for iOS and Android increases development and maintenance costs.
 - **Rationale**: React Native provides near-native performance with a shared codebase, reducing costs and improving delivery speed.
 - **Benefits**: Consistent behavior across platforms, reduced development effort, access to native gestures and animations.
 - **Limitations**: May encounter limitations in accessing low-level native APIs; requires bridging in some cases.
+- **Quality attributes**: Usability.
 - **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
   > _React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
 
-### <a id="10-2-performance"></a> 10.2 Performance
-
-#### Microservices with REST/JSON
+### <a id="10-4-Microservices"></a> 10.4 Microservices with REST/JSON
 - **Issue**: Monolithic architectures limit scalability and can become performance bottlenecks.
 - **Rationale**: Microservices allow scaling of individual components, and REST/JSON offers lightweight communication.
 - **Benefits**: Independent scaling, improved fault isolation, reduced data transfer size.
 - **Limitations**: Increased complexity in managing service boundaries and deployments.
+- **Quality attributes**: Performance.
 - **Alternative Solutions**: Use **GraphQL** to optimize API communication or **gRPC** for higher performance.  
   > _REST/JSON was selected for simplicity and wide compatibility; GraphQL or gRPC were considered but are heavier solutions._
 
-#### SQLite Local Storage
+### <a id="10-5-SQLite"></a> 10.5 SQLite Local Storage
 - **Issue**: Frequent API calls for product data increase load times and data usage.
 - **Rationale**: Local storage caches frequently accessed data, reducing API calls and enabling offline access.
 - **Benefits**: Improved load times, reduced mobile data usage, offline functionality.
 - **Limitations**: Risk of stale data if synchronization is not managed properly.
+- **Quality attributes**: Performance.
 - **Alternative Solutions**: Use **AsynStorage** or **Realm DB (for mobile)** for more advanced local data management.  
   > _SQLite was chosen for simplicity; IndexedDB or Realm offer more features but add complexity._
 
-#### Kubernetes Orchestration
+### <a id="10-6-Kubernetes"></a> 10.6 Kubernetes Orchestration
 - **Issue**: High-availability requirements for backend services under dynamic loads.
 - **Rationale**: Kubernetes provides automated deployment, scaling, and self-healing capabilities.
 - **Benefits**: High availability, automatic scaling, fault tolerance, and load balancing.
 - **Limitations**: Steep learning curve, additional overhead for managing Kubernetes clusters.
+- **Quality attributes**: Performance.
 - **Alternative Solutions**: Use **serverless architectures** (e.g., AWS Lambda) or **Docker Swarm**.  
   > _Kubernetes was chosen for robust orchestration; simpler alternatives were considered but lacked required capabilities._
 
-#### Lazy Loading
+### <a id="10-7-Lazy"></a> 10.7 Lazy Loading
 - **Issue**: Loading all resources upfront increases initial page load time.
 - **Rationale**: Lazy loading defers non-critical resources, improving perceived performance.
 - **Benefits**: Faster initial page loads, reduced server bandwidth.
 - **Limitations**: Possible delays in loading deferred resources when needed.
+- **Quality attributes**: Performance.
 - **Alternative Solutions**: Implement **critical resources** and prioritized loading, or use **CDN edge caching**.  
   > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
