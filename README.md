@@ -423,7 +423,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Single Page Applications (SPA) provide seamless navigation and faster interactions, crucial for vendor dashboards. Component-based design ensures consistency and reusability across the app.
 - **Benefits**: Smooth user experience with no full-page reloads; consistent design language throughout the app.
 - **Limitations**: Requires more complex client-side state management (e.g., Redux) and might affect initial load time.
-- **Quality attributes**: Usability.
+- **Quality attributes**: Usability and performance.
 - **Alternative Solutions**: Use server-side rendering (SSR) frameworks like **Next.js** to balance performance and interactivity.  
   > _We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity._
 
