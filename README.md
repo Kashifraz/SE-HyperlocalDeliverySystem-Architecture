@@ -556,6 +556,9 @@ We have provided the alternate competing solutions and the relationships between
 
 4 - <a href="https://ieeexplore.ieee.org/abstract/document/4497770">Web-application development using the Model/View/Controller design pattern</a>
 
+5 - <a href="https://www.researchgate.net/publication/383413476_Comparative_Analysis_of_Microservices_and_Monolithic_Architectures_in_Cloud_Deployment">Comparative Analysis of Microservices and Monolithic Architectures in Cloud Deployment</a>
+
+
 
 ## History Log
 
