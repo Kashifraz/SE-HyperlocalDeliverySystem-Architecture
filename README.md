@@ -435,7 +435,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **micro-ORMs like Dapper** or raw SQL for performance-critical parts.  
   > _MVC with ORM was chosen for its maintainability; micro-ORMs/raw SQL are alternatives but increase manual work._
 
-#### <a id="10-13-Isolation"></a> 10.13 React Native Unified Codebase
+### <a id="10-13-Isolation"></a> 10.13 React Native Unified Codebase
 - **Issue**: Maintaining separate iOS and Android codebases leads to duplication of work.
 - **Rationale**: React Native allows sharing most of the code, reducing maintenance and delivery effort.
 - **Benefits**: Single codebase, faster bug fixes, unified CI/CD pipeline.
