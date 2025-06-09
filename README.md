@@ -519,7 +519,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **web sockets**.  
   > _Stateless APIs chosen for their simplicity; web sockets add complexity and are suitable for real-time applications._
 
-### <a id="10-12-mvc-with-orm"></a> 10.12 MVC (Model View Controller) with ORM ((Object Relational Mapper)
+### <a id="10-12-mvc-with-orm"></a> 10.12 MVC (Model View Controller) with ORM (Object Relational Mapper)
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
 - **Rationale**: MVC separates concerns, and ORM reduces boilerplate while managing database interactions.
 - **Benefits**: Clean code structure, reduced development overhead, version-controlled schema changes.
