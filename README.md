@@ -381,7 +381,7 @@ We have adopted a minimalistic design to ensure that our system is easy to use a
 ### <a id="9-1-microservices-architecture"></a> 9.1 Microservices Architecture
 Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
 
-**Quality attributes**: Performance, scalability, and maintainability.
+**Quality attributes**: Availability, scalability, and maintainability.
 
 <a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
 <div align="center">
@@ -462,7 +462,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Risk of stale data if synchronization is not managed properly.
 - **Quality attributes**: Performance.
 - **Alternative Solutions**: Use **AsynStorage** or **Realm DB (for mobile)** for more advanced local data management.  
-  > _SQLite was chosen for simplicity; IndexedDB or Realm offer more features but add complexity._
+  > _SQLite was chosen for simplicity; Realm offer more features but add complexity._
 
 ### <a id="10-6-kubernetes-orchestration"></a> 10.6 Kubernetes Orchestration
 - **Issue**: High-availability requirements for backend services under dynamic loads.
@@ -517,7 +517,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Requires external session management (e.g., Redis) if needed.
 - **Quality attributes**: Scalability.
 - **Alternative Solutions**: Use **web sockets**.  
-  > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
+  > _Stateless APIs chosen for their simplicity; web sockets add complexity and are suitable for real-time applications._
 
 ### <a id="10-12-mvc-with-orm"></a> 10.12 MVC (Model View Controller) with ORM ((Object Relational Mapper)
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
