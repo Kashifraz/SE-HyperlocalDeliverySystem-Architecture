@@ -69,7 +69,7 @@ The platform emphasizes ease of use, responsiveness, and seamless interactions a
 Overall, this system supports the growing demand for convenient, reliable, and locally focused delivery services, fostering stronger connections between neighborhood vendors and their surrounding communities.
 
 ## 2. Features
-- **Customer Experience:**
+- **Customer Mobile Interface:**
   - Browse local vendors and food points.
   - Add items to the cart and place orders.
   - Real-time order tracking and delivery status updates.
@@ -78,7 +78,8 @@ Overall, this system supports the growing demand for convenient, reliable, and l
   
 - **Vendor Dashboard:**
   - Manage inventory and update product availability.
-  - Set business hours and manage orders.
+  - Set up a business profile and business hours.
+  - Manage orders.
   - View and respond to customer feedback.
 
 - **Delivery Agent Mobile Interface:**
