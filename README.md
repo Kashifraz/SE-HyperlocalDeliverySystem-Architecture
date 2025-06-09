@@ -210,11 +210,11 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
    - **Delivery agents** also require a user-friendly interface to minimize operational complexity. The mobile interface for them needs to ensure smooth management of delivery requests, real-time status updates, and quick response times to minimize errors and improve delivery speed.
    - Usability is crucial for both customers and delivery agents, as it directly impacts their interaction with the platform and their overall satisfaction.
 
-   **Implementation in the Project**:  
+   **Key Solutions**:  
    - The project employs a **minimalist design** approach, ensuring the interface is clear and easy to navigate for all user groups.
-   - Usability is further emphasized by the **mid-fidelity design** prototypes for the customer, delivery agent, and vendor interfaces, which showcase the emphasis on accessibility and efficiency.
+   - Usability is further emphasized by the **mid-fidelity design** prototypes for the customer, delivery agent, and vendor interfaces.
 
----
+
 
 ### 6.2. **Performance**
    **Stakeholder**: Customers  
@@ -225,11 +225,11 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
    - Performance in this context refers to how quickly the system responds to customer actions, such as browsing for items, adding them to the cart, placing orders, and tracking the delivery status. Delays or slow loading times can negatively impact user satisfaction and engagement.
    - Fast performance is vital to keep customers engaged and improve their experience on the platform. The application should deliver real-time updates on delivery status without significant latency.
 
-   **Implementation in the Project**:  
+   **Key Solutions**:  
    - The system uses **lazy loading** techniques to optimize performance, ensuring that only necessary resources are loaded initially, speeding up the user experience.
    - A component-based **SPA (Single Page Application)** architecture ensures that customers can transition between pages without full reloads, further improving the perceived performance.
 
----
+
 
 ### 6.3. **Availability**
    **Stakeholder**: Vendors, Delivery Agents  
@@ -242,11 +242,11 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
    - **Delivery agents** also need uninterrupted access to the system to receive delivery requests and manage orders in real time.
    - High **availability** ensures that no part of the system is down for long periods, minimizing operational interruptions.
 
-   **Implementation in the Project**:  
+   **Key Solutions**:  
    - The project incorporates **microservices architecture** to enable high availability, ensuring that individual services can scale and recover independently, reducing the chances of downtime.
    - The system uses **Kubernetes orchestration** for automated scaling, fault tolerance, and self-healing capabilities, ensuring continuous service availability.
 
----
+
 
 ### 6.4. **Scalability**
    **Stakeholder**: Product Owner  
@@ -257,28 +257,13 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
    - **Scalability** allows the system to handle increased load as the number of customers, vendors, and agents grows over time. This includes scaling the infrastructure, adding new features, or supporting more users without compromising performance.
    - The platform must be designed to support both vertical (increasing resources) and horizontal (adding more instances) scaling to accommodate growing demand.
 
-   **Implementation in the Project**:  
+   **Key Solutions**:  
    - **Microservices** architecture facilitates scalability by allowing individual components to scale independently as needed.
    - The system also employs **Kubernetes** for automated scaling and **horizontal scaling** of microservices, allowing the system to efficiently handle increased traffic and usage.
 
----
 
-### 6.5. **Interoperability**
-   **Stakeholder**: Product Owner  
-   **Concern**:  
-   - The system must be able to work across multiple devices and integrate with external systems like location APIs.
 
-   **Explanation**:  
-   - **Interoperability** ensures that the system can communicate and operate seamlessly across different platforms (iOS, Android, web) and integrate with external systems like **Google Maps API** for accurate location tracking.
-   - The platform needs to support various devices and maintain smooth interactions regardless of the operating system, device type, or external service it integrates with.
-
-   **Implementation in the Project**:  
-   - **React Native** is used for cross-platform mobile app development, ensuring a unified codebase for both iOS and Android devices.
-   - The system uses **RESTful APIs** for easy integration with external systems like the **Google Maps API**, ensuring seamless data exchange.
-
----
-
-### 6.6. **Maintainability**
+### 6.5. **Maintainability**
    **Stakeholder**: Developers  
    **Concern**:  
    - The codebase should be maintainable, allowing for easy updates, improvements, and issue resolution.
@@ -287,7 +272,7 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
    - **Maintainability** refers to the ease with which the system can be updated, debugged, and improved. Developers should be able to identify and resolve issues quickly, as well as implement new features or improvements without causing disruptions to the system.
    - A well-maintained codebase reduces technical debt, ensuring long-term stability and enabling faster feature development and bug fixes.
 
-   **Implementation in the Project**:  
+   **Key Solutions**:  
    - The project follows the **Model-View-Controller (MVC)** design pattern, promoting modularity and separation of concerns, which improves maintainability by making it easier to update individual components.
    - Additionally, the use of **ORM (Object-Relational Mapping)** for database interaction reduces boilerplate code, enhancing the ease of making future database changes.
 
