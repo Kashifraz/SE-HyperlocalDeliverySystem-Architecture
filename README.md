@@ -424,7 +424,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Single Page Applications (SPA) provide seamless navigation and faster interactions, crucial for vendor dashboards. Component-based design ensures consistency and reusability across the app.
 - **Benefits**: Smooth user experience with no full-page reloads; consistent design language throughout the app.
 - **Limitations**: Requires more complex client-side state management (e.g., Redux) and might affect initial load time.
-- **Quality attributes**: Usability.
+- **Quality attributes**: Usability and performance.
 - **Alternative Solutions**: Use server-side rendering (SSR) frameworks like **Next.js** to balance performance and interactivity.  
   > _We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity._
 
@@ -442,7 +442,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: React Native provides near-native performance with a shared codebase, reducing costs and improving delivery speed.
 - **Benefits**: Consistent behavior across platforms, reduced development effort, access to native gestures and animations.
 - **Limitations**: May encounter limitations in accessing low-level native APIs; requires bridging in some cases.
-- **Quality attributes**: Usability.
+- **Quality attributes**: Scalability, maintianability.
 - **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
   > _React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
 
@@ -451,7 +451,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Microservices allow scaling of individual components, and REST/JSON offers lightweight communication.
 - **Benefits**: Independent scaling, improved fault isolation, reduced data transfer size.
 - **Limitations**: Increased complexity in managing service boundaries and deployments.
-- **Quality attributes**: Performance.
+- **Quality attributes**: Performance, scalability.
 - **Alternative Solutions**: Use **GraphQL** to optimize API communication or **gRPC** for higher performance.  
   > _REST/JSON was selected for simplicity and wide compatibility; GraphQL or gRPC were considered but are heavier solutions._
 
@@ -469,7 +469,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Kubernetes provides automated deployment, scaling, and self-healing capabilities.
 - **Benefits**: High availability, automatic scaling, fault tolerance, and load balancing.
 - **Limitations**: Steep learning curve, additional overhead for managing Kubernetes clusters.
-- **Quality attributes**: Performance.
+- **Quality attributes**: Performance, availability.
 - **Alternative Solutions**: Use **serverless architectures** (e.g., AWS Lambda) or **Docker Swarm**.  
   > _Kubernetes was chosen for robust orchestration; simpler alternatives were considered but lacked required capabilities._
 
@@ -519,7 +519,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **web sockets**.  
   > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
 
-### <a id="10-12-mvc-with-orm"></a> 10.12 MVC with ORM
+### <a id="10-12-mvc-with-orm"></a> 10.12 MVC (Model View Controller) with ORM ((Object Relational Mapper)
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
 - **Rationale**: MVC separates concerns, and ORM reduces boilerplate while managing database interactions.
 - **Benefits**: Clean code structure, reduced development overhead, version-controlled schema changes.
