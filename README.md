@@ -20,19 +20,20 @@
    - 9.2 [Model-View-Controller (MVC) Pattern](#9-2-model-view-controller-mvc-pattern)
    - 9.3 [RESTful API Pattern](#9-3-restful-api-pattern)
 10. [Key Architectural Decisions](#10-key-architectural-decisions-to-address-quality-attributes)
-   -10.1  [Component-based SPA Architecture](#10-1-component-based-spa-architecture)
-   - 10.2 [Minimalist Modern Design](#10-2-Minimalist)
-   - 10.3 [React Native for Mobile](#10-3-Native)
-   - 10.4 [Microservices with REST/JSON](#10-4-Microservices)
-   - 10.5 [SQLite Local Storage](#10-5-SQLite)
-   - 10.6 [Kubernetes Orchestration](#10-6-Kubernetes)
-   - 10.7 [Lazy Loading](#10-7-Lazy)
-   - 10.8 [Multi-DB Deployment](#10-8-Deployment)
-   - 10.9 [Microservices Isolation](#10-9-Isolation)
-   - 10.10 [Horizontal Microservices Scaling]()
-   - 10.11 [Stateless APIs]()
-   - 10.12 [MVC with ORM]()
-   - 10.13 [React Native Unified Codebase]()
+   - 10.1  [Component-based SPA Architecture](#10-1-component-based-spa-architecture)  
+   - 10.2  [Minimalist Modern Design](#10-2-minimalist-modern-design)  
+   - 10.3  [React Native for Mobile](#10-3-react-native-for-mobile)  
+   - 10.4  [Microservices with REST/JSON](#10-4-microservices-with-rest-json)  
+   - 10.5  [SQLite Local Storage](#10-5-sqlite-local-storage)  
+   - 10.6  [Kubernetes Orchestration](#10-6-kubernetes-orchestration)  
+   - 10.7  [Lazy Loading](#10-7-lazy-loading)  
+   - 10.8  [Multi-DB Deployment](#10-8-multi-db-deployment)  
+   - 10.9  [Microservices Isolation](#10-9-microservices-isolation)  
+   - 10.10  [Horizontal Microservices Scaling](#10-10-horizontal-microservices-scaling)  
+   - 10.11  [Stateless APIs](#10-11-stateless-apis)  
+   - 10.12  [MVC with ORM](#10-12-mvc-with-orm)  
+   - 10.13  [React Native Unified Codebase](#10-13-react-native-unified-codebase)
+
 11. [Architectural decisions relationships](#11-architectural-decisions--trade-offs)
 12. [Revision History](#12-history-log)
 13. [Figures](#13-figures)
@@ -423,11 +424,11 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Rationale**: Single Page Applications (SPA) provide seamless navigation and faster interactions, crucial for vendor dashboards. Component-based design ensures consistency and reusability across the app.
 - **Benefits**: Smooth user experience with no full-page reloads; consistent design language throughout the app.
 - **Limitations**: Requires more complex client-side state management (e.g., Redux) and might affect initial load time.
-- **Quality attributes**: Usability and performance.
+- **Quality attributes**: Usability.
 - **Alternative Solutions**: Use server-side rendering (SSR) frameworks like **Next.js** to balance performance and interactivity.  
   > _We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity._
 
-### <a id="10-2-Minimalist"></a> 10.2 Minimalist Modern Design
+### <a id="10-2-minimalist-modern-design"></a> 10.2 Minimalist Modern Design
 - **Issue**: Overly complex UI designs increase cognitive load, reducing task efficiency.
 - **Rationale**: Minimalist design simplifies navigation and enhances usability by reducing visual clutter.
 - **Benefits**: Users can complete tasks faster due to intuitive layouts and familiar interaction patterns.
@@ -436,7 +437,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Employ **user-centered design (UCD)** or participatory design to balance simplicity and features.  
   > _Minimalist design was preferred for its clarity; UCD was considered but adds complexity in rapid delivery._
 
-### <a id="10-3-Native"></a> 10.3 React Native for Mobile
+### <a id="10-3-react-native-for-mobile"></a> 10.3 React Native for Mobile
 - **Issue**: Building separate native apps for iOS and Android increases development and maintenance costs.
 - **Rationale**: React Native provides near-native performance with a shared codebase, reducing costs and improving delivery speed.
 - **Benefits**: Consistent behavior across platforms, reduced development effort, access to native gestures and animations.
@@ -445,7 +446,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
   > _React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
 
-### <a id="10-4-Microservices"></a> 10.4 Microservices with REST/JSON
+### <a id="10-4-microservices-with-rest-json"></a> 10.4 Microservices with REST/JSON
 - **Issue**: Monolithic architectures limit scalability and can become performance bottlenecks.
 - **Rationale**: Microservices allow scaling of individual components, and REST/JSON offers lightweight communication.
 - **Benefits**: Independent scaling, improved fault isolation, reduced data transfer size.
@@ -454,7 +455,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **GraphQL** to optimize API communication or **gRPC** for higher performance.  
   > _REST/JSON was selected for simplicity and wide compatibility; GraphQL or gRPC were considered but are heavier solutions._
 
-### <a id="10-5-SQLite"></a> 10.5 SQLite Local Storage
+### <a id="10-5-sqlite-local-storage"></a> 10.5 SQLite Local Storage
 - **Issue**: Frequent API calls for product data increase load times and data usage.
 - **Rationale**: Local storage caches frequently accessed data, reducing API calls and enabling offline access.
 - **Benefits**: Improved load times, reduced mobile data usage, offline functionality.
@@ -463,7 +464,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **AsynStorage** or **Realm DB (for mobile)** for more advanced local data management.  
   > _SQLite was chosen for simplicity; IndexedDB or Realm offer more features but add complexity._
 
-### <a id="10-6-Kubernetes"></a> 10.6 Kubernetes Orchestration
+### <a id="10-6-kubernetes-orchestration"></a> 10.6 Kubernetes Orchestration
 - **Issue**: High-availability requirements for backend services under dynamic loads.
 - **Rationale**: Kubernetes provides automated deployment, scaling, and self-healing capabilities.
 - **Benefits**: High availability, automatic scaling, fault tolerance, and load balancing.
@@ -472,7 +473,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **serverless architectures** (e.g., AWS Lambda) or **Docker Swarm**.  
   > _Kubernetes was chosen for robust orchestration; simpler alternatives were considered but lacked required capabilities._
 
-### <a id="10-7-Lazy"></a> 10.7 Lazy Loading
+### <a id="10-7-lazy-loading"></a> 10.7 Lazy Loading
 - **Issue**: Loading all resources upfront increases initial page load time.
 - **Rationale**: Lazy loading defers non-critical resources, improving perceived performance.
 - **Benefits**: Faster initial page loads, reduced server bandwidth.
@@ -482,7 +483,7 @@ We also used the REST API architectural pattern, which is based on stateless com
   > _Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
 
 
-### <a id="10-8-Deployment"></a> 10.8 Multi-DB Deployment
+### <a id="10-8-multi-db-deployment"></a> 10.8 Multi-DB Deployment
 - **Issue**: A Single database failure can cause downtime.
 - **Rationale**: Active-active replication distributes load and ensures failover capabilities.
 - **Benefits**: High availability, resilience to regional failures, and distributed reads.
@@ -491,7 +492,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use managed distributed databases like **Amazon Aurora Global** or **Google Cloud Spanner**.  
   > _Multi-DB replication was chosen for control and resilience; managed solutions were considered but add vendor lock-in._
 
-### <a id="10-9-Isolation"></a> 10.9 Microservices Isolation
+### <a id="10-9-microservices-isolation"></a> 10.9 Microservices Isolation
 - **Issue**: Failures in one part of the system can cascade and affect the entire system.
 - **Rationale**: Isolating services ensures faults remain contained.
 - **Benefits**: One service failure (e.g., payments) does not affect others (e.g., product catalog).
@@ -500,7 +501,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **modular monolith**.  
   > _Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
 
-### <a id="10-10-Isolation"></a> 10.10 Horizontal Microservices Scaling
+### <a id="10-10-horizontal-microservices-scaling"></a> 10.10 Horizontal Microservices Scaling
 - **Issue**: Sudden increases in load can overwhelm services.
 - **Rationale**: Horizontal scaling adds instances of services under load.
 - **Benefits**: Scalability with predictable performance.
@@ -509,7 +510,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **serverless functions** for automatic scaling without managing infrastructure.  
   > _Horizontal scaling offers predictable control; serverless functions were considered but have cold start penalties._
 
-### <a id="10-11-Isolation"></a> 10.11 Stateless APIs
+### <a id="10-11-stateless-apis"></a> 10.11 Stateless APIs
 - **Issue**: Stateful APIs complicate scaling due to session management.
 - **Rationale**: Stateless APIs simplify scaling and load balancing by removing session dependency.
 - **Benefits**: Easy horizontal scaling, reduced complexity.
@@ -518,7 +519,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **web sockets**.  
   > _Stateless APIs chosen for their simplicity; sticky sessions add operational considerations._
 
-### <a id="10-12-Isolation"></a> 10.12 MVC with ORM
+### <a id="10-12-mvc-with-orm"></a> 10.12 MVC with ORM
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
 - **Rationale**: MVC separates concerns, and ORM reduces boilerplate while managing database interactions.
 - **Benefits**: Clean code structure, reduced development overhead, version-controlled schema changes.
@@ -527,7 +528,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Alternative Solutions**: Use **micro-ORMs like Dapper** or raw SQL for performance-critical parts.  
   > _MVC with ORM was chosen for its maintainability; micro-ORMs/raw SQL are alternatives but increase manual work._
 
-### <a id="10-13-Isolation"></a> 10.13 React Native Unified Codebase
+### <a id="10-13-react-native-unified-codebase"></a> 10.13 React Native Unified Codebase
 - **Issue**: Maintaining separate iOS and Android codebases leads to duplication of work.
 - **Rationale**: React Native allows sharing most of the code, reducing maintenance and delivery effort.
 - **Benefits**: Single codebase, faster bug fixes, unified CI/CD pipeline.
