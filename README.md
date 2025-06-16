@@ -357,7 +357,7 @@ The Development View focuses on the system’s internal structure from a develop
 ### Architectural Component Descriptions
 
 **Product Service**  
-The `Product Service` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `CartComponent` rely on to display items and validate availability during checkout.
+The `Product Service` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `Cart Service` rely on to display items and validate availability during checkout.
 
 **Cart Service**  
 The `Cart Service` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `Product Service` to fetch real-time product details and passes finalized carts to the `Cart Service` for checkout.
