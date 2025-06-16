@@ -354,7 +354,7 @@ The Development View focuses on the system’s internal structure from a develop
 </div>
 
 
-### Architectural Component Descriptions
+### Architectural Component (microservices) Descriptions
 
 **Product Service**  
 The `Product Service` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `Cart Service` rely on to display items and validate availability during checkout.
@@ -414,6 +414,14 @@ Our system follows a microservices architecture style compared to a monolithic a
 
 ### <a id="9-2-model-view-controller-mvc-pattern"></a> 9.2 Model-View-Controller (MVC) Pattern
 We have used Model-View-Controller (MVC) architecture patterns, which separate a system into three distinct components: the Model, which manages data logic; the View, which handles presentation and user interface; and the Controller, which processes input, invokes Model operations, and updates the View. This separation promotes modularity, ease of maintenance, and testability. By isolating business rules from the user interface, developers can work on different components simultaneously without introducing side effects. In server-side frameworks like Laravel, MVC enables clean, organized codebases where models represent database entities, views are templated frontends, and controllers serve as the business logic part.
+
+Figure 10 illustrates the application of the MVC pattern in our system architecture, demonstrated through the interaction between the Product Service and the customer mobile app. The implementation follows these key flows:
+
+When a customer views product information through the mobile app (which serves as the View layer), the app initiates a request to fetch product data via RESTful APIs exposed by the `Product Service`. This request is first received by the `Products Controller`, which acts as the intermediary between the View and data operations.
+
+The `Product Controller` performs several critical functions: it validates the incoming request, processes any required business logic, and coordinates with the `Product Model` to retrieve the necessary data. The `Product Model`, representing the data layer, executes the actual data retrieval operations based on the Controller's instructions, typically involving querying the database or other persistence mechanisms.
+
+Upon receiving the requested data from the `Product Model`, the `Product Controller` formats and returns the appropriate response to the mobile app View, completing the cycle. This separation of concerns ensures that the View remains focused on presentation, the Controller handles user input and application flow, while the Model manages data access and retrieval. 
 
 **Quality attributes**: Maintainability.
 
