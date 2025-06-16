@@ -38,18 +38,18 @@
 12. [References](#12-References)
 13. [Revision History](#12-history-log)
 14. [Figures](#13-figures)
-    - 13.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
-    - 13.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
-    - 13.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
-    - 13.4 [Figure 4: Sequence Diagram](#figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
-    - 13.5 [Figure 5: Component Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
-    - 13.6 [Figure 6: Customer UI](#figure-6-mid-fidelity-design-for-customer-mobile-application)
-    - 13.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
-    - 13.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
-    - 13.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
-    - 13.10 [Figure 10: MVC Pattern](#figure-10-mvc-pattern-of-hyperlocal-delivery-system)
-    - 13.11 [Figure 11: RESTful API](#figure-11-rest-pattern-of-hyperlocal-delivery-system)
-    - 13.12 [Figure 12: Key Architectural Decisions](#figure-8-relationship)
+   - 13.1 [Figure 1: System Overview](#figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture)
+   - 13.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
+   - 13.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
+   - 13.4 [Figure 4: Sequence Diagram](#figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
+   - 13.5 [Figure 5: Component Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
+   - 13.6 [Figure 6: Customer UI](#figure-6-mid-fidelity-design-for-customer-mobile-application)
+   - 13.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
+   - 13.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
+   - 13.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
+   - 13.10 [Figure 10: MVC Pattern](#figure-10-mvc-pattern-of-hyperlocal-delivery-system)
+   - 13.11 [Figure 11: RESTful API](#figure-11-rest-pattern-of-hyperlocal-delivery-system)
+   - 13.12 [Figure 12: Key Architectural Decisions](#figure-8-relationship)
 
 
 ## Group Members
@@ -378,7 +378,7 @@ The `Feedback Service` collects and processes customer reviews and ratings linke
 The `Business Profile Service` manages vendor profiles, store settings, and business analytics. The vendor profiles also include the product listing, which includes product information, customer reviews, and feedback. It compiles data from orders, payments, and feedback services to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
-## 8. Usability viewpoint
+## 8. Usability Viewpoint
 We provided mid-fidelity designs to address the usability concerns of end users and to showcase how our system is designed to meet the expectations of users across various devices, including iOS, Android, and the web. This approach allows us to highlight our key architectural decisions aimed at enhancing the user experience. The diagrams illustrate that our design adheres to modern UI/UX principles. 
 
 We have adopted a minimalistic design to ensure that our system is easy to use and understand. Additionally, we have created separate user interfaces tailored for different users, including distinct mobile applications for customers and delivery agents, as well as a web dashboard for vendors. This minimalistic approach and the separation of user interfaces contribute to improving the overall understandability of our system, which is an essential aspect of usability.
@@ -645,9 +645,9 @@ We have provided the alternate competing solutions and the relationships between
 | 2025, May 21   | Created the diagrams for architectural patterns used in the project.         | Syed, Shahzad, Danish|
 | 2025, May 23   | provided architectural decisions in proper format and provided alternative solutions.         | Syed, Shahzad,Juraev|
 | 2025, May 25 | Identified relationships among decisions and drawn decision space diagram. | Syed, Danish, Shahzad|
-| 2025, May 15   | Redesigned the Context diagram and improve it's explanation         | Syed, Danish, Juraev|
-| 2025, May 21   | Redesigned the MVC pattern diagram and added explanation in the context of our project.         | Syed, Shahzad, Danish|
-| 2025, May 23   | Improved the microservices diagram and added it to the development view         | Syed, Shahzad, Juraev|
-| 2025, May 25 | Provided examples of relationships among decisions and improved decision space diagram. | Syed, Danish, Shahzad|
+| 2025, May June 1   | Redesigned the Context diagram and improve it's explanation         | Syed, Danish, Juraev|
+| 2025, May June 5   | Redesigned the MVC pattern diagram and added explanation in the context of our project.         | Syed, Shahzad, Danish|
+| 2025, May June 15   | Improved the microservices diagram and added it to the development view         | Syed, Shahzad, Juraev|
+| 2025, May June 16 | Provided examples of relationships among decisions and improved decision space diagram. | Syed, Danish, Shahzad|
 
 
