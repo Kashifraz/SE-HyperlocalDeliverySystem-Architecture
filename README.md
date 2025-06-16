@@ -14,7 +14,7 @@
    - 7.2 [Use Case Viewpoint](#7-2-use-case-viewpoint)
    - 7.3 [Process Viewpoint](#7-3-process-viewpoint)
    - 7.4 [Development Viewpoint](#7-4-development-viewpoint)
-8. [Usability](#8-usability)
+8. [Usability](#8-usability-viewpoint)
 9. [Architectural Patterns Used in the Project](#9-architectural-patterns-used-in-the-project)
    - 9.1 [Microservices Architecture](#9-1-microservices-architecture)
    - 9.2 [Model-View-Controller (MVC) Pattern](#9-2-model-view-controller-mvc-pattern)
@@ -34,7 +34,7 @@
    - 10.12  [MVC with ORM](#10-12-mvc-with-orm)  
    - 10.13  [React Native Unified Codebase](#10-13-react-native-unified-codebase)
 
-11. [Architectural decisions relationships](#11-architectural-decisions-relationships)
+11. [Relationship between identified architecture design decisions](#11-Relationship-between-identified-architecture-design-decisions)
 12. [References](#12-References)
 13. [Revision History](#12-history-log)
 14. [Figures](#13-figures)
