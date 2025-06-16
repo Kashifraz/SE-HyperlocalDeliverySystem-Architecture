@@ -560,7 +560,31 @@ We also used the REST API architectural pattern, which is based on stateless com
 
 ## 11. Relationship between identified architecture design decisions
 <a id="#11-architectural-decisions--trade-offs"></a>
-We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram.
+We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram. This diagram shows that the architectural decisions are not independent but are related to each other. Below, we provide a few examples to explain this:
+
+### Microservices Architecture Enables API Gateway and RESTful APIs
+
+- We chose to use the microservices architectural style, and because of this decision, we also had to decide how to handle data communication and access to the microservices.
+- Without microservices, a monolithic architecture might have used direct method calls or a shared database, making RESTful APIs and an API Gateway unnecessary.
+- Therefore, we decided to use RESTful APIs for communication over HTTP(s) and adopted an API Gateway as the single entry point to backend microservices.
+
+### Microservices Demand Container Orchestration and Scaling
+
+- Since we are using microservices, which are deployed as independent containers, we need to decide how to manage these containers at scale.
+- Without microservices, container orchestration tools like Kubernetes would be irrelevant (e.g., a monolithic app could run on a single server).
+- Thus, we decided to use Kubernetes for orchestration and horizontal scaling to manage microservices efficiently.
+
+### Separate UIs Need Technology-Specific Decisions
+
+- The decision to have separate user interfaces for different users required us to select appropriate technologies for each frontend.
+- If we had a single UI, React.js for a web dashboard and React Native for mobile apps would not be needed—a single framework would be enough.
+- As a result, we chose: Component-based SPA (React.js) for the web dashboard, React Native for cross-platform mobile apps (customer/delivery agent).
+
+### React Native Mobile Apps Need SQLite for Offline Persistence
+
+- Because we chose React Native for mobile apps, we needed local data storage, leading to the decision to use SQLite.
+- Without React Native (e.g., if we used a pure web app), SQLite would be irrelevant—alternatives like IndexedDB (web) might apply.
+
 <a id="figure-8-relationship"></a>
 <div align="center">
  <img src="./relation.jpg" alt="Context Diagram" width="900"/>
