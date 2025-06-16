@@ -286,7 +286,7 @@ The `Context Diagram` below shows how external entities, such as users and exter
 
 <a id="figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system"></a>
 <div align="center">
- <img src="./context.jpg" alt="Context Diagram" width="800"/>
+ <img src="./context.jpg" alt="Context Diagram" width="700"/>
   <br>
   <em> Figure 2: Context view of the system showing the interaction of external entities with our system</em>
 </div>
@@ -297,7 +297,7 @@ The Use Case Viewpoint captures the primary ways different users (customers, ven
 
 <a id="figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent"></a>
 <div align="center">
- <img src="./Hyperlocal usecase.jpg" alt="Use Case Diagram" width="1000"/>
+ <img src="./Hyperlocal usecase.jpg" alt="Use Case Diagram" width="900"/>
   <br>
   <em> Figure 3: Use case diagram demonstrating the use cases for vendor, customer and delivery agent</em>
 </div>
@@ -321,9 +321,9 @@ The Development View focuses on the system’s internal structure from a develop
 
 <a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
 <div align="center">
-  <img src="./Component.png" alt="Diagram" width="800">
+  <img src="./micoservices.png" alt="Diagram" width="800">
   <br>
-  <em> Figure 5: Component view of hyperlocal delivery system</em>
+  <em> Figure 5: Mircoservices diagram for hyperlocal delivery system</em>
 </div>
 
 
@@ -380,16 +380,9 @@ We have adopted a minimalistic design to ensure that our system is easy to use a
 
 ## 9. Architectural Patterns Used in the Project
 ### <a id="9-1-microservices-architecture"></a> 9.1 Microservices Architecture
-Our system follows the mircoservices architecture style in comparison to monolithic architecture, and we have total 7 mircoservices. The three clients: 1) Customer mobile app 2) Vendor dashboard 3) Delivery agent mobile app, interacts with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs and the communication between these microservices and the clients are through JSON data format. The below diagram show the mircoservices architecture style of our system.
+Our system follows a microservices architecture style compared to a monolithic architecture, and we have a total of seven microservices. The three clients, 1) the Customer mobile app, 2) the Vendor dashboard, and 3) the Delivery agent mobile app, interact with the backend microservices through an API gateway. This interaction is stateless using RESTful APIs, and the communication between these microservices and the clients is through the JSON data format. Figure 5 shows the microservices architecture style of our system.
 
 **Quality attributes**: Availability, scalability, and maintainability.
-
-<a id="figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system"></a>
-<div align="center">
- <img src="./micoservices.png" alt="mircoservices Diagram" width="700"/>
-  <br>
-  <em> Figure 9: Mircoservices architecture style of Hyperlocal delivery system</em>
-</div>
 
 
 ### <a id="9-2-model-view-controller-mvc-pattern"></a> 9.2 Model-View-Controller (MVC) Pattern
@@ -399,7 +392,7 @@ We have used Model-View-Controller (MVC) architecture patterns, which separate a
 
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 <div align="center">
- <img src="./mvc_pattern.jpg" alt="MVC pattern diagram" width="700"/>
+ <img src="./mvc_pattern.jpg" alt="MVC pattern diagram" width="800"/>
   <br>
   <em> Figure 10: MVC pattern used in Hyperlocal delivery system</em>
 </div>
@@ -543,7 +536,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram.
 <a id="figure-8-relationship"></a>
 <div align="center">
- <img src="./relation.jpg" alt="Context Diagram" width="800"/>
+ <img src="./relation.jpg" alt="Context Diagram" width="900"/>
   <br>
   <em> Figure 12: Relationship between key architectural decisions.</em>
 </div>
