@@ -47,9 +47,8 @@
    - 13.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
    - 13.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
    - 13.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
-   - 13.10 [Figure 10: MVC Pattern](#figure-10-mvc-pattern-of-hyperlocal-delivery-system)
-   - 13.11 [Figure 11: RESTful API](#figure-11-rest-pattern-of-hyperlocal-delivery-system)
-   - 13.12 [Figure 12: Key Architectural Decisions](#figure-8-relationship)
+   - 13.10 [Figure 10: RESTful API](#figure-11-rest-pattern-of-hyperlocal-delivery-system)
+   - 13.11 [Figure 11: Key Architectural Decisions](#figure-8-relationship)
 
 
 ## Group Members
@@ -429,7 +428,7 @@ Upon receiving the requested data from the `Product Model`, the `Product Control
 <div align="center">
  <img src="./mvc_pattern.jpg" alt="MVC pattern diagram" width="800"/>
   <br>
-  <em> Figure 10: MVC pattern used in Hyperlocal delivery system</em>
+  <em> Figure 9: MVC pattern used in Hyperlocal delivery system</em>
 </div>
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 
@@ -442,7 +441,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 <div align="center">
  <img src="./RESTgate.png" alt="REST API diagram" width="800"/>
   <br>
-  <em> Figure 11: RESTful API pattern used in Hyperlocal delivery system</em>
+  <em> Figure 10: RESTful API pattern used in Hyperlocal delivery system</em>
 </div>
 
 ## 10. Key Architectural Decisions to Address Quality Attributes
@@ -572,7 +571,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 <div align="center">
  <img src="./relation.jpg" alt="Context Diagram" width="900"/>
   <br>
-  <em> Figure 12: Relationship between key architectural decisions.</em>
+  <em> Figure 11: Relationship between key architectural decisions.</em>
 </div>
 We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram. This diagram shows that the architectural decisions are not independent but are related to each other. Below, we provide a few examples to explain this:
 
