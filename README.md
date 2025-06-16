@@ -34,7 +34,7 @@
    - 10.12  [MVC with ORM](#10-12-mvc-with-orm)  
    - 10.13  [React Native Unified Codebase](#10-13-react-native-unified-codebase)
 
-11. [Architectural decisions relationships](#11-architectural-decisions--trade-offs)
+11. [Architectural decisions relationships](#11-architectural-decisions-relationships)
 12. [References](#12-References)
 13. [Revision History](#12-history-log)
 14. [Figures](#13-figures)
@@ -455,7 +455,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Requires more complex client-side state management (e.g., Redux) and might affect initial load time.
 - **Quality attributes**: Usability and performance.
 - **Alternative Solutions**: Use server-side rendering (SSR) frameworks like **Next.js** to balance performance and interactivity.  
-- **Summary**: We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity._
+- **Summary**: We chose SPA with React for its seamless UX and performance. SSR was considered but offers less client-side interactivity.
 
 ### <a id="10-2-minimalist-modern-design"></a> 10.2 Minimalist Modern Design
 - **Issue**: Overly complex UI designs increase cognitive load, reducing task efficiency.
@@ -464,7 +464,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Risk of oversimplifying features or omitting necessary visual cues.
 - **Quality attributes**: Usability.
 - **Alternative Solutions**: Employ **user-centered design (UCD)** or participatory design to balance simplicity and features.  
-- **Summary**: Minimalist design was preferred for its clarity; UCD was considered but adds complexity in rapid delivery._
+- **Summary**: Minimalist design was preferred for its clarity; UCD was considered but adds complexity in rapid delivery.
 
 ### <a id="10-3-react-native-for-mobile"></a> 10.3 React Native for Mobile
 - **Issue**: Building separate native apps for iOS and Android increases development and maintenance costs.
@@ -473,7 +473,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: May encounter limitations in accessing low-level native APIs; requires bridging in some cases.
 - **Quality attributes**: Scalability, maintianability.
 - **Alternative Solutions**: Use **Flutter** for high-performance cross-platform development or native development for full control.  
-- **Summary**: React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead._
+- **Summary**: React Native chosen for its balance of cost, performance, and developer familiarity; Flutter or native could add overhead.
 
 ### <a id="10-4-microservices-with-rest-json"></a> 10.4 Microservices with REST/JSON
 - **Issue**: Monolithic architectures limit scalability and can become performance bottlenecks.
@@ -482,7 +482,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Increased complexity in managing service boundaries and deployments.
 - **Quality attributes**: Performance, scalability.
 - **Alternative Solutions**: Use **GraphQL** to optimize API communication or **gRPC** for higher performance.  
-- **Summary**: REST/JSON was selected for simplicity and wide compatibility; GraphQL or gRPC were considered but are heavier solutions._
+- **Summary**: REST/JSON was selected for simplicity and wide compatibility; GraphQL or gRPC were considered but are heavier solutions.
 
 ### <a id="10-5-sqlite-local-storage"></a> 10.5 SQLite Local Storage
 - **Issue**: Frequent API calls for product data increase load times and data usage.
@@ -491,7 +491,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Risk of stale data if synchronization is not managed properly.
 - **Quality attributes**: Performance.
 - **Alternative Solutions**: Use **AsynStorage** or **Realm DB (for mobile)** for more advanced local data management.  
-- **Summary**: SQLite was chosen for simplicity; Realm offer more features but add complexity._
+- **Summary**: SQLite was chosen for simplicity; Realm offer more features but add complexity.
 
 ### <a id="10-6-kubernetes-orchestration"></a> 10.6 Kubernetes Orchestration
 - **Issue**: High-availability requirements for backend services under dynamic loads.
@@ -500,7 +500,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Steep learning curve, additional overhead for managing Kubernetes clusters.
 - **Quality attributes**: Performance, availability.
 - **Alternative Solutions**: Use **serverless architectures** (e.g., AWS Lambda) or **Docker Swarm**.  
-- **Summary**: Kubernetes was chosen for robust orchestration; simpler alternatives were considered but lacked required capabilities._
+- **Summary**: Kubernetes was chosen for robust orchestration; simpler alternatives were considered but lacked required capabilities.
 
 ### <a id="10-7-lazy-loading"></a> 10.7 Lazy Loading
 - **Issue**: Loading all resources upfront increases initial page load time.
@@ -509,7 +509,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Possible delays in loading deferred resources when needed.
 - **Quality attributes**: Performance.
 - **Alternative Solutions**: Implement **critical resources** and prioritized loading, or use **CDN edge caching**.  
-- **Summary**: Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary._
+- **Summary**: Lazy loading provides direct benefits with minimal complexity; CDN strategies are good but secondary.
 
 
 ### <a id="10-8-multi-db-deployment"></a> 10.8 Multi-DB Deployment
@@ -519,7 +519,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Increased complexity in replication and consistency management.
 - **Quality attributes**: Availability.
 - **Alternative Solutions**: Use managed distributed databases like **Amazon Aurora Global** or **Google Cloud Spanner**.  
-- **Summary**: Multi-DB replication was chosen for control and resilience; managed solutions were considered but add vendor lock-in._
+- **Summary**: Multi-DB replication was chosen for control and resilience; managed solutions were considered, but they add vendor lock-in.
 
 ### <a id="10-9-microservices-isolation"></a> 10.9 Microservices Isolation
 - **Issue**: Failures in one part of the system can cascade and affect the entire system.
@@ -528,7 +528,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Requires robust inter-service communication and monitoring.
 - **Quality attributes**: Availability.
 - **Alternative Solutions**: Use **modular monolith**.  
-- **Summary**: Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable._
+- **Summary**: Service isolation chosen for clear fault boundaries; modular monolith is simpler but less scalable.
 
 ### <a id="10-10-horizontal-microservices-scaling"></a> 10.10 Horizontal Microservices Scaling
 - **Issue**: Sudden increases in load can overwhelm services.
@@ -537,7 +537,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Requires effective load balancing and monitoring.
 - **Quality attributes**: Scalability.
 - **Alternative Solutions**: Use **serverless functions** for automatic scaling without managing infrastructure.  
-- **Summary**: Horizontal scaling offers predictable control; serverless functions were considered but have cold start penalties._
+- **Summary**: Horizontal scaling offers predictable control; serverless functions were considered but have cold start penalties.
 
 ### <a id="10-11-stateless-apis"></a> 10.11 Stateless APIs
 - **Issue**: Stateful APIs complicate scaling due to session management.
@@ -546,7 +546,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Requires external session management (e.g., Redis) if needed.
 - **Quality attributes**: Scalability.
 - **Alternative Solutions**: Use **web sockets**.  
-- **Summary**: Stateless APIs chosen for their simplicity; web sockets add complexity and are suitable for real-time applications._
+- **Summary**: Stateless APIs are chosen for their simplicity; web sockets add complexity and are suitable for real-time applications.
 
 ### <a id="10-12-mvc-with-orm"></a> 10.12 MVC (Model View Controller) with ORM (Object Relational Mapper)
 - **Issue**: Coupled business logic and presentation layers increase complexity and maintenance costs.
@@ -555,7 +555,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: ORM can introduce performance overhead for complex queries.
 - **Quality attributes**: Maintainability.
 - **Alternative Solutions**: Use MVVM (Model-View-ViewModel) or **micro-ORMs like Dapper** or raw SQL for performance-critical parts.  
-- **Summary**: MVC with ORM was chosen for its maintainability; MVVM, micro-ORMs/raw SQL are alternatives but increase manual work._
+- **Summary**: MVC with ORM was chosen for its maintainability; MVVM, micro-ORMs/raw SQL are alternatives but increase manual work.
 
 ### <a id="10-13-react-native-unified-codebase"></a> 10.13 React Native Unified Codebase
 - **Issue**: Maintaining separate iOS and Android codebases leads to duplication of work.
@@ -564,13 +564,19 @@ We also used the REST API architectural pattern, which is based on stateless com
 - **Limitations**: Limited access to certain native modules, may need custom bridging.
 - **Quality attributes**: Maintainability.
 - **Alternative Solutions**: Use **Flutter** for even more unified code or **native development** for full control.  
-- **Summary**: React Native chosen for simplicity and shared code; Flutter and native were considered but add complexity._
+- **Summary**: React Native chosen for simplicity and shared code; Flutter and native were considered but add complexity.
 
 ## 11. Relationship between identified architecture design decisions
-<a id="#11-architectural-decisions--trade-offs"></a>
+<a id="#11-architectural-decisions-relationships"></a>
+<a id="figure-8-relationship"></a>
+<div align="center">
+ <img src="./relation.jpg" alt="Context Diagram" width="900"/>
+  <br>
+  <em> Figure 12: Relationship between key architectural decisions.</em>
+</div>
 We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram. This diagram shows that the architectural decisions are not independent but are related to each other. Below, we provide a few examples to explain this:
 
-#### Relationship between microservices architecture and API Gateway and RESTful APIs
+#### Relationship between microservices architecture, API Gateway, and RESTful APIs
 
 - We chose to use the microservices architectural style, and because of this decision, we also had to decide how to handle data communication and access to the microservices.
 - Without microservices, a monolithic architecture might have used direct method calls or a shared database, making RESTful APIs and an API Gateway unnecessary.
@@ -592,13 +598,6 @@ We have provided the alternate competing solutions and the relationships between
 
 - Because we chose React Native for mobile apps, we needed local data storage, leading to the decision to use SQLite.
 - Without React Native (e.g., if we used a pure web app), SQLite would be irrelevant—alternatives like IndexedDB (web) might apply.
-
-<a id="figure-8-relationship"></a>
-<div align="center">
- <img src="./relation.jpg" alt="Context Diagram" width="900"/>
-  <br>
-  <em> Figure 12: Relationship between key architectural decisions.</em>
-</div>
 
 ## 12. References
 1 - <a href="https://dl.acm.org/doi/abs/10.1145/3106237.3121282">Reflections on the REST architectural style and principled design of the modern web architecture</a>
@@ -644,7 +643,11 @@ We have provided the alternate competing solutions and the relationships between
 | 2025, May 07 | Listed the key architecture decisions, how it addresses the quality attributes and potential trade-offs. | Syed, Danish, Shahzad, Juraev|
 | 2025, May 15   | Created the mid-fidelity design of the system to show the usability view of the system.         | Syed, Danish|
 | 2025, May 21   | Created the diagrams for architectural patterns used in the project.         | Syed, Shahzad, Danish|
-| 2025, May 23   | provided architectural decisons in proper format and provided alternative solutions.         | Syed, Shahzad|
+| 2025, May 23   | provided architectural decisions in proper format and provided alternative solutions.         | Syed, Shahzad,Juraev|
 | 2025, May 25 | Identified relationships among decisions and drawn decision space diagram. | Syed, Danish, Shahzad|
+| 2025, May 15   | Redesigned the Context diagram and improve it's explanation         | Syed, Danish, Juraev|
+| 2025, May 21   | Redesigned the MVC pattern diagram and added explanation in the context of our project.         | Syed, Shahzad, Danish|
+| 2025, May 23   | Improved the microservices diagram and added it to the development view         | Syed, Shahzad, Juraev|
+| 2025, May 25 | Provided examples of relationships among decisions and improved decision space diagram. | Syed, Danish, Shahzad|
 
 
