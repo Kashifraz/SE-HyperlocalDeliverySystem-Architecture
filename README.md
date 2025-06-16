@@ -321,7 +321,7 @@ The Development View focuses on the system’s internal structure from a develop
 
 <a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
 <div align="center">
-  <img src="./micoservices.png" alt="Diagram" width="800">
+  <img src="./micoservices.jpg" alt="Diagram" width="800">
   <br>
   <em> Figure 5: Mircoservices diagram for hyperlocal delivery system</em>
 </div>
@@ -329,26 +329,26 @@ The Development View focuses on the system’s internal structure from a develop
 
 ### Architectural Component Descriptions
 
-**ProductComponent**  
-The `ProductComponent` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `CartComponent` rely on to display items and validate availability during checkout.
+**Product Service**  
+The `Product Service` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `CartComponent` rely on to display items and validate availability during checkout.
 
-**CartComponent**  
-The `CartComponent` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `ProductComponent` to fetch real-time product details and passes finalized carts to the `PaymentComponent` for checkout.
+**Cart Service**  
+The `Cart Service` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `Product Service` to fetch real-time product details and passes finalized carts to the `Cart Service` for checkout.
 
-**OrderComponent**  
-The `OrderComponent` is responsible for managing the orders right from their creation to their fulfillment, including changing order status and order cancellation scenarios. It coordinates with the `PaymentComponent` for payment confirmation after the `PaymentComponent` completes transactions, and also interacts with the `TrackingComponent` to monitor order status post-purchase and provide real-time tracking.
+**Order Service**  
+The `Order Service` is responsible for managing the orders right from their creation to their fulfillment, including changing order status and order cancellation scenarios. It coordinates with the `Payment Service` for payment confirmation after the `Payment Service` completes transactions, and also interacts with the `Tracking Service` to monitor order status post-purchase and provide real-time tracking.
 
-**PaymentComponent**  
-The `PaymentComponent` manages all payment processing, including credit card transactions, digital wallets, and refunds. It ensures secure payment authorization and communicates success or failure back to the `OrderComponent`, which then updates the order status accordingly.
+**Payment Service**  
+The `Payment Service` manages all payment processing, including credit card transactions, digital wallets, and refunds. It ensures secure payment authorization and communicates success or failure back to the `Order Service`, which then updates the order status accordingly.
 
-**TrackingComponent**  
-The `TrackingComponent` monitors order fulfillment, providing real-time shipping and delivery status updates. It receives order data from the `OrderComponent`, tracks and delivers products, and notifies customers of progress.
+**Tracking Service**  
+The `Tracking Service` monitors order fulfillment, providing real-time shipping and delivery status updates. It receives order data from the `Order Service`, tracks and delivers products, and notifies customers of progress.
 
-**FeedbackComponent**  
-The `FeedbackComponent` collects and processes customer reviews and ratings linked to orders. This feedback information is required for the `ProductComponent` to create the product listing. It also aggregates feedback for analytics, which the `BusinessProfileComponent` uses to generate vendor performance reports and improve service quality.
+**Feedback Service**  
+The `Feedback Service` collects and processes customer reviews and ratings linked to orders. This feedback information is required for the `Product Service` to create the product listing. It also aggregates feedback for analytics, which the `Business Profile Service` uses to generate vendor performance reports and improve service quality.
 
-**BusinessProfileComponent**  
-The `BusinessProfileComponent` manages vendor profiles, store settings, and business analytics. The vendor profiles also include the product listing, which includes product information, customer reviews, and feedback. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
+**Business Profile Service**  
+The `Business Profile Service` manages vendor profiles, store settings, and business analytics. The vendor profiles also include the product listing, which includes product information, customer reviews, and feedback. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
 ## 8. Usability viewpoint
