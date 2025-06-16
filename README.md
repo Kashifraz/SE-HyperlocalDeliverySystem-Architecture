@@ -543,7 +543,7 @@ We also used the REST API architectural pattern, which is based on stateless com
 We have provided the alternate competing solutions and the relationships between the key architectural decisions in Figure 12. This diagram is drawn to show the architectural decisions in the design space tree diagram.
 <a id="figure-8-relationship"></a>
 <div align="center">
- <img src="./relation.png" alt="Context Diagram" width="800"/>
+ <img src="./relation.jpg" alt="Context Diagram" width="800"/>
   <br>
   <em> Figure 12: Relationship between key architectural decisions.</em>
 </div>
