@@ -321,7 +321,7 @@ The Development View focuses on the system’s internal structure from a develop
 
 <a id="figure-5-component-view-of-hyperlocal-delivery-system"></a>
 <div align="center">
-  <img src="./micoservices.jpg" alt="Diagram" width="800">
+  <img src="./microservices.jpg" alt="Diagram" width="800">
   <br>
   <em> Figure 5: Mircoservices diagram for hyperlocal delivery system</em>
 </div>
