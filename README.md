@@ -96,7 +96,7 @@ We included the system's `Overview diagram` showing the system's end users. It s
 
 <a id="figure-1-architecture-overview-diagram-showing-the-overview-of-system-architecture"></a>
 <div align="center">
- <img src="./system.png" alt="System Overview" width="1000"/>
+ <img src="./system.jpg" alt="System Overview" width="1000"/>
   <br>
   <em> Figure 1: Architecture overview diagram showing the overview of system architecture</em>
 </div>
@@ -399,7 +399,7 @@ We have used Model-View-Controller (MVC) architecture patterns, which separate a
 
 <a id="figure-10-mvc-pattern-of-hyperlocal-delivery-system"></a>
 <div align="center">
- <img src="./mvc_pattern.png" alt="MVC pattern diagram" width="700"/>
+ <img src="./mvc_pattern.jpg" alt="MVC pattern diagram" width="700"/>
   <br>
   <em> Figure 10: MVC pattern used in Hyperlocal delivery system</em>
 </div>
