@@ -130,25 +130,30 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
 
 ### <a id="5.1-customer-requirements"></a> 5.1 Customer Requirements
 
-**CUS-1 Add Items to Cart**  
+**CUS-1 Browse Items**  
+- The customer shall be able to browse items  
+- The customer shall be able to search for items
+- The customer shall be able to filter items  
+
+**CUS-2 Add Items to Cart**  
 - The customer shall be able to add items to the cart  
 - The customer shall be able to remove items from the cart  
 - The customer shall be able to view cart contents  
 - The customer shall be able to see the real-time price total  
 
-**CUS-2 Place Order**  
+**CUS-3 Place Order**  
 - The customer shall be able to initiate checkout  
 - The customer shall be able to select a delivery address  
 - The customer shall be able to choose a payment method  
 - The customer shall be able to confirm the order  
 
-**CUS-3 Track Order**  
+**CUS-4 Track Order**  
 - The customer shall be able to view the order status  
 - The customer shall be able to see the delivery agent's location  
 - The customer shall be able to contact the delivery agent  
 - The customer shall be able to mark delivery as received  
 
-**CUS-4 Give Feedback**  
+**CUS-5 Give Feedback**  
 - The customer shall be able to rate products (1-5 stars)  
 - The customer shall be able to write text reviews  
 - The customer shall be able to submit feedback anonymously  
@@ -159,34 +164,56 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
 - The vendor shall be able to register store information  
 - The vendor shall be able to upload the business logo  
 - The vendor shall be able to set service areas  
-- The vendor shall be able to configure business hours  
+- The vendor shall be able to configure business hours
 
-**VEN-2 Manage Inventory**  
+**VEN-2 CRUD (Create, Read, Update, Delete) Products**  
 - The vendor shall be able to add new products  
-- The vendor shall be able to update product details  
-- The vendor shall be able to mark items as out of stock  
-- The vendor shall be able to set product prices  
+- The vendor shall be able to update product details    
+- The vendor shall be able to set product prices    
 
-**VEN-3 Manage Orders**  
+**VEN-3 add Inventory**  
+- The vendor shall be able to add product inventory   
+- The vendor shall be able to mark items as out of stock
+- The vendor shall be able to mark items as in stock
+
+**VEN-4 Accept/Reject Orders**  
 - The vendor shall be able to view new orders  
 - The vendor shall be able to accept/reject orders  
 - The vendor shall be able to update the order status  
-- The vendor shall be able to cancel orders  
+- The vendor shall be able to cancel orders
 
-**VEN-4 Respond Feedback**  
+**VEN-6 Send Delivery Request**  
+- The vendor shall be able to see the available delivery agents on the platform  
+- The vendor shall be able to generate a delivery request when the order is ready 
+- The vendor shall be able to see who accepted the delivery request
+
+**VEN-5 Respond Feedback**  
 - The vendor shall be able to view customer ratings  
 - The vendor shall be able to reply to reviews  
 - The vendor shall be able to report inappropriate feedback  
-- The vendor shall be able to view feedback analytics  
+- The vendor shall be able to view feedback analytics
+
+**VEN-6 Generate Report**  
+- The vendor shall be able to see a report on business performance  
+- The vendor shall be able to see the stats of orders and profits  
+- The vendor shall be able to filter the report based on days, weeks, and months 
+- The vendor shall be able to download the business report
+
 
 ### <a id="5-3-delivery-agent-requirements"></a> 5.3 Delivery Agent Requirements
-**DEL-1 Manage Delivery Requests**  
+**DEL-1 Accept Delivery Requests**  
 - The agent shall be able to view assigned deliveries  
-- The agent shall be able to accept/reject delivery requests  
+- The agent shall be able to accept delivery requests  
 - The agent shall be able to see delivery locations on the map  
-- The agent shall be able to view package details  
+- The agent shall be able to view package details
 
-**DEL-2 Complete Order Delivery**  
+**DEL-2 Reject Delivery Requests**  
+- The agent shall be able to view assigned deliveries  
+- The agent shall be able to reject delivery requests  
+- The agent shall be able to see deliveries assigned other than rejected ones. 
+
+
+**DEL-3 Complete Order Delivery**  
 - The agent shall be able to mark orders as picked up  
 - The agent shall be able to update the delivery status  
 - The agent shall be able to collect customer signatures  
