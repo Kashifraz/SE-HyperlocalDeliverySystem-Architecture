@@ -42,11 +42,11 @@
    - 13.2 [Figure 2: Context Diagram](#figure-2-context-view-of-the-system-showing-the-interaction-of-external-entities-with-our-system)
    - 13.3 [Figure 3: Use Case Diagram](#figure-3-use-case-diagram-demonstrating-the-use-cases-for-vendor-customer-and-delivery-agent)
    - 13.4 [Figure 4: Sequence Diagram](#figure-4-system-sequence-diagram-to-show-interaction-between-customer-vendor-and-delivery-agent)
-   - 13.5 [Figure 5: Component Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
+   - 13.5 [Figure 5: Microservices Diagram](#figure-5-component-view-of-hyperlocal-delivery-system)
    - 13.6 [Figure 6: Customer UI](#figure-6-mid-fidelity-design-for-customer-mobile-application)
    - 13.7 [Figure 7: Agent UI](#figure-7-mid-fidelity-design-for-delivery-agent-mobile-application)
    - 13.8 [Figure 8: Vendor Dashboard](#figure-8-mid-fidelity-design-for-vendor-dashboard)
-   - 13.9 [Figure 9: Microservices](#figure-9-mircoservices-architecture-style-of-hyperlocal-delivery-system)
+   - 13.9 [Figure 9: MVC pattern](figure-10-mvc-pattern-of-hyperlocal-delivery-system)
    - 13.10 [Figure 10: RESTful API](#figure-11-rest-pattern-of-hyperlocal-delivery-system)
    - 13.11 [Figure 11: Key Architectural Decisions](#figure-8-relationship)
 
