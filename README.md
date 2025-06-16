@@ -182,18 +182,18 @@ While our hyperlocal delivery platform provides value to customers, vendors, and
 - The vendor shall be able to update the order status  
 - The vendor shall be able to cancel orders
 
-**VEN-6 Send Delivery Request**  
+**VEN-5 Send Delivery Request**  
 - The vendor shall be able to see the available delivery agents on the platform  
 - The vendor shall be able to generate a delivery request when the order is ready 
 - The vendor shall be able to see who accepted the delivery request
 
-**VEN-5 Respond Feedback**  
+**VEN-6 Respond Feedback**  
 - The vendor shall be able to view customer ratings  
 - The vendor shall be able to reply to reviews  
 - The vendor shall be able to report inappropriate feedback  
 - The vendor shall be able to view feedback analytics
 
-**VEN-6 Generate Report**  
+**VEN-7 Generate Report**  
 - The vendor shall be able to see a report on business performance  
 - The vendor shall be able to see the stats of orders and profits  
 - The vendor shall be able to filter the report based on days, weeks, and months 
