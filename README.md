@@ -360,7 +360,7 @@ The Development View focuses on the system’s internal structure from a develop
 The `Product Service` manages the product catalog and inventory, ensuring accurate stock levels and product details are available. It serves as the source of truth for product data, which other components like `Cart Service` rely on to display items and validate availability during checkout.
 
 **Cart Service**  
-The `Cart Service` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `Product Service` to fetch real-time product details and passes finalized carts to the `Cart Service` for checkout.
+The `Cart Service` handles all cart-related operations, such as adding or removing items, calculating totals, and applying discounts. It interacts with the `Product Service` to fetch real-time product details and passes finalized carts to the `Payment Service` for checkout.
 
 **Order Service**  
 The `Order Service` is responsible for managing the orders right from their creation to their fulfillment, including changing order status and order cancellation scenarios. It coordinates with the `Payment Service` for payment confirmation after the `Payment Service` completes transactions, and also interacts with the `Tracking Service` to monitor order status post-purchase and provide real-time tracking.
@@ -375,7 +375,7 @@ The `Tracking Service` monitors order fulfillment, providing real-time shipping 
 The `Feedback Service` collects and processes customer reviews and ratings linked to orders. This feedback information is required for the `Product Service` to create the product listing. It also aggregates feedback for analytics, which the `Business Profile Service` uses to generate vendor performance reports and improve service quality.
 
 **Business Profile Service**  
-The `Business Profile Service` manages vendor profiles, store settings, and business analytics. The vendor profiles also include the product listing, which includes product information, customer reviews, and feedback. It compiles data from orders, payments, and feedback to provide insights into sales performance, customer satisfaction, and operational efficiency.
+The `Business Profile Service` manages vendor profiles, store settings, and business analytics. The vendor profiles also include the product listing, which includes product information, customer reviews, and feedback. It compiles data from orders, payments, and feedback services to provide insights into sales performance, customer satisfaction, and operational efficiency.
 
 
 ## 8. Usability viewpoint
